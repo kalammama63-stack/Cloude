@@ -228,3 +228,48 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
   document.documentElement.addEventListener('pointerleave', () => { cursor.active = false; });
   window.addEventListener('blur', () => { cursor.active = false; });
 })();
+
+/* ============================================================
+   AI BUTTON — частицы при наведении + max.ru при отправке
+   ============================================================ */
+(function () {
+  const btn = document.getElementById('aiBtn');
+  if (!btn) return;
+
+  const colors = ['#f98b00','#ffb347','#ffd080','#ff6000','#ffe0a0','#ffcc55'];
+  let interval = null;
+
+  function spawnParticle() {
+    const p     = document.createElement('span');
+    p.className = 'ai-particle';
+    const angle = Math.random() * 360;
+    const dist  = 55 + Math.random() * 75;
+    const tx    = Math.cos(angle * Math.PI / 180) * dist;
+    const ty    = Math.sin(angle * Math.PI / 180) * dist;
+    const sz    = 3 + Math.random() * 6;
+    const dur   = 0.55 + Math.random() * 0.55;
+    p.style.cssText = `--tx:${tx}px;--ty:${ty}px;--r:${Math.random()*360}deg;--sz:${sz}px;--col:${colors[Math.floor(Math.random()*colors.length)]};--dur:${dur}s`;
+    btn.appendChild(p);
+    p.addEventListener('animationend', () => p.remove(), { once: true });
+  }
+
+  btn.addEventListener('mouseenter', () => {
+    spawnParticle();
+    interval = setInterval(spawnParticle, 110);
+  });
+  btn.addEventListener('mouseleave', () => clearInterval(interval));
+})();
+
+/* ============================================================
+   SCROLL TO TOP
+   ============================================================ */
+(function () {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 320);
+  }, { passive: true });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();

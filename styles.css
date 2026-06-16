@@ -204,70 +204,72 @@ p { margin: 0; }
 
 /* ============================================================
    СЕКЦИИ — ПЛАВНАЯ ГРАФИТОВАЯ ВОЛНА
-   Каждая секция начинается там, где закончилась предыдущая.
+   Каждая секция: тёмный → светлее (выраженный переход).
    ============================================================ */
 
 /* Герой: самый тёмный старт */
 .hero {
   background: linear-gradient(180deg,
     var(--bg-graphite-900) 0%,
-    var(--bg-graphite-800) 100%);
-}
-
-/* Услуги: чуть светлее */
-.section--services {
-  background: linear-gradient(180deg,
-    var(--bg-graphite-800) 0%,
-    var(--bg-graphite-700) 100%);
-}
-
-/* Для кого: продолжаем светлеть */
-.section--features {
-  background: linear-gradient(180deg,
-    var(--bg-graphite-700) 0%,
     var(--bg-graphite-600) 100%);
 }
 
-/* Почему TK Web: светлее — создаём контраст-пик */
-.section--trust {
+/* Услуги */
+.section--services {
   background: linear-gradient(180deg,
-    var(--bg-graphite-600) 0%,
+    var(--bg-graphite-900) 0%,
     var(--bg-graphite-500) 100%);
 }
 
-/* Отзывы: начинаем возвращаться к тёмному */
+/* Для кого */
+.section--features {
+  background: linear-gradient(180deg,
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-400) 100%);
+}
+
+/* Почему TK Web */
+.section--trust {
+  background: linear-gradient(180deg,
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-400) 100%);
+}
+
+/* Отзывы */
 .section--reviews {
   background: linear-gradient(180deg,
-    var(--bg-graphite-500) 0%,
-    var(--bg-graphite-600) 100%);
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-500) 100%);
 }
 
 /* Кейсы */
 .section--cases {
   background: linear-gradient(180deg,
-    var(--bg-graphite-600) 0%,
-    var(--bg-graphite-700) 100%);
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-500) 100%);
 }
 
-/* Процесс: снова темнее */
+/* Процесс */
 .section--process {
   background: linear-gradient(180deg,
-    var(--bg-graphite-700) 0%,
-    var(--bg-graphite-800) 100%);
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-500) 100%);
 }
 
-/* Сертификаты: небольшой отскок вверх для ритма */
+/* Сертификаты */
 .section--certs {
   background: linear-gradient(180deg,
-    var(--bg-graphite-800) 0%,
-    var(--bg-graphite-700) 100%);
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-500) 100%);
 }
 
-/* Контакт CTA: возврат к глубокому тёмному для акцента */
+/* Контакт CTA */
 .section--contact {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(180deg,
-    var(--bg-graphite-700) 0%,
-    var(--bg-graphite-900) 100%);
+    var(--bg-graphite-900) 0%,
+    var(--bg-graphite-400) 100%);
 }
 
 /* ============================================================
@@ -1749,4 +1751,131 @@ p { margin: 0; }
   .contact-wrap { padding: 28px; gap: 32px; }
 
   .guide-card { flex-direction: column; align-items: flex-start; padding: 24px; }
+}
+
+/* ============================================================
+   ЗВЁЗДНЫЕ АНИМАЦИИ
+   ============================================================ */
+@keyframes ss-shoot {
+  0%   { transform: translate(0px, 0px); opacity: 0; }
+  6%   { opacity: 1; }
+  82%  { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)); opacity: 0; }
+}
+
+@keyframes ss-twinkle {
+  0%,100% { opacity: var(--o); }
+  50%     { opacity: calc(var(--o) * 0.25); }
+}
+
+.contact-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  left: var(--x);
+  top:  var(--y);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent-orange-light);
+  box-shadow: 0 0 6px 2px rgba(249,139,0,0.45);
+}
+
+.star--twinkle {
+  animation: ss-twinkle var(--d, 3s) ease-in-out infinite;
+}
+
+.star--shoot {
+  width: 2px;
+  height: 2px;
+  animation: ss-shoot var(--d, 7s) ease-in infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* ============================================================
+   AI BUTTON — искровая кнопка «Отправить заявку»
+   ============================================================ */
+.ai-btn {
+  position: relative;
+  overflow: visible;
+}
+
+@keyframes ai-sparkle {
+  0%,100% { transform: scale(0) rotate(0deg);   opacity: 0; }
+  35%      { transform: scale(1) rotate(150deg); opacity: 1; }
+  65%      { transform: scale(1) rotate(200deg); opacity: 1; }
+}
+
+@keyframes ai-particle-fly {
+  0%   { transform: translate(0,0) rotate(var(--r)) scale(1); opacity: 0.95; }
+  100% { transform: translate(var(--tx),var(--ty)) rotate(calc(var(--r) + 360deg)) scale(0); opacity: 0; }
+}
+
+.ai-sp {
+  position: absolute;
+  color: #fff;
+  pointer-events: none;
+  animation: ai-sparkle 2s ease-in-out infinite;
+  line-height: 1;
+  user-select: none;
+}
+.ai-sp1 { font-size: 18px; top: -6px;  left: 14px; animation-delay: 0s;   animation-duration: 2s; }
+.ai-sp2 { font-size: 8px;  bottom: 4px; left: 10px; animation-delay: 1s;   animation-duration: 2s; }
+.ai-sp3 { font-size: 5px;  top: 4px;   left: 22px; animation-delay: 1.5s; animation-duration: 2.5s; }
+.ai-sp4 { font-size: 6px;  top: 9px;   left: 8px;  animation-delay: 0.5s; animation-duration: 2.5s; }
+
+.ai-particle {
+  position: absolute;
+  width:  var(--sz, 5px);
+  height: var(--sz, 5px);
+  background: var(--col, #f98b00);
+  clip-path: polygon(50% 0%,55% 45%,100% 50%,55% 55%,50% 100%,45% 55%,0% 50%,45% 45%);
+  animation: ai-particle-fly var(--dur, 0.75s) ease-out forwards;
+  pointer-events: none;
+  left: 50%;
+  top:  50%;
+  translate: -50% -50%;
+  z-index: 50;
+}
+
+/* ============================================================
+   КНОПКА «НАВЕРХ»
+   ============================================================ */
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-orange);
+  background: var(--bg-graphite-800);
+  color: var(--accent-orange);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--accent-orange);
+  color: #000;
 }

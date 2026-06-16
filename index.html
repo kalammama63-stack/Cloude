@@ -69,7 +69,7 @@
               <li><span class="check-icon">✓</span>80% рутины перейдёт на бота</li>
             </ul>
             <div class="hero__actions reveal-up">
-              <a class="button button--primary" href="#contact">Оставить контакт</a>
+              <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Оставить контакт</a>
               <a class="button button--ghost button--ghost-accent" href="https://t.me/firstTKbot?start=1" target="_blank" rel="noreferrer">Бот-консультант →</a>
             </div>
             <div class="hero__hint reveal-up">Срок и стоимость фиксируются в договоре. SEO-оптимизация в базовом пакете.</div>
@@ -110,7 +110,7 @@
               <h3>Чек-лист: что собрать до начала работы над сайтом</h3>
               <p>Готовый список материалов — сэкономьте время и запустите сайт быстрее.</p>
             </div>
-            <a href="https://docs.google.com/document/d/1rYVY2z9IyC_R4b2TZWS9ly9gLCfg-7e3JXLPQeA617o/edit?usp=sharing" target="_blank" rel="noreferrer" class="button button--primary">Открыть чек-лист →</a>
+            <a href="https://drive.google.com/file/d/1LV6bAk86Ve9DXAtcQvW5J-dk6cMmLNuf/view?usp=sharing" target="_blank" rel="noreferrer" class="button button--primary">Открыть чек-лист →</a>
           </div>
         </div>
       </section>
@@ -609,6 +609,20 @@
 
       <!-- CONTACT -->
       <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--twinkle" style="--x:14%;--y:90%;--o:0.35;--d:2.3s"></span>
+          <span class="star star--twinkle" style="--x:55%;--y:10%;--o:0.5;--d:4.0s"></span>
+          <span class="star star--twinkle" style="--x:88%;--y:78%;--o:0.4;--d:3.3s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
         <div class="container">
           <div class="contact-wrap reveal-up">
             <div class="contact-left">
@@ -620,15 +634,22 @@
                 <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
                 <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
               </div>
-              <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer" class="button button--primary" style="margin-top:24px;display:inline-flex;">Оставить заявку →</a>
             </div>
-            <form class="contact-form" action="https://formsubmit.co/tk.webdis@gmail.com" method="POST">
+            <form class="contact-form" onsubmit="return false;">
               <input type="text" name="name" placeholder="Ваше имя" required />
               <input type="text" name="contact" placeholder="Телефон или Telegram" required />
               <textarea name="message" placeholder="Расскажите о проекте (необязательно)" rows="4"></textarea>
               <input type="hidden" name="_subject" value="Новая заявка с сайта TK Web" />
               <input type="hidden" name="_captcha" value="false" />
-              <button type="submit" class="button button--primary">Отправить заявку →</button>
+              <a href="https://max.ru/u/f9LHodD0cOJpyUIq7-C9ZbF6BWkkcugepiRE8RLCYP9owSCEG5-ohLqr09M"
+                 target="_blank" rel="noreferrer"
+                 class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить заявку →
+              </a>
               <p class="form-note">Звонить не буду — напишу в мессенджер</p>
             </form>
           </div>
@@ -651,6 +672,9 @@
     </footer>
 
   </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>
