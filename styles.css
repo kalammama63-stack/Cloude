@@ -1562,6 +1562,26 @@ p { margin: 0; }
   transform: rotate(2deg);
 }
 
+/* ============================================================
+   4-CARD SPREAD expanded — 2×2 grid (no horizontal scroll)
+   ============================================================ */
+.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-stage {
+  display: block;
+  overflow-x: visible;
+}
+.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-item__internal {
+  transform: none !important;
+}
+@media (max-width: 768px) {
+  .card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Pricing card design */
 .pc-card {
   position: relative;
