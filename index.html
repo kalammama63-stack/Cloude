@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сайт на Tilda + Telegram-бот под ключ | TK Web</title>
+  <meta name="description" content="Создание сайта на Tilda под ключ с Telegram-ботом для заявок, онлайн-записи и автоматизации продаж." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/" />
+  <meta property="og:title" content="Сайт на Tilda + Telegram-бот под ключ | TK Web" />
+  <meta property="og:description" content="Создание сайта на Tilda под ключ с Telegram-ботом для заявок и автоматизации продаж." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tk-webb.ru/" />
+  <meta property="og:locale" content="ru_RU" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Сайт на Tilda + Telegram-бот под ключ",
+    "provider": { "@type": "Organization", "name": "TK Web", "url": "https://tk-webb.ru/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="#home">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav">
+          <a href="#cases">Кейсы</a>
+          <a href="#process">Этапы</a>
+          <a href="#pricing">Прайс</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <canvas id="hero-boids" class="hero-boids-canvas" aria-hidden="true"></canvas>
+        <div class="hero__bg hero__bg--gradient"></div>
+        <div class="hero__decor hero__decor--circle"></div>
+        <div class="hero__decor hero__decor--square"></div>
+        <div class="container hero__content">
+          <div class="hero__text">
+            <span class="eyebrow reveal-up">Сайт + Telegram-бот под ключ</span>
+            <h1 class="reveal-up">Создаю сайт на Tilda с умным Telegram-ботом для заявок и автоматизации</h1>
+            <ul class="hero__checklist reveal-up">
+              <li><span class="check-icon">✓</span>24/7 — ваш бизнес принимает заявки даже ночью</li>
+              <li><span class="check-icon">✓</span>от 10 дней — срок создания</li>
+              <li><span class="check-icon">✓</span>80% рутины перейдёт на бота</li>
+            </ul>
+            <div class="hero__actions reveal-up">
+              <a class="button button--primary" href="#contact">Оставить контакт</a>
+              <a class="button button--ghost" href="https://t.me/firstTKbot?start=1" target="_blank" rel="noreferrer">Бот-консультант →</a>
+            </div>
+            <div class="hero__hint reveal-up">Срок и стоимость фиксируются в договоре. SEO-оптимизация в базовом пакете.</div>
+          </div>
+          <div class="hero__visual reveal-right">
+            <div class="hero-logo-spin-wrap">
+              <img src="logo.png" alt="TK Web" class="hero-logo-spin-img" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span>Сайт на Tilda</span><span class="marquee-dot">•</span>
+          <span>Telegram-бот</span><span class="marquee-dot">•</span>
+          <span>Автоматизация заявок</span><span class="marquee-dot">•</span>
+          <span>Онлайн-запись</span><span class="marquee-dot">•</span>
+          <span>Лидогенерация</span><span class="marquee-dot">•</span>
+          <span>Сайт + Бот под ключ</span><span class="marquee-dot">•</span>
+          <span>Сайт на Tilda</span><span class="marquee-dot">•</span>
+          <span>Telegram-бот</span><span class="marquee-dot">•</span>
+          <span>Автоматизация заявок</span><span class="marquee-dot">•</span>
+          <span>Онлайн-запись</span><span class="marquee-dot">•</span>
+          <span>Лидогенерация</span><span class="marquee-dot">•</span>
+          <span>Сайт + Бот под ключ</span><span class="marquee-dot">•</span>
+        </div>
+      </div>
+
+      <!-- LEAD MAGNET -->
+      <section class="section section--services">
+        <div class="container">
+          <div class="guide-card reveal-up">
+            <div class="guide-card__icon">📋</div>
+            <div class="guide-card__text">
+              <span class="eyebrow">Бесплатно</span>
+              <h3>Чек-лист: что собрать до начала работы над сайтом</h3>
+              <p>Готовый список материалов — сэкономьте время и запустите сайт быстрее.</p>
+            </div>
+            <a href="https://docs.google.com/document/d/1rYVY2z9IyC_R4b2TZWS9ly9gLCfg-7e3JXLPQeA617o/edit?usp=sharing" target="_blank" rel="noreferrer" class="button button--primary">Открыть чек-лист →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASES -->
+      <section class="section section--features" id="cases">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Кейсы</span>
+            <h2>Реальные проекты</h2>
+            <p>Сайты на Tilda и Telegram-боты, которые подняли конверсию и автоматизировали продажи.</p>
+          </div>
+          <div class="cases-grid">
+            <article class="case-big-card reveal-up">
+              <div class="case-img-wrap">
+                <img src="case1.jpg" alt="Никита Коломейцев — лендинг" class="case-img" />
+                <div class="case-img-overlay"></div>
+              </div>
+              <div class="case-big-card__body">
+                <span class="case-label">Стоматология</span>
+                <h3>Подход №1: Продающий минимализм</h3>
+                <p>Лендинг с акцентом на портфолио работ и чёткое УТП. Чистый дизайн убирает лишнее и ведёт клиента к действию — без отвлечений.</p>
+                <div class="case-stats">
+                  <div class="case-stat"><strong>+20%</strong><span>к среднему чеку</span></div>
+                  <div class="case-stat"><strong>+18%</strong><span>конверсия в заявку</span></div>
+                </div>
+                <a href="https://xn--80aa2afg.xn--p1ai/" target="_blank" rel="noreferrer" class="button button--ghost">Посмотреть проект →</a>
+              </div>
+            </article>
+            <article class="case-big-card reveal-up">
+              <div class="case-flip-inner">
+                <div class="case-flip-front">
+                  <img src="case2.jpg" alt="NK LAB — лендинг" class="case-flip-img" />
+                  <div class="case-flip-front__label">Наведите, чтобы узнать подробнее</div>
+                  <div class="case-flip-front__title">Подход №2: Статусный лендинг для премиум-сегмента</div>
+                </div>
+                <div class="case-flip-back">
+                  <span class="case-label">Стоматология</span>
+                  <h3>Подход №2: Статусный лендинг для премиум-сегмента</h3>
+                  <p>Строгий дизайн с подчёркнутой экспертизой: 14 лет опыта, портфолио реставраций. Для клиентов, которые ценят качество.</p>
+                  <a href="http://tk-webb.ru/nk" target="_blank" rel="noreferrer" class="button button--primary">Посмотреть сайт →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTS -->
+      <section class="section section--trust">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Telegram-боты</span>
+            <h2>Два вида ботов для бизнеса</h2>
+            <p>Выберите под задачу — или возьмите оба в связке с сайтом.</p>
+          </div>
+          <div class="bots-grid">
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">💬</div>
+                <div>
+                  <h3>Бот-опросник</h3>
+                  <p class="bot-function">Расчёт стоимости и сбор заявок</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Клиент звонит, долго объясняет задачу — вы тратите время на уточнение деталей.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот задаёт вопросы, собирает данные и отправляет готовую заявку вам в Telegram.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Вы получаете клиента с уже заполненным брифом — без лишних звонков.</p></div>
+              </div>
+            </article>
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">📅</div>
+                <div>
+                  <h3>Бот-администратор</h3>
+                  <p class="bot-function">Онлайн-запись на услуги</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Запись</span><p>Клиент выбирает удобное время — бот записывает в ваш календарь без вашего участия.</p></div>
+                <div class="bot-point"><span class="bot-label">Напоминания</span><p>Автоматически за 2 часа до визита — снижает процент неявок.</p></div>
+                <div class="bot-point"><span class="bot-label">Управление</span><p>Вы видите весь график в одном месте, без звонков и путаницы.</p></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADVANTAGE -->
+      <section class="section section--reviews">
+        <div class="container">
+          <div class="advantage-wrap reveal-up">
+            <div class="advantage-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&auto=format&fit=crop"
+                alt="Telegram-бот для бизнеса"
+                class="advantage-img"
+              />
+            </div>
+            <div class="advantage-text">
+              <span class="eyebrow">Главное преимущество</span>
+              <h2>Сайт + бот = единая система продаж</h2>
+              <p>Человек зашёл на сайт, нажал кнопку — и уже общается с ботом в Telegram. Никаких форм, ожидания и «мы перезвоним».</p>
+              <p class="mt16">Бот работает 24/7: собирает заявки, считает стоимость, ведёт онлайн-запись — пока вы занимаетесь делом.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECONOMY -->
+      <section class="section section--cases">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Экономика</span>
+            <h2>Бот vs живой сотрудник</h2>
+          </div>
+          <div class="economy-grid">
+            <div class="economy-card economy-card--bad reveal-up">
+              <h3>Живой администратор</h3>
+              <div class="economy-price">30 000 ₽<span class="economy-per">/мес</span></div>
+              <div class="economy-year">= 360 000 ₽ в год</div>
+              <ul class="economy-list economy-list--bad">
+                <li>Работает только в рабочее время</li>
+                <li>Болеет, уходит в отпуск</li>
+                <li>Забывает напоминать клиентам</li>
+                <li>Оклад + налоги + обучение</li>
+              </ul>
+            </div>
+            <div class="economy-vs reveal-up">VS</div>
+            <div class="economy-card economy-card--good reveal-up">
+              <h3>Telegram-бот</h3>
+              <div class="economy-price economy-price--orange">от 10 000 ₽<span class="economy-per"> разово</span></div>
+              <div class="economy-year economy-save">Экономия более 95% в первый год</div>
+              <ul class="economy-list economy-list--good">
+                <li>Работает 24/7 без выходных</li>
+                <li>Не болеет и не увольняется</li>
+                <li>Всегда отправляет напоминания</li>
+                <li>Одноразовая оплата</li>
+              </ul>
+              <div class="economy-bonus">+ освобождает 2 часа вашего времени в день</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING CARD SPREAD -->
+      <section class="section section--process" id="pricing">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Прайс</span>
+            <h2>Стоимость и сроки</h2>
+          </div>
+
+          <div class="card-spread card-spread--trio reveal-up">
+            <div class="card-spread__toggle-wrap">
+              <label class="card-spread-open">
+                <input type="checkbox" class="card-spread-toggle" />
+                <span class="card-spread-open__text--expand">Развернуть карточки ↗</span>
+                <span class="card-spread-open__text--collapse">Свернуть ↙</span>
+              </label>
+            </div>
+
+            <div class="card-spread-stage">
+              <div class="card-spread-container card-spread-container--trio">
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="pc-card">
+                        <div class="pc-card__num">01</div>
+                        <h3 class="pc-card__title">Бот-опросник</h3>
+                        <div class="pc-card__price">от 5 000 ₽</div>
+                        <div class="pc-card__duration">срок: от 3 дней</div>
+                        <ul class="pc-card__list">
+                          <li>Сценарий и приветствие</li>
+                          <li>Опрос и расчёт цены</li>
+                          <li>Готовая заявка в Telegram</li>
+                        </ul>
+                        <a href="#contact" class="button button--ghost pc-card__btn">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="pc-card pc-card--2">
+                        <div class="pc-card__num">02</div>
+                        <h3 class="pc-card__title">Бот-администратор</h3>
+                        <div class="pc-card__price">от 10 000 ₽</div>
+                        <div class="pc-card__duration">срок: от 5 дней</div>
+                        <ul class="pc-card__list">
+                          <li>Всё из бот-опросника</li>
+                          <li>Онлайн-запись в календарь</li>
+                          <li>Авто-напоминания за 2 часа</li>
+                        </ul>
+                        <a href="#contact" class="button button--ghost pc-card__btn">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="pc-card pc-card--featured">
+                        <div class="pc-card__badge">Выгоднее всего</div>
+                        <div class="pc-card__num">03</div>
+                        <h3 class="pc-card__title">Комбо: Сайт + Бот</h3>
+                        <div class="pc-card__old">60 000 ₽</div>
+                        <div class="pc-card__price">от 45 000 ₽</div>
+                        <div class="pc-card__duration">срок: от 10 дней</div>
+                        <ul class="pc-card__list">
+                          <li>Сайт на Tilda под ключ</li>
+                          <li>Telegram-бот — полная автоматизация</li>
+                          <li>SEO-оптимизация</li>
+                          <li>Подключение и настройка</li>
+                        </ul>
+                        <a href="#contact" class="button button--primary pc-card__btn">Заказать</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SERVICES CARD SPREAD -->
+      <section class="section section--certs">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Услуги</span>
+            <h2>Типы сайтов и стоимость</h2>
+          </div>
+
+          <div class="card-spread reveal-up">
+            <div class="card-spread__toggle-wrap">
+              <label class="card-spread-open">
+                <input type="checkbox" class="card-spread-toggle" />
+                <span class="card-spread-open__text--expand">Развернуть карточки ↗</span>
+                <span class="card-spread-open__text--collapse">Свернуть ↙</span>
+              </label>
+            </div>
+
+            <div class="card-spread-stage">
+              <div class="card-spread-container">
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="cs-card">
+                        <div class="cs-card__num">01</div>
+                        <div class="cs-card__icon">🪪</div>
+                        <h3 class="cs-card__title">Сайт-визитка</h3>
+                        <p class="cs-card__desc">Онлайн-представительство специалиста</p>
+                        <div class="cs-card__footer">
+                          <div class="cs-card__price">20 000 — 45 000 ₽</div>
+                          <div class="cs-card__duration">⏱ 12–14 дней</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="cs-card cs-card--2">
+                        <div class="cs-card__num">02</div>
+                        <div class="cs-card__icon">🎯</div>
+                        <h3 class="cs-card__title">Landing Page</h3>
+                        <p class="cs-card__desc">Продающий лендинг с высокой конверсией</p>
+                        <div class="cs-card__footer">
+                          <div class="cs-card__price">25 000 — 80 000 ₽</div>
+                          <div class="cs-card__duration">⏱ 14–22 дня</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="cs-card cs-card--3">
+                        <div class="cs-card__num">03</div>
+                        <div class="cs-card__icon">🏢</div>
+                        <h3 class="cs-card__title">Корпоративный сайт</h3>
+                        <p class="cs-card__desc">5–15 страниц, полная упаковка бизнеса</p>
+                        <div class="cs-card__footer">
+                          <div class="cs-card__price">60 000 — 180 000 ₽</div>
+                          <div class="cs-card__duration">⏱ 20–30 дней</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-spread-item">
+                  <div class="card-spread-item__hover">
+                    <div class="card-spread-item__internal">
+                      <div class="cs-card cs-card--4">
+                        <div class="cs-card__num">04</div>
+                        <div class="cs-card__icon">🛒</div>
+                        <h3 class="cs-card__title">Интернет-магазин</h3>
+                        <p class="cs-card__desc">До 50 товаров, корзина, онлайн-оплата</p>
+                        <div class="cs-card__footer">
+                          <div class="cs-card__price">90 000 — 300 000 ₽</div>
+                          <div class="cs-card__duration">⏱ 21–45 дней</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PHOTO GALLERY -->
+      <section class="section section--contact gallery-section">
+        <div class="container">
+          <div class="gallery-grid">
+            <div class="gallery-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop" alt="Аналитика и SEO" class="gallery-img" />
+              <div class="gallery-caption">Аналитика и SEO</div>
+            </div>
+            <div class="gallery-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop" alt="Мобильный адаптив" class="gallery-img" />
+              <div class="gallery-caption">Мобильный адаптив</div>
+            </div>
+            <div class="gallery-item reveal-up">
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop" alt="Разработка под ключ" class="gallery-img" />
+              <div class="gallery-caption">Разработка под ключ</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section section--services" id="process">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Процесс</span>
+            <h2>Как проходит работа</h2>
+            <p>Общий срок: 10–16 дней</p>
+          </div>
+          <div class="process-grid">
+            <div class="process-step reveal-up">
+              <div class="process-num">01</div>
+              <h3>Анализ и ТЗ</h3>
+              <p>Разбираем задачи, аудиторию, конкурентов. Фиксируем структуру и ключевые слова для SEO.</p>
+            </div>
+            <div class="process-step reveal-up">
+              <div class="process-num">02</div>
+              <h3>Прототип и дизайн</h3>
+              <p>Чёткая структура, адаптив, продающие тексты и современный дизайн с анимациями.</p>
+            </div>
+            <div class="process-step reveal-up">
+              <div class="process-num">03</div>
+              <h3>Вёрстка и запуск</h3>
+              <p>Финальная сборка, подключение домена, проверка форм и заявок, передача проекта.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES FLIP CARDS -->
+      <section class="section section--features" id="certs">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Сертификаты</span>
+            <h2>Доказанная экспертиза</h2>
+            <p>Нажмите на карточку, чтобы увидеть сертификат</p>
+          </div>
+          <div class="certs-flip-grid">
+
+            <div class="flip-card reveal-up">
+              <div class="flip-card__inner">
+                <div class="flip-card__front flip-card__front--yandex">
+                  <div class="flip-front-top">
+                    <div class="flip-org">Яндекс</div>
+                    <div class="flip-badge">Базовый уровень</div>
+                  </div>
+                  <div class="flip-main">
+                    <h3 class="flip-title">Яндекс Директ</h3>
+                    <p class="flip-subtitle">Сертификат специалиста</p>
+                  </div>
+                  <div class="flip-bottom">
+                    <div class="flip-meta"><span>№ 307615</span><span>До 18.04.2027</span></div>
+                    <div class="flip-hint">Нажмите ↻</div>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <img src="cert1.jpg" alt="Сертификат Яндекс Директ" />
+                  <div class="flip-back-hint">↩ Назад</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card reveal-up">
+              <div class="flip-card__inner">
+                <div class="flip-card__front flip-card__front--gora">
+                  <div class="flip-front-top">
+                    <div class="flip-org flip-org--gora">▲ GORA ACADEMY</div>
+                  </div>
+                  <div class="flip-main">
+                    <h3 class="flip-title">Маркетинг и маркетинговые связки</h3>
+                    <p class="flip-subtitle">Практикум · 5 уроков и 5 работ</p>
+                  </div>
+                  <div class="flip-bottom">
+                    <div class="flip-meta"><span>№ 368-250426</span><span>25.04.2026</span></div>
+                    <div class="flip-hint">Нажмите ↻</div>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <img src="cert2.jpg" alt="Сертификат Gora Academy Маркетинг" />
+                  <div class="flip-back-hint">↩ Назад</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flip-card reveal-up">
+              <div class="flip-card__inner">
+                <div class="flip-card__front flip-card__front--gora">
+                  <div class="flip-front-top">
+                    <div class="flip-org flip-org--gora">▲ GORA ACADEMY</div>
+                  </div>
+                  <div class="flip-main">
+                    <h3 class="flip-title">Автоматизация бизнеса и AI-агенты</h3>
+                    <p class="flip-subtitle">Практикум · 6 уроков и 4 работы</p>
+                  </div>
+                  <div class="flip-bottom">
+                    <div class="flip-meta"><span>№ 582-230526</span><span>23.05.2026</span></div>
+                    <div class="flip-hint">Нажмите ↻</div>
+                  </div>
+                </div>
+                <div class="flip-card__back">
+                  <img src="cert3.jpg" alt="Сертификат Gora Academy AI-агенты" />
+                  <div class="flip-back-hint">↩ Назад</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--trust" id="faq">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">FAQ</span>
+            <h2>Частые вопросы</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal-up">
+              <summary>Что входит в стоимость?</summary>
+              <div class="faq-body">В стоимость входит: разработка прототипа, дизайн, вёрстка на Tilda, наполнение контентом, SEO-оптимизация, настройка форм и подключение бота. Домен и хостинг оплачиваются отдельно по факту.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Реально ли уложиться в 10–14 дней?</summary>
+              <div class="faq-body">Да, если быстро предоставляете материалы (тексты, фото, пожелания). Именно для этого есть чек-лист — он помогает собрать всё нужное заранее и не тормозить процесс.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Нужно ли платить за бота ежемесячно?</summary>
+              <div class="faq-body">Нет. Вы платите один раз за разработку. Стоимость поддержания работы бота минимальна и зависит от платформы — обсудим при заказе.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Как связаны сайт и бот?</summary>
+              <div class="faq-body">На сайте размещается кнопка, которая ведёт прямо в Telegram-бот. Клиент нажимает — и сразу попадает в воронку: бот задаёт вопросы, считает стоимость и отправляет заявку вам. Без звонков и ожиданий.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Нужна ли лицензия Tilda?</summary>
+              <div class="faq-body">Для разработки использую свою лицензию. После сдачи проекта вам нужно будет оформить подписку Tilda — от 750 ₽/мес. Это стандартное условие платформы.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Готовы запускать?</span>
+              <h2>Оставьте контакт — обсудим проект</h2>
+              <p>Напишите имя и телефон или мессенджер. Звонить не буду — напишу сам.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/tk.webdis@gmail.com" method="POST">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Расскажите о проекте (необязательно)" rows="4"></textarea>
+              <input type="hidden" name="_subject" value="Новая заявка с сайта TK Web" />
+              <input type="hidden" name="_captcha" value="false" />
+              <button type="submit" class="button button--primary">Отправить заявку →</button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.png" alt="TK Web" class="logo-footer" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://tk-web-portfolio.netlify.app" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web</div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

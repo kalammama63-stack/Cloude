@@ -1,0 +1,13 @@
+# Скриншоты (рабочие файлы, не нужны на сайте)
+screenshot_*.png
+flip_front.png
+flip_back.png
+
+# Старые/незаконченные страницы
+homepage.html
+site-tilda.html
+telegram-bot.html
+
+# Служебные файлы
+key.json
+key.jsonGet-Item
