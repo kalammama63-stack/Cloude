@@ -136,8 +136,12 @@ img { max-width: 100%; display: block; }
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--border);
 }
+.button--ghost-accent {
+  border-color: var(--accent-orange);
+}
 .button--secondary:hover,
-.button--ghost:hover {
+.button--ghost:hover,
+.button--ghost-accent:hover {
   border-color: var(--border-accent);
   background: var(--accent-orange-dim);
   color: var(--text-primary);
