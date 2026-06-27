@@ -1954,9 +1954,10 @@ p { margin: 0; }
 .rev-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
   max-width: 720px;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 [data-scroll="fade-slide"] {
@@ -1987,14 +1988,22 @@ p { margin: 0; }
 }
 
 .rev-card {
+  position: sticky;
+  top: 80px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 36px 40px;
+  margin-bottom: 16px;
   transform-origin: top center;
   will-change: transform;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
+.rev-card:nth-child(1) { z-index: 1; }
+.rev-card:nth-child(2) { z-index: 2; }
+.rev-card:nth-child(3) { z-index: 3; }
+.rev-card:nth-child(4) { z-index: 4; }
+.rev-card:nth-child(5) { z-index: 5; }
 .rev-card:hover {
   border-color: var(--border-accent);
   box-shadow: var(--shadow-orange);
