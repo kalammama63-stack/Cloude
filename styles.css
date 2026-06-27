@@ -939,7 +939,7 @@ p { margin: 0; }
 /* ============================================================
    BOTS
    ============================================================ */
-.bots-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.bots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .bot-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1678,7 +1678,6 @@ p { margin: 0; }
 @media (max-width: 1120px) {
   .hero__content,
   .cases-grid,
-  .bots-grid,
   .advantage-wrap,
   .pricing-grid,
   .gallery-grid,
@@ -1686,6 +1685,8 @@ p { margin: 0; }
   .contact-wrap {
     grid-template-columns: 1fr;
   }
+
+  .bots-grid { grid-template-columns: repeat(2, 1fr); }
 
   .spinning-logo-wrap {
     bottom: -20px;
@@ -1738,6 +1739,8 @@ p { margin: 0; }
   .contact-wrap { padding: 28px; gap: 32px; }
 
   .guide-card { flex-direction: column; align-items: flex-start; padding: 24px; }
+
+  .bots-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
