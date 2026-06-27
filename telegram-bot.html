@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram-бот для бизнеса под ключ | TK Web</title>
+  <meta name="description" content="Разработка Telegram-ботов для бизнеса: запись клиентов, магазин, рассылки, поддержка, лояльность. 6 видов ботов. Под ключ от 10 000 ₽. Работаю по всей России." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/telegram-bot.html" />
+  <meta property="og:title" content="Telegram-бот для бизнеса под ключ | TK Web" />
+  <meta property="og:description" content="6 видов Telegram-ботов: запись, магазин, рассылки, поддержка, лояльность. Автоматизация бизнеса от 10 000 ₽." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tk-webb.ru/telegram-bot.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:image" content="https://tk-webb.ru/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Разработка Telegram-ботов для бизнеса",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "TK Web — Тамара Коломейцева",
+      "url": "https://tk-webb.ru/",
+      "telephone": "+79662864905",
+      "email": "tk.webdis@gmail.com",
+      "areaServed": "RU"
+    },
+    "description": "Разработка Telegram-ботов под ключ: опросник, администратор, магазин, рассылка, поддержка, лояльность.",
+    "offers": [
+      { "@type": "Offer", "name": "Бот-опросник", "price": "10000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Бот-администратор (онлайн-запись)", "price": "25000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Бот-магазин", "price": "30000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Бот-рассылка", "price": "15000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Бот-поддержка", "price": "20000", "priceCurrency": "RUB" },
+      { "@type": "Offer", "name": "Бот лояльности", "price": "25000", "priceCurrency": "RUB" }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="index.html">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="site-tilda.html">Сайты на Tilda</a>
+          <a href="telegram-bot.html" class="nav--active">Telegram-боты</a>
+          <a href="index.html#cases">Кейсы</a>
+          <a href="#pricing">Прайс</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Разработка Telegram-ботов</span>
+            <h1 class="reveal-up">Telegram-бот для бизнеса под ключ — автоматизация заявок, записи и продаж</h1>
+            <p class="hero__sub reveal-up">6 видов ботов под любую задачу. Бот работает 24/7, не болеет и не увольняется — пока вы занимаетесь делом.</p>
+            <ul class="hero__checklist reveal-up">
+              <li><span class="check-icon">✓</span>80% рутины переходит на бота</li>
+              <li><span class="check-icon">✓</span>Работает 24/7 без выходных</li>
+              <li><span class="check-icon">✓</span>Одноразовая оплата — без ежемесячных расходов</li>
+              <li><span class="check-icon">✓</span>Фиксированная цена в договоре</li>
+            </ul>
+            <div class="hero__actions reveal-up">
+              <a class="button button--primary" href="#contact">Заказать бота</a>
+              <a class="button button--ghost button--ghost-accent" href="https://t.me/firstTKbot?start=1" target="_blank" rel="noreferrer">Попробовать бота →</a>
+            </div>
+          </div>
+          <div class="hero-inner__badge reveal-right">
+            <div class="inner-badge">
+              <div class="inner-badge__num">6</div>
+              <div class="inner-badge__label">видов ботов</div>
+              <div class="inner-badge__divider"></div>
+              <div class="inner-badge__num">от 10 000 ₽</div>
+              <div class="inner-badge__label">стоимость</div>
+              <div class="inner-badge__divider"></div>
+              <div class="inner-badge__num">от 3 дней</div>
+              <div class="inner-badge__label">срок сдачи</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <span>Бот-опросник</span><span class="marquee-dot">•</span>
+          <span>Онлайн-запись</span><span class="marquee-dot">•</span>
+          <span>Бот-магазин</span><span class="marquee-dot">•</span>
+          <span>Рассылки клиентам</span><span class="marquee-dot">•</span>
+          <span>Поддержка 24/7</span><span class="marquee-dot">•</span>
+          <span>Программа лояльности</span><span class="marquee-dot">•</span>
+          <span>Автоматизация заявок</span><span class="marquee-dot">•</span>
+          <span>Бот-опросник</span><span class="marquee-dot">•</span>
+          <span>Онлайн-запись</span><span class="marquee-dot">•</span>
+          <span>Бот-магазин</span><span class="marquee-dot">•</span>
+          <span>Рассылки клиентам</span><span class="marquee-dot">•</span>
+          <span>Поддержка 24/7</span><span class="marquee-dot">•</span>
+          <span>Программа лояльности</span><span class="marquee-dot">•</span>
+          <span>Автоматизация заявок</span><span class="marquee-dot">•</span>
+        </div>
+      </div>
+
+      <!-- 6 BOTS -->
+      <section class="section section--trust" id="bots">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Виды ботов</span>
+            <h2>6 видов Telegram-ботов для бизнеса</h2>
+            <p>Каждый бот решает конкретную задачу. Можно взять один или несколько в связке с сайтом.</p>
+          </div>
+          <div class="bots-grid">
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">💬</div>
+                <div>
+                  <h3>Бот-опросник</h3>
+                  <p class="bot-function">Расчёт стоимости и сбор заявок</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Клиент звонит, долго объясняет задачу — вы тратите время на уточнение деталей.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот задаёт вопросы, собирает данные и отправляет готовую заявку вам в Telegram.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Вы получаете клиента с уже заполненным брифом — без лишних звонков и переписок.</p></div>
+              </div>
+            </article>
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">📅</div>
+                <div>
+                  <h3>Бот-администратор</h3>
+                  <p class="bot-function">Онлайн-запись на услуги</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Запись</span><p>Клиент выбирает удобное время — бот записывает в ваш календарь без вашего участия.</p></div>
+                <div class="bot-point"><span class="bot-label">Напоминания</span><p>Автоматически за 2 часа до визита — снижает процент неявок.</p></div>
+                <div class="bot-point"><span class="bot-label">Управление</span><p>Вы видите весь график в одном месте, без звонков и путаницы.</p></div>
+              </div>
+            </article>
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">🛍️</div>
+                <div>
+                  <h3>Бот-магазин</h3>
+                  <p class="bot-function">Каталог товаров и приём заказов</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Клиент хочет купить, но у вас нет интернет-магазина — он уходит к конкурентам.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот показывает каталог с фото, принимает заказ и собирает данные для доставки прямо в Telegram.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Продажи 24/7 без сайта-магазина. Заказ приходит к вам уже полностью оформленным.</p></div>
+              </div>
+            </article>
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">📢</div>
+                <div>
+                  <h3>Бот-рассылка</h3>
+                  <p class="bot-function">Удержание клиентов и акции</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Клиенты покупают раз и пропадают — вы не можете с ними связаться повторно.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот собирает базу подписчиков и рассылает акции, новинки и напоминания одной кнопкой.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Повторные продажи растут без дополнительного бюджета на рекламу.</p></div>
+              </div>
+            </article>
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">🤖</div>
+                <div>
+                  <h3>Бот-поддержка</h3>
+                  <p class="bot-function">Автоответы на частые вопросы</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Одни и те же вопросы занимают 80% рабочего дня — цена, адрес, время работы.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот мгновенно отвечает на FAQ, а сложные вопросы переводит на живого менеджера.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Экономите 2–3 часа в день. Клиенты получают ответ в любое время суток.</p></div>
+              </div>
+            </article>
+
+            <article class="bot-card reveal-up">
+              <div class="bot-card__top">
+                <div class="bot-emoji">🎁</div>
+                <div>
+                  <h3>Бот лояльности</h3>
+                  <p class="bot-function">Бонусная программа и рефералы</p>
+                </div>
+              </div>
+              <div class="bot-card__body">
+                <div class="bot-point"><span class="bot-label">Проблема</span><p>Клиенты уходят к конкурентам — нет причины возвращаться именно к вам.</p></div>
+                <div class="bot-point"><span class="bot-label">Решение</span><p>Бот выдаёт бонусные баллы, даёт скидки постоянным покупателям и запускает реферальную программу.</p></div>
+                <div class="bot-point"><span class="bot-label">Выгода</span><p>Повторные визиты +40%, средний чек растёт за счёт персональных предложений.</p></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ADVANTAGE -->
+      <section class="section section--reviews">
+        <div class="container">
+          <div class="advantage-wrap reveal-up">
+            <div class="advantage-img-wrap">
+              <img src="Frame 1.png" alt="Telegram-бот для бизнеса" class="advantage-img" loading="lazy" />
+            </div>
+            <div class="advantage-text">
+              <span class="eyebrow">Главное преимущество</span>
+              <h2>Сайт + бот = единая система продаж</h2>
+              <p>Человек зашёл на сайт, нажал кнопку — и уже общается с ботом в Telegram. Никаких форм, ожидания и «мы перезвоним».</p>
+              <p class="mt16">Бот работает 24/7: собирает заявки, считает стоимость, ведёт онлайн-запись — пока вы занимаетесь своим делом.</p>
+              <div class="hero__actions" style="margin-top: 28px;">
+                <a href="site-tilda.html" class="button button--ghost button--ghost-accent">Сайты на Tilda →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECONOMY -->
+      <section class="section section--cases">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Экономика</span>
+            <h2>Бот vs живой сотрудник</h2>
+          </div>
+          <div class="economy-grid">
+            <div class="economy-card economy-card--bad reveal-up">
+              <h3>Живой администратор</h3>
+              <div class="economy-price">30 000 ₽<span class="economy-per">/мес</span></div>
+              <div class="economy-year">= 360 000 ₽ в год</div>
+              <ul class="economy-list economy-list--bad">
+                <li>Работает только в рабочее время</li>
+                <li>Болеет, уходит в отпуск</li>
+                <li>Забывает напоминать клиентам</li>
+                <li>Оклад + налоги + обучение</li>
+              </ul>
+            </div>
+            <div class="economy-vs reveal-up">VS</div>
+            <div class="economy-card economy-card--good reveal-up">
+              <h3>Telegram-бот</h3>
+              <div class="economy-price economy-price--orange">от 10 000 ₽<span class="economy-per"> разово</span></div>
+              <div class="economy-year economy-save">Экономия более 95% в первый год</div>
+              <ul class="economy-list economy-list--good">
+                <li>Работает 24/7 без выходных</li>
+                <li>Не болеет и не увольняется</li>
+                <li>Всегда отправляет напоминания</li>
+                <li>Одноразовая оплата</li>
+              </ul>
+              <div class="economy-bonus">+ освобождает 2–3 часа вашего времени в день</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="section section--services" id="pricing">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Прайс</span>
+            <h2>Стоимость Telegram-ботов</h2>
+            <p>Цена фиксируется в договоре. Скрытых платежей и ежемесячных платежей нет.</p>
+          </div>
+          <div class="services-table reveal-up">
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">💬</div>
+              <div class="bot-price-row__name"><h3>Бот-опросник</h3><p>Сценарий, опрос, расчёт цены, готовая заявка в Telegram</p></div>
+              <div class="bot-price-row__price">от 10 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 3 дней</div>
+            </div>
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">📅</div>
+              <div class="bot-price-row__name"><h3>Бот-администратор</h3><p>Онлайн-запись, управление расписанием, авто-напоминания</p></div>
+              <div class="bot-price-row__price">от 25 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 5 дней</div>
+            </div>
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">🛍️</div>
+              <div class="bot-price-row__name"><h3>Бот-магазин</h3><p>Каталог с фото, корзина, оформление и приём заказов</p></div>
+              <div class="bot-price-row__price">от 30 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 7 дней</div>
+            </div>
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">📢</div>
+              <div class="bot-price-row__name"><h3>Бот-рассылка</h3><p>Сбор базы, рассылка акций и уведомлений по кнопке</p></div>
+              <div class="bot-price-row__price">от 15 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 3 дней</div>
+            </div>
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">🤖</div>
+              <div class="bot-price-row__name"><h3>Бот-поддержка</h3><p>Автоответы на FAQ, перевод сложных вопросов на менеджера</p></div>
+              <div class="bot-price-row__price">от 20 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 5 дней</div>
+            </div>
+            <div class="bot-price-row">
+              <div class="bot-price-emoji">🎁</div>
+              <div class="bot-price-row__name"><h3>Бот лояльности</h3><p>Бонусные баллы, скидки постоянным клиентам, реферальная программа</p></div>
+              <div class="bot-price-row__price">от 25 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 7 дней</div>
+            </div>
+            <div class="bot-price-row bot-price-row--featured">
+              <div class="bot-price-emoji">🚀</div>
+              <div class="bot-price-row__name"><h3>Сайт + Telegram-бот</h3><p>Любой сайт на Tilda + бот в связке — единая система продаж</p></div>
+              <div class="bot-price-row__price">от 45 000 ₽</div>
+              <div class="bot-price-row__duration">⏱ от 10 дней</div>
+            </div>
+          </div>
+          <p class="pricing-note reveal-up">Цена зависит от сложности сценария. Обсудим вашу задачу и назову точную стоимость — бесплатно, без обязательств.</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--trust" id="faq">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">FAQ</span>
+            <h2>Вопросы о Telegram-ботах</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal-up">
+              <summary>Нужно ли платить за бота ежемесячно?</summary>
+              <div class="faq-body">Нет. Вы платите один раз за разработку. Стоимость работы бота минимальна и зависит от используемой платформы — обсудим при заказе. В большинстве случаев это бесплатно или до 500 ₽/мес.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Как связаны сайт и бот?</summary>
+              <div class="faq-body">На сайте размещается кнопка, которая ведёт прямо в Telegram-бот. Клиент нажимает — и сразу попадает в воронку: бот задаёт вопросы, считает стоимость и отправляет заявку вам. Без звонков и ожиданий.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Какие виды ботов вы разрабатываете?</summary>
+              <div class="faq-body">Разрабатываю 6 видов ботов: опросник (сбор заявок), администратор (онлайн-запись), магазин (каталог и заказы), рассылка (акции и напоминания), поддержка (ответы на FAQ) и лояльность (бонусная программа). Также делаю комбинированные боты с несколькими функциями.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Могу ли я сам управлять ботом после сдачи?</summary>
+              <div class="faq-body">Да. После сдачи обучу как редактировать тексты, добавлять вопросы и управлять базой подписчиков. Бот остаётся вашим — полностью под вашим контролем.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>Можно ли доработать бота позже?</summary>
+              <div class="faq-body">Да. После сдачи при необходимости можно добавить новые функции или изменить сценарий. Стоимость доработки обсуждается отдельно в зависимости от объёма изменений.</div>
+            </details>
+            <details class="faq-item reveal-up">
+              <summary>За сколько дней делается бот?</summary>
+              <div class="faq-body">Простой бот-опросник — от 3 дней. Бот с онлайн-записью или каталогом — от 5–7 дней. Сложные комбинированные сценарии — от 10 дней. Точный срок фиксируется в договоре.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Готовы автоматизировать?</span>
+              <h2>Расскажите о задаче для бота</h2>
+              <p>Напишите имя и телефон или мессенджер. Звонить не буду — напишу сам.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Какой бот нужен? (необязательно)" rows="4"></textarea>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить заявку →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.png" alt="TK Web" class="logo-footer" loading="lazy" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

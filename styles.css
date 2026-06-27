@@ -2076,3 +2076,242 @@ p { margin: 0; }
   .rev-card { padding: 24px 20px; }
   .rev-stars { font-size: 0.9rem; }
 }
+
+/* ============================================================
+   INNER PAGE NAV ACTIVE STATE
+   ============================================================ */
+.nav--active { color: var(--accent-orange) !important; }
+
+/* ============================================================
+   INNER PAGE HERO
+   ============================================================ */
+.section--hero-inner {
+  padding: 80px 0 100px;
+  background: #414042;
+  position: relative;
+  overflow: hidden;
+}
+.section--hero-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 40%, rgba(249,139,0,0.09) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 60%, rgba(249,139,0,0.05) 0%, transparent 45%);
+  pointer-events: none;
+}
+.hero-inner__content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-inner__text h1 { font-size: clamp(1.9rem, 3vw, 3rem); margin-bottom: 20px; }
+.hero-inner__text .eyebrow { margin-bottom: 14px; }
+
+.inner-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-card);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow: var(--shadow-orange);
+}
+.inner-badge__num {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--accent-orange);
+  line-height: 1.1;
+}
+.inner-badge__label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+  margin-bottom: 18px;
+}
+.inner-badge__divider {
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .hero-inner__content { grid-template-columns: 1fr; }
+  .hero-inner__badge { display: none; }
+}
+
+/* ============================================================
+   WHY-GRID (6 cards)
+   ============================================================ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  transition: border-color 0.3s, transform 0.25s;
+}
+.why-card:hover { border-color: var(--border-accent); transform: translateY(-3px); }
+.why-icon { font-size: 1.8rem; margin-bottom: 14px; line-height: 1; }
+.why-card h3 { margin: 0 0 10px; font-size: 1rem; }
+.why-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0; }
+
+@media (max-width: 1120px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 680px)  { .why-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   SITE TYPE CARDS
+   ============================================================ */
+.site-types-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.site-type-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.3s;
+}
+.site-type-card:hover { border-color: var(--border-accent); }
+.site-type-card--featured {
+  border-color: var(--border-accent);
+  background: rgba(249,139,0,0.03);
+}
+.site-type-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.site-type-icon { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+.site-type-card__head > div { flex: 1; }
+.site-type-card__head h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.site-type-for {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+.site-type-price {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  white-space: nowrap;
+  margin-left: auto;
+  text-align: right;
+}
+.site-type-desc { color: var(--text-secondary); line-height: 1.7; font-size: 0.9rem; margin: 0; }
+.site-type-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.site-type-tags span {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+.site-type-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.site-type-footer span { color: var(--text-muted); font-size: 0.84rem; }
+
+@media (max-width: 780px) { .site-types-list { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   INCLUDED GRID
+   ============================================================ */
+.included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.included-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  transition: border-color 0.3s;
+}
+.included-item:hover { border-color: var(--border-accent); }
+.included-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-orange-dim);
+  color: var(--accent-orange);
+  font-size: 0.82rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.included-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.included-item p { color: var(--text-secondary); font-size: 0.86rem; line-height: 1.65; margin: 0; }
+
+@media (max-width: 780px) { .included-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   PRICING NOTE
+   ============================================================ */
+.pricing-note {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   BOT PRICING TABLE (on telegram-bot.html)
+   ============================================================ */
+.bot-price-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 28px;
+  transition: border-color .3s, background .3s;
+}
+.bot-price-row:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+.bot-price-row--featured { border-color: var(--border-accent); background: rgba(249,139,0,0.04); }
+.bot-price-emoji { font-size: 1.6rem; line-height: 1; }
+.bot-price-row__name h3 { margin: 0 0 3px; font-size: 0.97rem; }
+.bot-price-row__name p { color: var(--text-secondary); font-size: 0.83rem; margin: 0; }
+.bot-price-row__price { font-size: 1rem; font-weight: 800; color: var(--accent-orange); white-space: nowrap; }
+.bot-price-row__duration { font-size: 0.82rem; color: var(--text-secondary); white-space: nowrap; text-align: right; }
+
+@media (max-width: 680px) {
+  .bot-price-row { grid-template-columns: 36px 1fr; gap: 10px; }
+  .bot-price-row__price, .bot-price-row__duration { grid-column: 2; text-align: left; }
+}
