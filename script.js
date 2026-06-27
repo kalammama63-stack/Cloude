@@ -261,6 +261,47 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
+   CONTACT FORM — отправка в Telegram
+   ============================================================ */
+(function () {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name    = form.querySelector('[name="name"]').value.trim();
+    const contact = form.querySelector('[name="contact"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+    const btn     = form.querySelector('#aiBtn');
+
+    const text = `📬 Новая заявка с сайта TK Web\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}${message ? '\n💬 Сообщение: ' + message : ''}`;
+
+    btn.disabled    = true;
+    btn.textContent = 'Отправляю...';
+
+    try {
+      const res = await fetch('https://api.telegram.org/bot8974900147:AAErGOAW3RrvNURzevwcx7i-QeqVXO_9Iy0/sendMessage', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ chat_id: 8715001372, text })
+      });
+
+      if (!res.ok) throw new Error();
+
+      form.innerHTML = '<p class="form-success">Заявка отправлена! Напишу в мессенджер в течение дня 🤝</p>';
+    } catch {
+      btn.disabled    = false;
+      btn.innerHTML   = '✦ Отправить заявку →';
+      const err = document.createElement('p');
+      err.className   = 'form-error';
+      err.textContent = 'Не удалось отправить. Напишите напрямую: @TK_Web';
+      form.appendChild(err);
+    }
+  });
+})();
+
+/* ============================================================
    SCROLL TO TOP
    ============================================================ */
 (function () {

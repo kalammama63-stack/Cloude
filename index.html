@@ -697,21 +697,17 @@
                 <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
               </div>
             </div>
-            <form class="contact-form" onsubmit="return false;">
+            <form class="contact-form" id="contactForm">
               <input type="text" name="name" placeholder="Ваше имя" required />
               <input type="text" name="contact" placeholder="Телефон или Telegram" required />
               <textarea name="message" placeholder="Расскажите о проекте (необязательно)" rows="4"></textarea>
-              <input type="hidden" name="_subject" value="Новая заявка с сайта TK Web" />
-              <input type="hidden" name="_captcha" value="false" />
-              <a href="https://max.ru/u/f9LHodD0cOJpyUIq7-C9ZbF6BWkkcugepiRE8RLCYP9owSCEG5-ohLqr09M"
-                 target="_blank" rel="noreferrer"
-                 class="button button--primary ai-btn" id="aiBtn">
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
                 <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
                 <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
                 <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
                 <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
                 Отправить заявку →
-              </a>
+              </button>
               <p class="form-note">Звонить не буду — напишу в мессенджер</p>
             </form>
           </div>
