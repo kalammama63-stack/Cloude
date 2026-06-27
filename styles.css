@@ -1949,33 +1949,17 @@ p { margin: 0; }
 }
 
 /* ============================================================
-   REVIEWS STICKY STACK
+   REVIEWS
    ============================================================ */
-.rev-stack-root {
-  max-width: 720px;
-  margin: 48px auto 0;
-  padding: 0 18px;
-  position: relative;
+.rev-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 48px;
 }
 
-.rev-slot {
-  height: 480px;
-  position: relative;
-}
-.rev-slot:nth-child(1) { z-index: 1; }
-.rev-slot:nth-child(2) { z-index: 2; }
-.rev-slot:nth-child(3) { z-index: 3; }
-.rev-slot:nth-child(4) { z-index: 4; }
-.rev-slot:nth-child(5) { z-index: 5; }
-
-.rev-slot--last {
-  height: auto;
-  padding-bottom: 80px;
-}
-
-.rev-sticky {
-  position: sticky;
-  top: 110px;
+@media (max-width: 780px) {
+  .rev-list { grid-template-columns: 1fr; }
 }
 
 .rev-card {
