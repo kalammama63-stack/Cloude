@@ -302,6 +302,42 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
+   REVIEWS — Skiper16 sticky stack scale effect
+   ============================================================ */
+(function () {
+  const outer = document.getElementById('revOuter');
+  if (!outer) return;
+
+  const inners = outer.querySelectorAll('.rev-inner');
+  const N = inners.length;
+
+  // Same formula as Skiper16: targetScale = max(0.5, 1 - (N-i-1)*0.1)
+  const targetScales = Array.from({ length: N }, (_, i) =>
+    Math.max(0.5, 1 - (N - i - 1) * 0.1)
+  );
+
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+  function update() {
+    const rect = outer.getBoundingClientRect();
+    const scrollable = outer.offsetHeight - window.innerHeight;
+    if (scrollable <= 0) return;
+    const progress = clamp(-rect.top / scrollable, 0, 1);
+
+    inners.forEach((inner, i) => {
+      // Each card starts animating at i*0.25 of total scroll (same as range=[i*0.25, 1])
+      const rangeStart = i * 0.25;
+      const t = rangeStart >= 1 ? 0 : clamp((progress - rangeStart) / (1 - rangeStart), 0, 1);
+      const scale = 1 + (targetScales[i] - 1) * t;
+      inner.style.transform = `scale(${scale})`;
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+/* ============================================================
    SCROLL TO TOP
    ============================================================ */
 (function () {
