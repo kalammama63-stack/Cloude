@@ -1952,12 +1952,9 @@ p { margin: 0; }
    REVIEWS — fade & slide on scroll
    ============================================================ */
 .rev-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: block;
   max-width: 720px;
   margin: 0 auto;
-  padding-bottom: 40px;
 }
 
 [data-scroll="fade-slide"] {
@@ -1994,11 +1991,10 @@ p { margin: 0; }
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 36px 40px;
-  margin-bottom: 16px;
-  transform-origin: top center;
-  will-change: transform;
+  margin-bottom: 120px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
+.rev-card:last-child { margin-bottom: 0; }
 .rev-card:nth-child(1) { z-index: 1; }
 .rev-card:nth-child(2) { z-index: 2; }
 .rev-card:nth-child(3) { z-index: 3; }
