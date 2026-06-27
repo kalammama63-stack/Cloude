@@ -1949,34 +1949,41 @@ p { margin: 0; }
 }
 
 /* ============================================================
-   REVIEWS — sticky stack (Skiper16-style)
+   REVIEWS — fade & slide on scroll
    ============================================================ */
-.rev-outer {
-  padding-top: 50vh;
-  padding-bottom: 100vh;
-  width: min(720px, calc(100% - 36px));
+.rev-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
-.rev-row {
-  position: sticky;
-  top: 0;
-  height: 300px;
-  display: flex;
-  justify-content: center;
+[data-scroll="fade-slide"] {
+  animation: scrollFadeSlide linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 80%;
 }
-.rev-row:nth-child(1) { z-index: 1; }
-.rev-row:nth-child(2) { z-index: 2; }
-.rev-row:nth-child(3) { z-index: 3; }
-.rev-row:nth-child(4) { z-index: 4; }
-.rev-row:nth-child(5) { z-index: 5; }
+[data-scroll="fade-slide"][data-scroll-direction="up"],
+[data-scroll="fade-slide"]:not([data-scroll-direction]) {
+  --scroll-tx: 0px; --scroll-ty: var(--scroll-distance, 40px);
+}
+[data-scroll="fade-slide"][data-scroll-direction="down"] {
+  --scroll-tx: 0px; --scroll-ty: calc(-1 * var(--scroll-distance, 40px));
+}
+[data-scroll="fade-slide"][data-scroll-direction="left"] {
+  --scroll-tx: var(--scroll-distance, 40px); --scroll-ty: 0px;
+}
+[data-scroll="fade-slide"][data-scroll-direction="right"] {
+  --scroll-tx: calc(-1 * var(--scroll-distance, 40px)); --scroll-ty: 0px;
+}
+@keyframes scrollFadeSlide {
+  from { opacity: 0; transform: translate(var(--scroll-tx, 0px), var(--scroll-ty, 40px)); }
+  to   { opacity: 1; transform: translate(0, 0); }
+}
 
-.rev-inner {
-  position: relative;
-  /* top is set inline per card */
-  width: 100%;
-  transform-origin: top center;
-  will-change: transform;
+@media (max-width: 780px) {
+  .rev-list { max-width: 100%; }
 }
 
 .rev-card {
