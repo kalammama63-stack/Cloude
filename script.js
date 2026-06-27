@@ -302,6 +302,33 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
+   REVIEWS STACK — scale buried cards as new ones crawl on top
+   ============================================================ */
+(function () {
+  const slots = document.querySelectorAll('.rev-slot');
+  if (!slots.length) return;
+
+  const STICKY_TOP = 110; // must match CSS top value
+  const SCALE_STEP = 0.038;
+
+  function updateRevScale() {
+    slots.forEach((slot, i) => {
+      const card = slot.querySelector('.rev-card');
+      if (!card) return;
+      let buried = 0;
+      for (let j = i + 1; j < slots.length; j++) {
+        const stickyEl = slots[j].querySelector('.rev-sticky');
+        if (stickyEl && stickyEl.getBoundingClientRect().top <= STICKY_TOP + 4) buried++;
+      }
+      card.style.transform = buried > 0 ? `scale(${Math.max(0.84, 1 - buried * SCALE_STEP)})` : '';
+    });
+  }
+
+  window.addEventListener('scroll', updateRevScale, { passive: true });
+  updateRevScale();
+})();
+
+/* ============================================================
    SCROLL TO TOP
    ============================================================ */
 (function () {

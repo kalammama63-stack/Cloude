@@ -1947,3 +1947,116 @@ p { margin: 0; }
     aspect-ratio: 3/4;
   }
 }
+
+/* ============================================================
+   REVIEWS STICKY STACK
+   ============================================================ */
+.rev-stack-root {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 0 18px;
+  position: relative;
+}
+
+.rev-slot {
+  height: 480px;
+  position: relative;
+}
+.rev-slot:nth-child(1) { z-index: 1; }
+.rev-slot:nth-child(2) { z-index: 2; }
+.rev-slot:nth-child(3) { z-index: 3; }
+.rev-slot:nth-child(4) { z-index: 4; }
+.rev-slot:nth-child(5) { z-index: 5; }
+
+.rev-slot--last {
+  height: auto;
+  padding-bottom: 80px;
+}
+
+.rev-sticky {
+  position: sticky;
+  top: 110px;
+}
+
+.rev-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 36px 40px;
+  transform-origin: top center;
+  will-change: transform;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.rev-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-orange);
+}
+
+.rev-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.rev-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--av-bg, #333);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rev-author-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.rev-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.rev-place {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.rev-stars {
+  color: var(--accent-orange);
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.rev-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.78;
+  margin: 0 0 20px;
+  font-style: italic;
+}
+
+.rev-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--accent-orange-dim);
+  color: var(--accent-orange-light);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .rev-slot { height: 380px; }
+  .rev-card { padding: 24px 20px; }
+  .rev-stars { font-size: 0.9rem; }
+}
