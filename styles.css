@@ -1457,6 +1457,10 @@ p { margin: 0; }
   background: linear-gradient(155deg, #1e1208 0%, var(--bg-graphite-900) 100%);
   border-color: var(--border-accent);
 }
+.cs-card--5 {
+  background: linear-gradient(155deg, #0d1520 0%, #1a1030 100%);
+  border-color: rgba(120, 80, 220, 0.35);
+}
 
 .cs-card__num {
   font-size: 0.65rem;
