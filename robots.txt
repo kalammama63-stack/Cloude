@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /homepage.html
 
 Sitemap: https://tk-webb.ru/sitemap.xml

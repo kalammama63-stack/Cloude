@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 /* ============================================================
    GLOBAL CSS VARIABLES — графитовая палитра + оранжевый акцент
    ============================================================ */
@@ -940,6 +942,25 @@ p { margin: 0; }
    BOTS
    ============================================================ */
 .bots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* Sticky stacking variant — как у отзывов */
+.bots-grid--stack {
+  display: block;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.bots-grid--stack .bot-card {
+  position: sticky;
+  top: 84px;
+  margin-bottom: 18px;
+}
+.bots-grid--stack .bot-card:nth-child(1) { z-index: 1; }
+.bots-grid--stack .bot-card:nth-child(2) { z-index: 2; }
+.bots-grid--stack .bot-card:nth-child(3) { z-index: 3; }
+.bots-grid--stack .bot-card:nth-child(4) { z-index: 4; }
+.bots-grid--stack .bot-card:nth-child(5) { z-index: 5; }
+.bots-grid--stack .bot-card:nth-child(6) { z-index: 6; }
+
 .bot-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1204,8 +1225,35 @@ p { margin: 0; }
 .contact-form input:focus,
 .contact-form textarea:focus { border-color: var(--border-accent); }
 .form-note    { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin: 0; }
-.form-success { font-size: 1rem; color: #4caf82; text-align: center; padding: 20px 0; margin: 0; }
 .form-error   { font-size: 0.85rem; color: #e05c5c; text-align: center; margin: 4px 0 0; }
+
+@keyframes successZoom {
+  0% {
+    opacity: 0;
+    transform: perspective(900px) translateZ(-400px) scale(0.15);
+    filter: blur(6px);
+  }
+  65% {
+    opacity: 1;
+    transform: perspective(900px) translateZ(40px) scale(1.06);
+    filter: blur(0);
+  }
+  100% {
+    transform: perspective(900px) translateZ(0px) scale(1);
+    filter: blur(0);
+  }
+}
+.form-success {
+  font-family: 'Marck Script', cursive;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #4caf82;
+  text-align: center;
+  padding: 40px 16px;
+  margin: 0;
+  text-shadow: 0 2px 18px rgba(76, 175, 130, 0.25);
+  animation: successZoom 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
 
 /* ============================================================
    FOOTER EXTRAS
@@ -1357,6 +1405,8 @@ p { margin: 0; }
 .card-spread-item:nth-child(2) { z-index: 20; position: relative; }
 .card-spread-item:nth-child(3) { z-index: 30; position: relative; }
 .card-spread-item:nth-child(4) { z-index: 40; position: relative; }
+.card-spread-item:nth-child(5) { z-index: 50; position: relative; }
+.card-spread-item:nth-child(6) { z-index: 60; position: relative; }
 
 /* Internal transform layer */
 .card-spread-item__internal {
@@ -1556,21 +1606,120 @@ p { margin: 0; }
 }
 
 /* ============================================================
-   4-CARD SPREAD expanded — 2×2 grid (no horizontal scroll)
+   CARD SPREAD — 6-карточный вариант (все боты)
    ============================================================ */
-.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-stage {
+.card-spread-container--6 {
+  grid-template-columns: repeat(6, 1fr);
+  min-width: 100%;
+}
+
+/* DECK — 6 cards стопкой в центре */
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(1) .card-spread-item__internal {
+  transform: translate3d(calc(250% + 1.875rem), 0, 0);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(2) .card-spread-item__internal {
+  transform: translate3d(calc(150% + 1.125rem), 0, 0);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(3) .card-spread-item__internal {
+  transform: translate3d(calc(50% + 0.375rem), 0, 0);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(4) .card-spread-item__internal {
+  transform: translate3d(calc(-50% - 0.375rem), 0, 0);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(5) .card-spread-item__internal {
+  transform: translate3d(calc(-150% - 1.125rem), 0, 0);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-item:nth-child(6) .card-spread-item__internal {
+  transform: translate3d(calc(-250% - 1.875rem), 0, 0);
+}
+
+/* HOVER PEEK — 6 cards */
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(1) .card-spread-item__hover {
+  transform: rotate(-2deg);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(2) .card-spread-item__hover {
+  transform: rotate(-1deg);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(3) .card-spread-item__hover {
+  transform: rotate(0deg);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(4) .card-spread-item__hover {
+  transform: rotate(1deg);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(5) .card-spread-item__hover {
+  transform: rotate(2deg);
+}
+.card-spread--6:not(:has(.card-spread-toggle:checked))
+  .card-spread-stage:hover .card-spread-item:nth-child(6) .card-spread-item__hover {
+  transform: rotate(3deg);
+}
+
+/* SPREAD expanded — 2×3 grid */
+.card-spread--6:has(.card-spread-toggle:checked) .card-spread-stage {
   display: block;
   overflow-x: visible;
 }
-.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-container {
+.card-spread--6:has(.card-spread-toggle:checked) .card-spread-container--6 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.card-spread--6:has(.card-spread-toggle:checked) .card-spread-item__internal {
+  transform: none !important;
+}
+@media (max-width: 900px) {
+  .card-spread--6:has(.card-spread-toggle:checked) .card-spread-container--6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .card-spread--6:has(.card-spread-toggle:checked) .card-spread-container--6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* pc-card цвета для карточек 3–6 */
+.pc-card--3 {
+  background: linear-gradient(155deg, var(--bg-graphite-500) 0%, var(--bg-graphite-800) 100%);
+}
+.pc-card--4 {
+  background: linear-gradient(155deg, var(--bg-graphite-400) 0%, var(--bg-graphite-800) 100%);
+}
+.pc-card--5 {
+  background: linear-gradient(155deg, var(--bg-graphite-500) 0%, var(--bg-graphite-800) 100%);
+}
+.pc-card--6 {
+  background: linear-gradient(155deg, #1a0e05 0%, #0d0905 100%);
+  border-color: rgba(249,139,0,0.35);
+  box-shadow: var(--shadow), 0 0 30px rgba(249,139,0,0.08);
+}
+
+/* ============================================================
+   4-CARD SPREAD expanded — 2×2 grid (no horizontal scroll)
+   ============================================================ */
+.card-spread:not(.card-spread--trio):not(.card-spread--6):has(.card-spread-toggle:checked) .card-spread-stage {
+  display: block;
+  overflow-x: visible;
+}
+.card-spread:not(.card-spread--trio):not(.card-spread--6):has(.card-spread-toggle:checked) .card-spread-container {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-item__internal {
+.card-spread:not(.card-spread--trio):not(.card-spread--6):has(.card-spread-toggle:checked) .card-spread-item__internal {
   transform: none !important;
 }
 @media (max-width: 768px) {
-  .card-spread:not(.card-spread--trio):has(.card-spread-toggle:checked) .card-spread-container {
+  .card-spread:not(.card-spread--trio):not(.card-spread--6):has(.card-spread-toggle:checked) .card-spread-container {
     grid-template-columns: 1fr;
   }
 }

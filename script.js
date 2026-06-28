@@ -289,7 +289,7 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 
       if (!res.ok) throw new Error();
 
-      form.innerHTML = '<p class="form-success">Заявка отправлена! Напишу в мессенджер в течение дня 🤝</p>';
+      form.innerHTML = '<p class="form-success">Заявка отправлена!<br>Напишу в мессенджер в течение дня 🤝</p>';
     } catch {
       btn.disabled    = false;
       btn.innerHTML   = '✦ Отправить заявку →';
