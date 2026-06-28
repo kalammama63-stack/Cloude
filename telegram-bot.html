@@ -98,7 +98,7 @@
   <meta name="theme-color" content="#060607" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -110,13 +110,13 @@
 
     <header class="topbar">
       <div class="topbar__inner container">
-        <a class="brand" href="index.html">
+        <a class="brand" href="/">
           <span class="brand-name">Тамара Коломейцева</span>
         </a>
-        <nav class="nav">
-          <a href="index.html">Главная</a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
           <a href="site-tilda.html">Сайты</a>
-          <a href="telegram-bot.html" class="nav--active">Telegram-боты</a>
+          <a href="telegram-bot.html" class="nav--active" aria-current="page">Telegram-боты</a>
           <a href="cases.html">Кейсы</a>
           <a href="/#pricing">Прайс</a>
           <a href="faq.html">FAQ</a>
@@ -124,6 +124,9 @@
         <div class="topbar__right">
           <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
           <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </header>
@@ -507,7 +510,21 @@
             <form class="contact-form" id="contactForm">
               <input type="text" name="name" placeholder="Ваше имя" required />
               <input type="text" name="contact" placeholder="Телефон или Telegram" required />
-              <textarea name="message" placeholder="Какой бот нужен? (необязательно)" rows="4"></textarea>
+              <select name="service">
+                <option value="" disabled selected>Какой бот нужен?</option>
+                <option value="Бот-опросник">Бот-опросник (сбор заявок)</option>
+                <option value="Бот-администратор">Бот-администратор (онлайн-запись)</option>
+                <option value="Бот-магазин">Бот-магазин</option>
+                <option value="Бот-рассылка">Бот-рассылка</option>
+                <option value="Бот-поддержка">Бот-поддержка</option>
+                <option value="Бот лояльности">Бот лояльности</option>
+                <option value="Не знаю — посоветуйте">Не знаю — посоветуйте</option>
+              </select>
+              <textarea name="message" placeholder="Расскажите о задаче (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
               <button type="submit" class="button button--primary ai-btn" id="aiBtn">
                 <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
                 <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
@@ -535,7 +552,7 @@
           <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
         </div>
         <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
-        <div class="footer__copy">Самозанятый · Работаю по договору</div>
+        <div class="footer__copy">Самозанятый · Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
       </div>
     </footer>
 

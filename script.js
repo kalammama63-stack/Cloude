@@ -1,4 +1,10 @@
 /* ============================================================
+   WORKER URL — замени на реальный адрес Cloudflare Worker
+   после деплоя cf-worker.js (инструкция внутри файла)
+   ============================================================ */
+const WORKER_URL = 'https://tkweb-form.kalammama63.workers.dev';
+
+/* ============================================================
    CUSTOM CURSOR
    ============================================================ */
 const cursorRing = document.getElementById('cursorRing');
@@ -44,7 +50,6 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
 
-    // Stagger siblings that appear together
     const parent   = entry.target.parentElement;
     const siblings = [...parent.querySelectorAll('.reveal-up, .reveal-right')];
     const idx      = siblings.indexOf(entry.target);
@@ -79,11 +84,7 @@ if (window.matchMedia('(hover: none)').matches) {
 const mobileCta = document.querySelector('.mobile-cta');
 if (mobileCta) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      mobileCta.classList.add('mobile-cta--visible');
-    } else {
-      mobileCta.classList.remove('mobile-cta--visible');
-    }
+    mobileCta.classList.toggle('mobile-cta--visible', window.scrollY > 300);
   }, { passive: true });
 }
 
@@ -94,8 +95,8 @@ const topbar = document.querySelector('.topbar');
 if (topbar) {
   window.addEventListener('scroll', () => {
     topbar.style.background = window.scrollY > 60
-      ? 'rgba(6,6,7,0.98)'
-      : 'rgba(6,6,7,0.88)';
+      ? 'rgba(14,14,16,0.98)'
+      : 'rgba(14,14,16,0.88)';
   }, { passive: true });
 }
 
@@ -106,7 +107,6 @@ const parallaxItems = document.querySelectorAll('.hero-img, .advantage-img');
 
 if (parallaxItems.length && !window.matchMedia('(max-width: 768px)').matches) {
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
     parallaxItems.forEach(img => {
       const rect   = img.closest('[class*="wrap"], [class*="img-wrap"], section')?.getBoundingClientRect();
       if (!rect) return;
@@ -118,15 +118,46 @@ if (parallaxItems.length && !window.matchMedia('(max-width: 768px)').matches) {
 }
 
 /* ============================================================
-   GALLERY IMAGES — ken burns hover (CSS handles it)
-   but also stagger reveal delays for visual interest
+   ACTIVE NAV — подсвечивает текущую страницу в меню
    ============================================================ */
-document.querySelectorAll('.gallery-item').forEach((item, i) => {
-  item.style.transitionDelay = (i * 0.08) + 's';
-});
+(function () {
+  const path = window.location.pathname.replace(/^\//, '') || 'index.html';
+  document.querySelectorAll('.nav a').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const linkPath = href.replace(/^\//, '').split('#')[0] || 'index.html';
+    if (linkPath === path) {
+      link.classList.add('nav--active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+})();
 
 /* ============================================================
-   BOIDS ECOSYSTEM — hero background (ported from animata.design)
+   BURGER MENU — мобильное меню (< 480px)
+   ============================================================ */
+(function () {
+  const burger  = document.getElementById('burgerBtn');
+  const navMenu = document.getElementById('navMenu');
+  if (!burger || !navMenu) return;
+
+  burger.addEventListener('click', () => {
+    const open = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!open));
+    navMenu.classList.toggle('nav--open', !open);
+    burger.classList.toggle('burger--open', !open);
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.setAttribute('aria-expanded', 'false');
+      navMenu.classList.remove('nav--open');
+      burger.classList.remove('burger--open');
+    });
+  });
+})();
+
+/* ============================================================
+   BOIDS ECOSYSTEM — hero background
    ============================================================ */
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -136,16 +167,17 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
-  const PALETTE      = ['#f98b00', '#ffb347', '#ffd166', '#f2f2f3', 'rgba(249,139,0,0.55)'];
-  const COUNT        = 120;
-  const PERCEPTION   = 36;
-  const MAX_SPEED    = 1.8;
-  const CURSOR_R     = 90;
+  const PALETTE    = ['#f98b00', '#ffb347', '#ffd166', '#f2f2f3', 'rgba(249,139,0,0.55)'];
+  const COUNT      = 70;
+  const PERCEPTION = 36;
+  const MAX_SPEED  = 1.8;
+  const CURSOR_R   = 90;
 
   const dpr    = Math.min(window.devicePixelRatio || 1, 2);
   const cursor = { x: 0, y: 0, active: false };
   let agents   = [];
   let raf      = 0;
+  let paused   = false;
 
   const W = () => canvas.width  / dpr;
   const H = () => canvas.height / dpr;
@@ -171,9 +203,11 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
   }
 
   function step() {
+    if (paused) { raf = requestAnimationFrame(step); return; }
+
     const Wv = W(), Hv = H();
 
-    ctx.fillStyle = 'rgba(6,6,7,0.18)';
+    ctx.fillStyle = 'rgba(14,14,16,0.18)';
     ctx.fillRect(0, 0, Wv, Hv);
 
     for (const a of agents) {
@@ -242,6 +276,12 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
   const ro = new ResizeObserver(() => { resize(); });
   ro.observe(canvas);
 
+  // Пауза когда canvas вне viewport
+  const visObs = new IntersectionObserver(([entry]) => {
+    paused = !entry.isIntersecting;
+  }, { threshold: 0 });
+  visObs.observe(canvas);
+
   window.addEventListener('pointermove', e => {
     const r = canvas.getBoundingClientRect();
     cursor.x = e.clientX - r.left;
@@ -253,7 +293,7 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
-   AI BUTTON — частицы при наведении + max.ru при отправке
+   AI BUTTON — частицы при наведении
    ============================================================ */
 (function () {
   const btn = document.getElementById('aiBtn');
@@ -284,7 +324,7 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
-   CONTACT FORM — отправка в Telegram
+   CONTACT FORM — отправка через Cloudflare Worker
    ============================================================ */
 (function () {
   const form = document.getElementById('contactForm');
@@ -296,26 +336,25 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
     const name    = form.querySelector('[name="name"]').value.trim();
     const contact = form.querySelector('[name="contact"]').value.trim();
     const message = form.querySelector('[name="message"]').value.trim();
+    const service = form.querySelector('[name="service"]')?.value || '';
     const btn     = form.querySelector('#aiBtn');
-
-    const text = `📬 Новая заявка с сайта TK Web\n\n👤 Имя: ${name}\n📞 Контакт: ${contact}${message ? '\n💬 Сообщение: ' + message : ''}`;
 
     btn.disabled    = true;
     btn.textContent = 'Отправляю...';
 
     try {
-      const res = await fetch('https://api.telegram.org/bot8974900147:AAErGOAW3RrvNURzevwcx7i-QeqVXO_9Iy0/sendMessage', {
+      const res = await fetch(WORKER_URL, {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ chat_id: 8715001372, text })
+        body:    JSON.stringify({ name, contact, message, service }),
       });
 
       if (!res.ok) throw new Error();
 
       form.innerHTML = '<p class="form-success">Заявка отправлена!<br>Напишу в мессенджер в течение дня 🤝</p>';
     } catch {
-      btn.disabled    = false;
-      btn.innerHTML   = '✦ Отправить заявку →';
+      btn.disabled  = false;
+      btn.innerHTML = '✦ Отправить заявку →';
       const err = document.createElement('p');
       err.className   = 'form-error';
       err.textContent = 'Не удалось отправить. Напишите напрямую: @TK_Web';
@@ -325,12 +364,67 @@ document.querySelectorAll('.gallery-item').forEach((item, i) => {
 })();
 
 /* ============================================================
-   FADE-SLIDE SCROLL ANIMATION — data-scroll-distance → CSS var
+   LEAD MAGNET MODAL — форма захвата контакта
    ============================================================ */
-document.querySelectorAll('[data-scroll]').forEach(function (el) {
-  var d = el.dataset.scrollDistance;
-  if (d) el.style.setProperty('--scroll-distance', d + 'px');
-});
+(function () {
+  const triggerBtns = document.querySelectorAll('[data-checklist-trigger]');
+  const modal       = document.getElementById('checklistModal');
+  if (!triggerBtns.length || !modal) return;
+
+  const modalForm  = modal.querySelector('#checklistForm');
+  const modalClose = modal.querySelector('[data-modal-close]');
+
+  triggerBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      modal.classList.add('modal--open');
+      modal.querySelector('input')?.focus();
+    });
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', () => modal.classList.remove('modal--open'));
+  }
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('modal--open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') modal.classList.remove('modal--open');
+  });
+
+  if (modalForm) {
+    modalForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const contactVal = modalForm.querySelector('[name="cl_contact"]').value.trim();
+      const submitBtn  = modalForm.querySelector('button[type="submit"]');
+      if (!contactVal) return;
+
+      submitBtn.disabled    = true;
+      submitBtn.textContent = 'Отправляю...';
+
+      try {
+        await fetch(WORKER_URL, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({
+            name:    'Запрос чек-листа',
+            contact: contactVal,
+            message: 'Хочет получить чек-лист по подготовке к сайту',
+            service: 'Чек-лист',
+          }),
+        });
+      } catch { /* тихо игнорируем */ }
+
+      modalForm.innerHTML = `
+        <p style="color:var(--accent-orange);font-weight:700;text-align:center;margin:0 0 12px;">Готово! Открываю чек-лист…</p>
+        <p style="color:var(--text-secondary);text-align:center;font-size:0.9rem;margin:0;">Напишу вам — пришлю ссылку и ответлю на вопросы.</p>`;
+      setTimeout(() => {
+        window.open('https://docs.google.com/document/d/1rYVY2z9IyC_R4b2TZWS9ly9gLCfg-7e3JXLPQeA617o/edit?usp=sharing', '_blank', 'noreferrer');
+        setTimeout(() => modal.classList.remove('modal--open'), 2000);
+      }, 800);
+    });
+  }
+})();
 
 /* ============================================================
    SCROLL TO TOP

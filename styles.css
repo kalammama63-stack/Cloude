@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+/* Marck Script загружается через <link> в <head> каждой страницы */
 
 /* ============================================================
    GLOBAL CSS VARIABLES — графитовая палитра + оранжевый акцент
@@ -56,7 +56,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
-  background: #414042;
+  background: var(--bg-graphite-800);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
 }
@@ -89,7 +89,7 @@ img { max-width: 100%; display: block; }
   padding: 18px 0;
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
-  background: rgba(65, 64, 66, 0.92);
+  background: rgba(14, 14, 16, 0.92);
   border-bottom: 1px solid var(--border);
 }
 
@@ -211,49 +211,49 @@ p { margin: 0; }
 
 /* Герой: самый тёмный старт */
 .hero {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Услуги (лид-магнит + этапы работы) */
 .section--services {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Кейсы + Сертификаты */
 .section--features {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Боты + FAQ */
 .section--trust {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Преимущество (без карточек) */
 .section--reviews {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Экономика */
 .section--cases {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Прайс ботов */
 .section--process {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Прайс сайтов */
 .section--certs {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* Галерея + Контакт CTA (без карточек) */
 .section--contact {
   position: relative;
   overflow: hidden;
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 /* ============================================================
@@ -379,21 +379,14 @@ p { margin: 0; }
 }
 
 
-/* ============================================================
-   PROCESS SECTION
-   ============================================================ */
-.process-grid {
-  display: grid;
-  gap: 22px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
+/* process-grid определён ниже в секции PROCESS (3 cols override) */
 
 
 /* ============================================================
    FOOTER
    ============================================================ */
 .footer {
-  background: #414042;
+  background: var(--bg-graphite-900);
   padding: 28px 0 44px;
   border-top: 1px solid var(--border);
 }
@@ -434,12 +427,8 @@ p { margin: 0; }
 }
 
 /* ============================================================
-   ANIMATIONS (hover & transitions)
+   ANIMATIONS (hover & transitions) — дубль @keyframes float удалён
    ============================================================ */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-18px); }
-}
 
 /* ============================================================
    TOPBAR INNER & LOGO
@@ -978,7 +967,7 @@ p { margin: 0; }
 }
 
 /* FAQ — без карточек, переопределяем фон секции */
-#faq { background: #414042; }
+#faq { background: var(--bg-graphite-800); }
 
 /* ============================================================
    FAQ
@@ -1850,7 +1839,7 @@ p { margin: 0; }
    ABOUT SECTION
    ============================================================ */
 .section--about {
-  background: #414042;
+  background: var(--bg-graphite-800);
 }
 
 .about-wrap {
@@ -1874,7 +1863,7 @@ p { margin: 0; }
   right: 0;
   width: 110px;
   height: 44px;
-  background: #414042;
+  background: var(--bg-graphite-800);
   border-radius: 0 0 16px 0;
 }
 
@@ -2053,7 +2042,7 @@ p { margin: 0; }
    ============================================================ */
 .section--hero-inner {
   padding: 80px 0 100px;
-  background: #414042;
+  background: var(--bg-graphite-800);
   position: relative;
   overflow: hidden;
 }
@@ -2480,4 +2469,171 @@ p { margin: 0; }
     bottom: 84px;
     right: 20px;
   }
+}
+
+/* ============================================================
+   BURGER MENU
+   ============================================================ */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  padding: 6px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.burger span {
+  display: block;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+.burger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger--open span:nth-child(2) { opacity: 0; }
+.burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 480px) {
+  .burger { display: flex; }
+
+  .nav {
+    display: none;
+    position: fixed;
+    inset: 0 0 0 0;
+    top: 60px;
+    background: rgba(14,14,16,0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 19;
+    padding: 32px 24px;
+  }
+  .nav--open {
+    display: flex;
+  }
+  .nav a {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .nav-phone { display: none; }
+  .topbar__right .button { font-size: 0.82rem; padding: 10px 16px; }
+}
+
+/* ============================================================
+   ФОРМА — SELECT УСЛУГИ
+   ============================================================ */
+.contact-form select {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.94rem;
+  outline: none;
+  transition: border-color .2s;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c4c4c7' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.contact-form select:focus { border-color: var(--border-accent); }
+.contact-form select option { background: var(--bg-graphite-700); color: var(--text-primary); }
+
+/* Согласие на ПД */
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.form-consent input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-orange);
+  cursor: pointer;
+}
+.form-consent a { color: var(--accent-orange); }
+
+/* ============================================================
+   МОДАЛ ЛИД-МАГНИТА
+   ============================================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6,6,7,0.80);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.modal--open { display: flex; }
+
+.modal-box {
+  background: var(--bg-graphite-600);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-card);
+  padding: 40px 36px;
+  max-width: 460px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 40px rgba(249,139,0,0.08);
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color .2s;
+}
+.modal-close:hover { color: var(--text-primary); }
+.modal-box h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.modal-box > p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.65; margin: 0 0 24px; }
+.modal-form { display: flex; flex-direction: column; gap: 12px; }
+.modal-form input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 16px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.94rem;
+  outline: none;
+  transition: border-color .2s;
+}
+.modal-form input:focus { border-color: var(--border-accent); }
+.modal-form input::placeholder { color: var(--text-muted); }
+.modal-note {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+@media (max-width: 480px) {
+  .modal-box { padding: 28px 20px; }
 }

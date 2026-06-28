@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Test-Path \"c:/Users/user/Documents/vk/tk-webb/site-tilda.html\")",
+      "Bash(git commit -m ' *)",
+      "WebFetch(domain:yandex.ru)",
+      "WebFetch(domain:yandex.eu)",
+      "WebFetch(domain:yandex.com)",
+      "Bash(find /c/Users/user/Desktop /c/Users/user/Downloads /c/Users/user/Documents -name \"*.jpg\" -o -name \"*.png\" -o -name \"*.jpeg\" 2>/dev/null | grep -iv \"appdata\\\\|wallet\\\\|cache\\\\|chrome\\\\|brave\\\\|edge\" | head -40)",
+      "Read(//c/Users/user/Desktop/**)",
+      "Bash(find /c/Users/user/Downloads /c/Users/user/Documents -name \"*.jpg\" -o -name \"*.png\" -o -name \"*.jpeg\" -o -name \"*.webp\" 2>/dev/null | head -50)",
+      "Read(//c/Users/user/Downloads/**)",
+      "Bash(find /c/Users/user/Desktop/САЙТ -type f | sort)",
+      "Read(//c/Users/user/Desktop/САЙТ/**)",
+      "Read(//c/Users/user/**)",
+      "Bash(sort -t'/' -k6)",
+      "Read(//c/Users/user/Downloads/фартпост/**)",
+      "PowerShell(Copy-Item \"c:\\\\Users\\\\user\\\\Documents\\\\vk\\\\tk-webb\\\\Gemini_Generated_Image_qug4laqug4laqug4.png\" \"c:\\\\Users\\\\user\\\\Documents\\\\vk\\\\tk-webb\\\\bots-banner.png\")",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\('c:/Users/user/Documents/vk/tk-webb/bots-banner.png'\\); print\\(img.size, img.mode\\)\")",
+      "Bash(pip install *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
