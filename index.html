@@ -138,6 +138,7 @@
   <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
   <link rel="apple-touch-icon" href="/logo.png" />
   <meta name="theme-color" content="#060607" />
+  <link rel="preload" as="image" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -153,7 +154,7 @@
     <!-- HEADER -->
     <header class="topbar">
       <div class="topbar__inner container">
-        <a class="brand" href="#home">
+        <a class="brand" href="/">
           <span class="brand-name">Тамара Коломейцева</span>
         </a>
         <nav class="nav">
@@ -192,11 +193,12 @@
               <a class="button button--primary" href="#contact">Оставить заявку</a>
               <a class="button button--ghost button--ghost-accent" href="https://t.me/firstTKbot?start=1" target="_blank" rel="noreferrer">Бот-консультант →</a>
             </div>
+            <div class="hero__price-hint reveal-up">Боты от <strong>10 000 ₽</strong> · Сайты от <strong>15 000 ₽</strong></div>
             <div class="hero__hint reveal-up">Срок и стоимость фиксируются в договоре. SEO-оптимизация в базовом пакете.</div>
           </div>
           <div class="hero__visual reveal-right">
             <div class="hero-logo-spin-wrap">
-              <img src="logo.png" alt="TK Web" class="hero-logo-spin-img" />
+              <img src="logo.png" alt="Логотип TK Web — создание сайтов и Telegram-ботов" class="hero-logo-spin-img" fetchpriority="high" />
             </div>
           </div>
         </div>
@@ -317,7 +319,7 @@
             <article class="case-big-card reveal-up">
               <div class="case-flip-inner">
                 <div class="case-flip-front">
-                  <img src="зелен.jpg" alt="Лендинг + квиз-воронка" class="case-flip-img" loading="lazy" />
+                  <img src="zeleniy.jpg" alt="Лендинг + квиз-воронка" class="case-flip-img" loading="lazy" />
                   <div class="case-flip-front__label">Наведите, чтобы узнать подробнее</div>
                   <div class="case-flip-front__title">Лендинг + квиз-воронка</div>
                 </div>
@@ -335,7 +337,7 @@
             <article class="case-big-card reveal-up">
               <div class="case-flip-inner">
                 <div class="case-flip-front">
-                  <img src="косм.jpg" alt="Сайт-визитка с онлайн-записью" class="case-flip-img" loading="lazy" />
+                  <img src="kosmetolog.jpg" alt="Сайт-визитка с онлайн-записью" class="case-flip-img" loading="lazy" />
                   <div class="case-flip-front__label">Наведите, чтобы узнать подробнее</div>
                   <div class="case-flip-front__title">Сайт-визитка с онлайн-записью</div>
                 </div>
@@ -363,7 +365,7 @@
           <div class="section__head reveal-up">
             <span class="eyebrow">Telegram-боты</span>
             <h2>6 видов Telegram-ботов для бизнеса</h2>
-            <p>Каждый бот решает конкретную задачу. Можно взять один или несколько в связке с сайтом.</p>
+            <p>Каждый бот решает конкретную задачу. Можно взять один или несколько в связке с сайтом. <a href="telegram-bot.html">Подробнее о видах ботов →</a></p>
           </div>
           <div class="bots-banner reveal-up">
             <img src="bot.jpg" alt="Создание Telegram-ботов для бизнеса — TK Web" loading="lazy" style="width:100%;max-width:900px;display:block;margin:0 auto 40px;border-radius:16px;" />
@@ -532,7 +534,7 @@
           <div class="card-spread card-spread--6 reveal-up">
             <div class="card-spread__toggle-wrap">
               <label class="card-spread-open">
-                <input type="checkbox" class="card-spread-toggle" />
+                <input type="checkbox" class="card-spread-toggle" checked />
                 <span class="card-spread-open__text--expand">Развернуть карточки ↗</span>
                 <span class="card-spread-open__text--collapse">Свернуть ↙</span>
               </label>
@@ -668,13 +670,13 @@
           <div class="section__head reveal-up">
             <span class="eyebrow">Услуги</span>
             <h2>Типы сайтов и стоимость</h2>
-            <p>Создание сайтов на Tilda и с использованием ИИ — под ключ, выберите подходящий тип проекта.</p>
+            <p>Создание сайтов на Tilda и с использованием ИИ — под ключ, выберите подходящий тип проекта. <a href="site-tilda.html">Подробнее о разработке сайтов →</a></p>
           </div>
 
           <div class="card-spread reveal-up">
             <div class="card-spread__toggle-wrap">
               <label class="card-spread-open">
-                <input type="checkbox" class="card-spread-toggle" />
+                <input type="checkbox" class="card-spread-toggle" checked />
                 <span class="card-spread-open__text--expand">Развернуть карточки ↗</span>
                 <span class="card-spread-open__text--collapse">Свернуть ↙</span>
               </label>
@@ -1067,10 +1069,13 @@
           <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
         </div>
         <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Самозанятый · Работаю по договору</div>
       </div>
     </footer>
 
   </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
 
   <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
 

@@ -58,11 +58,34 @@ const revealObserver = new IntersectionObserver(entries => {
 revealEls.forEach(el => revealObserver.observe(el));
 
 /* ============================================================
-   FLIP CARDS — click to flip
+   FLIP CARDS — click to flip (сертификаты)
    ============================================================ */
 document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', () => card.classList.toggle('is-flipped'));
 });
+
+/* ============================================================
+   CASE FLIP CARDS — touch devices only (desktop uses CSS hover)
+   ============================================================ */
+if (window.matchMedia('(hover: none)').matches) {
+  document.querySelectorAll('.case-big-card').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+  });
+}
+
+/* ============================================================
+   MOBILE CTA — показываем после прокрутки hero
+   ============================================================ */
+const mobileCta = document.querySelector('.mobile-cta');
+if (mobileCta) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      mobileCta.classList.add('mobile-cta--visible');
+    } else {
+      mobileCta.classList.remove('mobile-cta--visible');
+    }
+  }, { passive: true });
+}
 
 /* ============================================================
    TOPBAR — darkens on scroll
