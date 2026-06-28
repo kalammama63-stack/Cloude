@@ -269,7 +269,7 @@
               <h3>Чек-лист: что собрать до начала работы над сайтом</h3>
               <p>Готовый список материалов — сэкономьте время и запустите сайт быстрее.</p>
             </div>
-            <button class="button button--primary" data-checklist-trigger>Получить чек-лист →</button>
+            <a class="button button--primary" id="checklistBtn" href="https://docs.google.com/document/d/1rYVY2z9IyC_R4b2TZWS9ly9gLCfg-7e3JXLPQeA617o/edit?usp=sharing" target="_blank" rel="noreferrer">Получить чек-лист →</a>
           </div>
         </div>
       </section>
@@ -1095,19 +1095,11 @@
 
   </div>
 
-  <!-- МОДАЛ ЛИД-МАГНИТА -->
-  <div class="modal-overlay" id="checklistModal" role="dialog" aria-modal="true" aria-labelledby="checklistModalTitle">
-    <div class="modal-box">
-      <button class="modal-close" data-modal-close aria-label="Закрыть">×</button>
-      <span class="eyebrow">Бесплатно</span>
-      <h3 id="checklistModalTitle">Получите чек-лист на свой Telegram</h3>
-      <p>Укажите ваш Telegram-ник или телефон — пришлю ссылку и отвечу на вопросы.</p>
-      <form class="modal-form" id="checklistForm">
-        <input type="text" name="cl_contact" placeholder="Telegram или телефон" required />
-        <button type="submit" class="button button--primary">Получить чек-лист →</button>
-        <p class="modal-note">Спам не отправляю. Только чек-лист и ответ на вопросы.</p>
-      </form>
-    </div>
+  <!-- ТОСТ ЛИД-МАГНИТА -->
+  <div class="checklist-toast" id="checklistToast" role="status" aria-live="polite">
+    <span>Понравился чек-лист? Напишите — отвечу на вопросы</span>
+    <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web →</a>
+    <button class="checklist-toast__close" id="checklistToastClose" aria-label="Закрыть">×</button>
   </div>
 
   <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>

@@ -364,65 +364,22 @@ if (parallaxItems.length && !window.matchMedia('(max-width: 768px)').matches) {
 })();
 
 /* ============================================================
-   LEAD MAGNET MODAL — форма захвата контакта
+   LEAD MAGNET TOAST
    ============================================================ */
 (function () {
-  const triggerBtns = document.querySelectorAll('[data-checklist-trigger]');
-  const modal       = document.getElementById('checklistModal');
-  if (!triggerBtns.length || !modal) return;
+  const btn   = document.getElementById('checklistBtn');
+  const toast = document.getElementById('checklistToast');
+  const close = document.getElementById('checklistToastClose');
+  if (!btn || !toast) return;
 
-  const modalForm  = modal.querySelector('#checklistForm');
-  const modalClose = modal.querySelector('[data-modal-close]');
-
-  triggerBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      modal.classList.add('modal--open');
-      modal.querySelector('input')?.focus();
-    });
+  btn.addEventListener('click', () => {
+    setTimeout(() => {
+      toast.classList.add('checklist-toast--visible');
+    }, 1200);
   });
 
-  if (modalClose) {
-    modalClose.addEventListener('click', () => modal.classList.remove('modal--open'));
-  }
-  modal.addEventListener('click', e => {
-    if (e.target === modal) modal.classList.remove('modal--open');
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') modal.classList.remove('modal--open');
-  });
-
-  if (modalForm) {
-    modalForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const contactVal = modalForm.querySelector('[name="cl_contact"]').value.trim();
-      const submitBtn  = modalForm.querySelector('button[type="submit"]');
-      if (!contactVal) return;
-
-      submitBtn.disabled    = true;
-      submitBtn.textContent = 'Отправляю...';
-
-      try {
-        await fetch(WORKER_URL, {
-          method:  'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({
-            name:    'Запрос чек-листа',
-            contact: contactVal,
-            message: 'Хочет получить чек-лист по подготовке к сайту',
-            service: 'Чек-лист',
-          }),
-        });
-      } catch { /* тихо игнорируем */ }
-
-      modalForm.innerHTML = `
-        <p style="color:var(--accent-orange);font-weight:700;text-align:center;margin:0 0 12px;">Готово! Открываю чек-лист…</p>
-        <p style="color:var(--text-secondary);text-align:center;font-size:0.9rem;margin:0;">Напишу вам — пришлю ссылку и ответлю на вопросы.</p>`;
-      setTimeout(() => {
-        window.open('https://docs.google.com/document/d/1rYVY2z9IyC_R4b2TZWS9ly9gLCfg-7e3JXLPQeA617o/edit?usp=sharing', '_blank', 'noreferrer');
-        setTimeout(() => modal.classList.remove('modal--open'), 2000);
-      }, 800);
-    });
+  if (close) {
+    close.addEventListener('click', () => toast.classList.remove('checklist-toast--visible'));
   }
 })();
 
