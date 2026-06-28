@@ -1,0 +1,101 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow-left" cx="20%" cy="65%" r="55%">
+      <stop offset="0%" stop-color="#f98b00" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f98b00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-right" cx="85%" cy="25%" r="45%">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#060607"/>
+  <rect width="1200" height="630" fill="url(#glow-left)"/>
+  <rect width="1200" height="630" fill="url(#glow-right)"/>
+
+  <!-- Декоративные кольца -->
+  <circle cx="1090" cy="520" r="220" fill="none" stroke="#f98b00" stroke-opacity="0.07" stroke-width="1.5"/>
+  <circle cx="1090" cy="520" r="155" fill="none" stroke="#f98b00" stroke-opacity="0.1" stroke-width="1.5"/>
+  <circle cx="1090" cy="520" r="88" fill="none" stroke="#f98b00" stroke-opacity="0.14" stroke-width="1.5"/>
+
+  <!-- Декоративный браузер-окно справа -->
+  <rect x="688" y="72" width="448" height="292" rx="18" fill="#0e0e10" stroke="#f98b00" stroke-opacity="0.25" stroke-width="1.5"/>
+  <!-- Шапка окна -->
+  <rect x="688" y="72" width="448" height="44" rx="18" fill="#1a1a1f"/>
+  <rect x="688" y="96" width="448" height="20" fill="#1a1a1f"/>
+  <!-- Точки окна -->
+  <circle cx="718" cy="94" r="7" fill="#e05c5c" fill-opacity="0.7"/>
+  <circle cx="742" cy="94" r="7" fill="#f98b00" fill-opacity="0.7"/>
+  <circle cx="766" cy="94" r="7" fill="#4ade80" fill-opacity="0.7"/>
+  <!-- Адресная строка -->
+  <rect x="800" y="82" width="300" height="22" rx="11" fill="#28282f"/>
+  <text x="950" y="98" font-family="Inter, Arial, sans-serif" font-size="11" fill="#5a5a62" text-anchor="middle">tk-webb.ru</text>
+  <!-- Контент-блоки -->
+  <rect x="710" y="134" width="405" height="28" rx="5" fill="#1e1e24"/>
+  <rect x="710" y="172" width="260" height="16" rx="4" fill="#1e1e24"/>
+  <rect x="710" y="198" width="310" height="16" rx="4" fill="#1e1e24"/>
+  <rect x="710" y="224" width="230" height="16" rx="4" fill="#1e1e24"/>
+  <!-- Кнопка CTA -->
+  <rect x="710" y="256" width="148" height="42" rx="21" fill="#f98b00"/>
+  <text x="784" y="283" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#060607" text-anchor="middle">Заказать →</text>
+  <!-- Картинка-плейсхолдер справа внутри окна -->
+  <rect x="878" y="134" width="196" height="164" rx="8" fill="#1e1e24"/>
+  <circle cx="976" cy="186" r="28" fill="#28282f"/>
+  <rect x="910" y="226" width="132" height="10" rx="3" fill="#28282f"/>
+  <rect x="925" y="246" width="102" height="10" rx="3" fill="#28282f"/>
+
+  <!-- Маленькие декоративные точки -->
+  <circle cx="660" cy="55" r="3.5" fill="#f98b00" fill-opacity="0.55"/>
+  <circle cx="645" cy="72" r="2" fill="#f98b00" fill-opacity="0.35"/>
+  <circle cx="678" cy="42" r="2.5" fill="#ffb347" fill-opacity="0.4"/>
+  <circle cx="1160" cy="150" r="3" fill="#f98b00" fill-opacity="0.3"/>
+  <circle cx="1175" cy="170" r="2" fill="#f98b00" fill-opacity="0.2"/>
+
+  <!-- Второй блок-карточка (смещён, как стопка) -->
+  <rect x="720" y="390" width="380" height="48" rx="12" fill="#1e1e24" stroke="#f98b00" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="748" cy="414" r="14" fill="#28282f"/>
+  <text x="748" y="419" font-family="Inter, Arial, sans-serif" font-size="11" fill="#f98b00" text-anchor="middle">ИИ</text>
+  <rect x="774" y="404" width="180" height="10" rx="3" fill="#28282f"/>
+  <rect x="774" y="422" width="120" height="8" rx="3" fill="#28282f"/>
+
+  <rect x="720" y="450" width="380" height="48" rx="12" fill="#1e1e24" stroke="#f98b00" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="748" cy="474" r="14" fill="#28282f"/>
+  <text x="748" y="479" font-family="Inter, Arial, sans-serif" font-size="10" fill="#f98b00" text-anchor="middle">TL</text>
+  <rect x="774" y="464" width="160" height="10" rx="3" fill="#28282f"/>
+  <rect x="774" y="482" width="110" height="8" rx="3" fill="#28282f"/>
+
+  <!-- Логотип / бренд -->
+  <rect x="60" y="52" width="100" height="38" rx="9" fill="#f98b00"/>
+  <text x="110" y="77" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900" fill="#060607" text-anchor="middle" letter-spacing="1">TK WEB</text>
+
+  <!-- Заголовок -->
+  <text x="60" y="220" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900" fill="white" letter-spacing="-3">Сайты на Tilda</text>
+  <text x="60" y="316" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="900" fill="white" letter-spacing="-3">и с помощью <tspan fill="#f98b00">ИИ</tspan></text>
+
+  <!-- Оранжевая линия -->
+  <rect x="60" y="348" width="90" height="5" rx="2.5" fill="#f98b00"/>
+
+  <!-- Подзаголовок -->
+  <text x="60" y="404" font-family="Inter, Arial, sans-serif" font-size="28" fill="#c4c4c7" font-weight="400">Под ключ · Дизайн, SEO, адаптив · от 20 000 ₽</text>
+
+  <!-- Теги -->
+  <rect x="60" y="448" width="188" height="38" rx="19" fill="#1e1e24"/>
+  <text x="154" y="473" font-family="Inter, Arial, sans-serif" font-size="15" fill="#c4c4c7" text-anchor="middle">Tilda-сайты</text>
+
+  <rect x="260" y="448" width="188" height="38" rx="19" fill="#1e1e24"/>
+  <text x="354" y="473" font-family="Inter, Arial, sans-serif" font-size="15" fill="#c4c4c7" text-anchor="middle">ИИ-сайты</text>
+
+  <rect x="460" y="448" width="188" height="38" rx="19" fill="#1e1e24"/>
+  <text x="554" y="473" font-family="Inter, Arial, sans-serif" font-size="15" fill="#c4c4c7" text-anchor="middle">от 10 дней</text>
+
+  <!-- Нижняя линия и домен -->
+  <rect x="60" y="552" width="1080" height="1" fill="#1e1e24"/>
+  <text x="60" y="585" font-family="Inter, Arial, sans-serif" font-size="18" fill="#3a3a42">tk-webb.ru</text>
+  <text x="1140" y="585" font-family="Inter, Arial, sans-serif" font-size="18" fill="#3a3a42" text-anchor="end">Тамара Коломейцева</text>
+</svg>
