@@ -2319,3 +2319,50 @@ p { margin: 0; }
   .bot-price-row { grid-template-columns: 36px 1fr; gap: 10px; }
   .bot-price-row__price, .bot-price-row__duration { grid-column: 2; text-align: left; }
 }
+
+/* ============================================================
+   CASE DETAIL CARDS (cases.html)
+   ============================================================ */
+.cases-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.case-detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 40px;
+  transition: border-color 0.3s;
+}
+.case-detail-card:hover { border-color: var(--border-accent); }
+.case-detail-card__left { display: flex; flex-direction: column; gap: 16px; }
+.case-detail-card__left .case-label { align-self: flex-start; }
+.case-detail-card__left h3 { margin: 0; font-size: 1.15rem; }
+.case-detail-card__left > p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.75; margin: 0; }
+.case-detail-quote {
+  background: rgba(249,139,0,0.06);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin-top: auto;
+}
+.case-detail-quote p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0 0 8px; font-style: italic; }
+.case-detail-quote strong { font-size: 0.82rem; color: var(--text-muted); }
+.case-detail-card__right { display: flex; flex-direction: column; }
+.case-detail-results { display: flex; flex-direction: column; gap: 18px; }
+.case-detail-result {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.cdr-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+.case-detail-result strong { display: block; font-size: 0.95rem; margin-bottom: 3px; }
+.case-detail-result p { color: var(--text-secondary); font-size: 0.83rem; line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .case-detail-card { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+}
