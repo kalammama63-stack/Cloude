@@ -200,8 +200,24 @@
             <div class="hero__hint reveal-up">Срок и стоимость фиксируются в договоре. SEO-оптимизация в базовом пакете.</div>
           </div>
           <div class="hero__visual reveal-right">
-            <div class="hero-logo-spin-wrap">
-              <img src="logo.png" alt="Логотип TK Web — создание сайтов и Telegram-ботов" class="hero-logo-spin-img" fetchpriority="high" />
+            <div class="hero-ticker">
+              <span class="hero-ticker__label">Реализованные проекты</span>
+              <div class="hero-ticker__wrap">
+                <div class="hero-ticker__item">Сайт на Tilda — зубной техник</div>
+                <div class="hero-ticker__item">AI-сайт — АвтоПолив Про</div>
+                <div class="hero-ticker__item">Telegram-бот для онлайн-записи</div>
+                <div class="hero-ticker__item">AI-сайт — косметолог</div>
+                <div class="hero-ticker__item">Бот-опросник для заявок</div>
+                <div class="hero-ticker__item">Сайт на Tilda — премиум</div>
+              </div>
+              <div class="hero-ticker__dots">
+                <span class="hero-ticker__dot"></span>
+                <span class="hero-ticker__dot"></span>
+                <span class="hero-ticker__dot"></span>
+                <span class="hero-ticker__dot"></span>
+                <span class="hero-ticker__dot"></span>
+                <span class="hero-ticker__dot"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -1095,11 +1111,12 @@
 
   </div>
 
-  <!-- ТОСТ ЛИД-МАГНИТА -->
-  <div class="checklist-toast" id="checklistToast" role="status" aria-live="polite">
-    <span>Понравился чек-лист? Напишите — отвечу на вопросы</span>
-    <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web →</a>
-    <button class="checklist-toast__close" id="checklistToastClose" aria-label="Закрыть">×</button>
+  <!-- ОВЕРЛЕЙ ЛИД-МАГНИТА -->
+  <div class="checklist-overlay" id="checklistToast" role="dialog" aria-modal="true">
+    <div class="checklist-overlay__inner">
+      <p class="checklist-overlay__text">Чек-лист открыт!<br>Понравилось? Напишите<br><a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web →</a></p>
+      <button class="checklist-overlay__close" id="checklistToastClose">Закрыть</button>
+    </div>
   </div>
 
   <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>

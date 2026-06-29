@@ -364,23 +364,64 @@ if (parallaxItems.length && !window.matchMedia('(max-width: 768px)').matches) {
 })();
 
 /* ============================================================
-   LEAD MAGNET TOAST
+   LEAD MAGNET OVERLAY
    ============================================================ */
 (function () {
-  const btn   = document.getElementById('checklistBtn');
-  const toast = document.getElementById('checklistToast');
-  const close = document.getElementById('checklistToastClose');
-  if (!btn || !toast) return;
+  const btn     = document.getElementById('checklistBtn');
+  const overlay = document.getElementById('checklistToast');
+  const close   = document.getElementById('checklistToastClose');
+  if (!btn || !overlay) return;
 
-  btn.addEventListener('click', () => {
-    setTimeout(() => {
-      toast.classList.add('checklist-toast--visible');
-    }, 1200);
-  });
+  const text = overlay.querySelector('.checklist-overlay__text');
 
-  if (close) {
-    close.addEventListener('click', () => toast.classList.remove('checklist-toast--visible'));
+  function showOverlay() {
+    overlay.classList.add('checklist-overlay--visible');
+    if (text) {
+      text.classList.remove('play-anim');
+      void text.offsetWidth;
+      text.classList.add('play-anim');
+    }
   }
+
+  function hideOverlay() {
+    overlay.classList.remove('checklist-overlay--visible');
+  }
+
+  btn.addEventListener('click', () => setTimeout(showOverlay, 1200));
+  if (close) close.addEventListener('click', (e) => { e.stopPropagation(); hideOverlay(); });
+  overlay.addEventListener('click', hideOverlay);
+})();
+
+/* ============================================================
+   HERO TICKER
+   ============================================================ */
+(function () {
+  const items = Array.from(document.querySelectorAll('.hero-ticker__item'));
+  const dots  = Array.from(document.querySelectorAll('.hero-ticker__dot'));
+  if (!items.length) return;
+
+  let current = 0;
+
+  function activate(idx) {
+    items[idx].classList.add('hero-ticker__item--active');
+    if (dots[idx]) dots[idx].classList.add('hero-ticker__dot--active');
+  }
+
+  function deactivate(idx) {
+    items[idx].classList.remove('hero-ticker__item--active');
+    items[idx].classList.add('hero-ticker__item--exit');
+    if (dots[idx]) dots[idx].classList.remove('hero-ticker__dot--active');
+    setTimeout(() => items[idx].classList.remove('hero-ticker__item--exit'), 500);
+  }
+
+  activate(0);
+
+  setInterval(() => {
+    const prev = current;
+    current = (current + 1) % items.length;
+    deactivate(prev);
+    setTimeout(() => activate(current), 350);
+  }, 3000);
 })();
 
 /* ============================================================
