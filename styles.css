@@ -639,7 +639,7 @@ p { margin: 0; }
 .hero-ticker__wrap {
   position: relative;
   overflow: hidden;
-  height: 110px;
+  height: 140px;
   width: 100%;
 }
 
@@ -653,8 +653,9 @@ p { margin: 0; }
   padding: 16px 20px;
   display: flex;
   align-items: center;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.65rem;
+  font-weight: 400;
   color: #39ff14;
   text-shadow: 0 0 12px #39ff14, 0 0 30px #39ff1488, 0 0 60px #39ff1444;
   white-space: normal;
@@ -692,49 +693,6 @@ p { margin: 0; }
 .hero-ticker__dot--active {
   background: var(--accent-orange);
   transform: scale(1.4);
-}
-
-/* ============================================================
-   HERO PROJECTS CARD (правая колонка hero)
-   ============================================================ */
-.hero-projects-card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 28px 22px;
-}
-
-.hero-projects-card__title {
-  font-family: 'Marck Script', cursive;
-  font-size: 1.45rem;
-  color: #39ff14;
-  text-shadow: 0 0 12px #39ff14, 0 0 30px #39ff1488, 0 0 60px #39ff1444;
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.hero-projects-card__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.hero-projects-card__list li {
-  font-family: 'Marck Script', cursive;
-  font-size: 1.1rem;
-  color: #39ff14;
-  text-shadow: 0 0 12px #39ff14, 0 0 30px #39ff1488, 0 0 60px #39ff1444;
-  line-height: 1.4;
-  padding: 6px 10px 6px 12px;
-  border-left: 2px solid rgba(57,255,20,0.35);
 }
 
 /* ============================================================
@@ -1743,7 +1701,8 @@ p { margin: 0; }
 
   .bots-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .hero-projects-card { padding: 22px 18px; min-height: auto; }
+  .hero-ticker { padding: 24px 0 0; min-height: auto; align-items: center; }
+  .hero-ticker__wrap { max-width: 480px; height: 140px; }
 
   .spinning-logo-wrap {
     bottom: -20px;
@@ -1780,8 +1739,9 @@ p { margin: 0; }
   .hero__decor { display: none; }
   .logo-hero { max-width: 160px; }
   .hero-img-wrap { height: 280px; }
-  .hero-projects-card { padding: 18px 14px; }
-  .hero-projects-card__list li { font-size: 0.95rem; }
+  .hero-ticker { padding: 20px 0 0; min-height: auto; align-items: center; }
+  .hero-ticker__item { font-size: 1.3rem; }
+  .hero-ticker__wrap { height: 110px; max-width: 400px; }
 
   .section { padding: 60px 0; }
   .section__head { margin-bottom: 40px; }
