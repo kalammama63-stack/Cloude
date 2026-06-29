@@ -1,0 +1,26 @@
+name: Deploy to Beget
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.beget.com
+          username: kalammcm
+          password: ${{ secrets.BEGET_FTP_PASSWORD }}
+          server-dir: /tk-webb.ru/public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            cf-worker.js
+            README.md
