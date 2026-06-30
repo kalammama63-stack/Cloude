@@ -9,3 +9,9 @@ homepage.html
 # Служебные файлы
 key.json
 key.jsonGet-Item
+
+# Dev-инструменты (конвертация картинок)
+node_modules/
+package.json
+package-lock.json
+convert-webp.js
