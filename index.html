@@ -1032,6 +1032,58 @@
         </div>
       </section>
 
+      <!-- QUIZ -->
+      <section class="section section--quiz" id="quiz">
+        <div class="container">
+          <div class="section__head reveal-up">
+            <span class="eyebrow">Подбор</span>
+            <h2>Что вам подойдёт?</h2>
+            <p class="section__sub">3 вопроса — и вы узнаете, с чего начать</p>
+          </div>
+          <div class="quiz-wrap reveal-up">
+            <div class="quiz-progress">
+              <div class="quiz-progress__bar" id="quizBar"></div>
+            </div>
+            <!-- Шаг 1 -->
+            <div class="quiz-step" id="qStep1">
+              <p class="quiz-question">Что вам сейчас нужно?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" data-step="1" data-val="clients">Привлечь клиентов через интернет</button>
+                <button class="quiz-opt" data-step="1" data-val="auto">Автоматизировать приём заявок</button>
+                <button class="quiz-opt" data-step="1" data-val="both">И то, и другое</button>
+              </div>
+            </div>
+            <!-- Шаг 2 -->
+            <div class="quiz-step quiz-step--hidden" id="qStep2">
+              <p class="quiz-question">Есть ли у вас сайт?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" data-step="2" data-val="no">Нет, нужен с нуля</button>
+                <button class="quiz-opt" data-step="2" data-val="old">Есть, но устарел</button>
+                <button class="quiz-opt" data-step="2" data-val="yes">Есть, хочу добавить бота</button>
+              </div>
+            </div>
+            <!-- Шаг 3 -->
+            <div class="quiz-step quiz-step--hidden" id="qStep3">
+              <p class="quiz-question">Какой бюджет планируете?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" data-step="3" data-val="low">до 20 000 ₽</button>
+                <button class="quiz-opt" data-step="3" data-val="mid">20 000 — 50 000 ₽</button>
+                <button class="quiz-opt" data-step="3" data-val="high">от 50 000 ₽</button>
+              </div>
+            </div>
+            <!-- Результат -->
+            <div class="quiz-step quiz-step--hidden quiz-result" id="qResult">
+              <div class="quiz-result__icon">✓</div>
+              <p class="quiz-result__label">Вам подойдёт</p>
+              <p class="quiz-result__title" id="qResultTitle"></p>
+              <p class="quiz-result__desc" id="qResultDesc"></p>
+              <a href="#contact" class="button button--primary quiz-result__btn">Обсудить проект</a>
+              <button class="quiz-restart" id="qRestart">Пройти заново</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section class="section section--contact" id="contact">
         <div class="contact-stars" aria-hidden="true">
@@ -1124,5 +1176,67 @@
   <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
 
   <script src="script.js"></script>
+  <script>
+  (function(){
+    var answers = {};
+    var results = {
+      site: {
+        title: 'Сайт-визитка или Landing Page',
+        desc: 'Сделаем продающий сайт на Tilda под ключ: дизайн, тексты, SEO. Клиенты найдут вас в поиске и сразу поймут, чем вы занимаетесь.'
+      },
+      bot: {
+        title: 'Telegram-бот для автоматизации',
+        desc: 'Бот сам принимает заявки, отвечает на вопросы и уведомляет вас в Telegram. Вы не пропустите ни одного клиента — даже ночью.'
+      },
+      combo: {
+        title: 'Комбо: Сайт + Telegram-бот',
+        desc: 'Сайт привлекает клиентов из поиска, бот автоматически собирает заявки. Полный пакет от 45 000 ₽ под ключ за 10 дней.'
+      },
+      update: {
+        title: 'Обновление сайта + Telegram-бот',
+        desc: 'Освежим дизайн и добавим бота для автоматического сбора заявок. Клиент нажимает кнопку на сайте — и попадает прямо к вам в Telegram.'
+      }
+    };
+
+    function getResult() {
+      var q1 = answers[1], q2 = answers[2], q3 = answers[3];
+      if (q1 === 'auto' && q2 === 'yes') return results.bot;
+      if (q1 === 'auto') return results.bot;
+      if (q2 === 'old' || q2 === 'yes') return results.update;
+      if (q1 === 'both') return results.combo;
+      return results.site;
+    }
+
+    function showStep(n) {
+      ['qStep1','qStep2','qStep3','qResult'].forEach(function(id){
+        document.getElementById(id).classList.add('quiz-step--hidden');
+      });
+      var target = n === 'result' ? 'qResult' : 'qStep' + n;
+      document.getElementById(target).classList.remove('quiz-step--hidden');
+      var pct = n === 'result' ? 100 : ((n - 1) / 3 * 100);
+      document.getElementById('quizBar').style.width = pct + '%';
+    }
+
+    document.querySelectorAll('.quiz-opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var step = parseInt(this.dataset.step);
+        answers[step] = this.dataset.val;
+        if (step < 3) {
+          showStep(step + 1);
+        } else {
+          var r = getResult();
+          document.getElementById('qResultTitle').textContent = r.title;
+          document.getElementById('qResultDesc').textContent = r.desc;
+          showStep('result');
+        }
+      });
+    });
+
+    document.getElementById('qRestart').addEventListener('click', function(){
+      answers = {};
+      showStep(1);
+    });
+  })();
+  </script>
 </body>
 </html>
