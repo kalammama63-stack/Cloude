@@ -22,7 +22,6 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
-            cf-worker.js
             README.md
             node_modules/**
             convert-webp.js

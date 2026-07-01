@@ -1,8 +1,7 @@
 /* ============================================================
-   WORKER URL — замени на реальный адрес Cloudflare Worker
-   после деплоя cf-worker.js (инструкция внутри файла)
+   URL обработчика формы — PHP-скрипт на том же хостинге (Beget)
    ============================================================ */
-const WORKER_URL = 'https://tkweb-form.kalammama63.workers.dev';
+const WORKER_URL = '/send-form.php';
 
 /* ============================================================
    CUSTOM CURSOR
@@ -324,7 +323,7 @@ if (parallaxItems.length && !window.matchMedia('(max-width: 768px)').matches) {
 })();
 
 /* ============================================================
-   CONTACT FORM — отправка через Cloudflare Worker
+   CONTACT FORM — отправка через PHP на Beget
    ============================================================ */
 (function () {
   const form = document.getElementById('contactForm');
