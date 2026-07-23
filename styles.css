@@ -2370,6 +2370,13 @@ p { margin: 0; }
 .case-detail-quote p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0 0 8px; font-style: italic; }
 .case-detail-quote strong { font-size: 0.82rem; color: var(--text-muted); }
 .case-detail-card__right { display: flex; flex-direction: column; }
+.case-detail-shot {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--bg-graphite-500);
+  display: block;
+}
+.case-detail-shot + .case-detail-shot { margin-top: 16px; }
 .case-detail-results { display: flex; flex-direction: column; gap: 18px; }
 .case-detail-result {
   display: flex;
