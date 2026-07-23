@@ -2110,6 +2110,8 @@ p { margin: 0; }
   position: relative;
   overflow: hidden;
 }
+.section--hero-inner--compact { padding-bottom: 32px; }
+.section--articles-top { padding-top: 32px; }
 .section--hero-inner::before {
   content: '';
   position: absolute;
