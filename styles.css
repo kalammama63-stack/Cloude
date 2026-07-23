@@ -2801,3 +2801,57 @@ p { margin: 0; }
   .quiz-wrap { padding: 28px 20px; }
   .quiz-question { font-size: 1rem; }
 }
+
+/* ===== Статьи ===== */
+.article-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  margin: 0 0 40px;
+  display: block;
+}
+.article-meta { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 32px; opacity: 0.85; }
+.article-body { max-width: 760px; margin: 0 auto; }
+.article-body p { color: var(--text-secondary); line-height: 1.8; margin: 0 0 20px; font-size: 1.05rem; }
+.article-body h2 { margin: 48px 0 20px; font-size: 1.6rem; line-height: 1.3; }
+.article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.8; margin: 0 0 20px 22px; }
+.article-body a { color: var(--accent-orange); text-decoration: underline; text-underline-offset: 3px; }
+.article-callout {
+  border-left: 3px solid var(--accent-orange);
+  background: var(--bg-card);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 0 0 20px;
+  color: var(--text-secondary);
+}
+.article-callout strong { color: var(--accent-orange); }
+.article-table-wrap { overflow-x: auto; margin: 0 0 28px; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.article-body th, .article-body td { border: 1px solid var(--bg-graphite-500); padding: 10px 14px; text-align: left; color: var(--text-secondary); }
+.article-body th { background: var(--bg-card); color: var(--text-primary); }
+.article-sources {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.75;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bg-graphite-500);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article-cards { max-width: 760px; margin: 0 auto; display: grid; gap: 20px; }
+.article-card {
+  display: block;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: 28px;
+  transition: background 0.2s;
+}
+.article-card:hover { background: var(--bg-card-hover); }
+.article-card__title { color: var(--text-primary); font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.article-card__excerpt { color: var(--text-secondary); line-height: 1.7; margin-bottom: 0; }
+@media (max-width: 600px) {
+  .article-body h2 { font-size: 1.3rem; }
+  .article-body p { font-size: 1rem; }
+}
