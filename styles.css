@@ -2851,6 +2851,17 @@ p { margin: 0; }
 .article-card:hover { background: var(--bg-card-hover); }
 .article-card__title { color: var(--text-primary); font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
 .article-card__excerpt { color: var(--text-secondary); line-height: 1.7; margin-bottom: 0; }
+.article-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.article-card__cta span { transition: transform 0.2s; }
+.article-card:hover .article-card__cta span { transform: translateX(4px); }
 @media (max-width: 600px) {
   .article-body h2 { font-size: 1.3rem; }
   .article-body p { font-size: 1rem; }
