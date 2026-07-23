@@ -2370,13 +2370,28 @@ p { margin: 0; }
 .case-detail-quote p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0 0 8px; font-style: italic; }
 .case-detail-quote strong { font-size: 0.82rem; color: var(--text-muted); }
 .case-detail-card__right { display: flex; flex-direction: column; }
-.case-detail-shot {
+
+/* Реальный кейс с фото-парой (текст сверху, скриншоты рядом снизу — не в узкой колонке) */
+.case-real {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 40px;
+}
+.case-real h3 { margin: 16px 0; font-size: 1.15rem; }
+.case-real > p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.75; margin: 0 0 16px; }
+.case-real .case-detail-quote { margin: 8px 0 28px; }
+.case-real__shots { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.case-real__shots img {
   width: 100%;
+  max-width: 420px;
+  height: auto;
   border-radius: var(--radius-card);
   border: 1px solid var(--bg-graphite-500);
   display: block;
 }
-.case-detail-shot + .case-detail-shot { margin-top: 16px; }
 .case-detail-results { display: flex; flex-direction: column; gap: 18px; }
 .case-detail-result {
   display: flex;
