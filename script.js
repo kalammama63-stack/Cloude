@@ -78,6 +78,27 @@ if (window.matchMedia('(hover: none)').matches) {
 }
 
 /* ============================================================
+   CASE GALLERY — листалка скриншотов стрелками
+   ============================================================ */
+document.querySelectorAll('.case-gallery').forEach(gallery => {
+  const track = gallery.querySelector('.case-gallery__track');
+  const slides = gallery.querySelectorAll('.case-gallery__slide');
+  const prevBtn = gallery.querySelector('.case-gallery__arrow--prev');
+  const nextBtn = gallery.querySelector('.case-gallery__arrow--next');
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === slides.length - 1;
+  }
+
+  prevBtn.addEventListener('click', () => { if (index > 0) { index--; update(); } });
+  nextBtn.addEventListener('click', () => { if (index < slides.length - 1) { index++; update(); } });
+  update();
+});
+
+/* ============================================================
    MOBILE CTA — показываем после прокрутки hero
    ============================================================ */
 const mobileCta = document.querySelector('.mobile-cta');

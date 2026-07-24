@@ -2373,7 +2373,7 @@ p { margin: 0; }
 
 /* Реальный кейс с фото-парой (текст сверху, скриншоты рядом снизу — не в узкой колонке) */
 .case-real {
-  max-width: 800px;
+  max-width: 880px;
   margin: 0 auto;
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -2383,14 +2383,81 @@ p { margin: 0; }
 .case-real h3 { margin: 16px 0; font-size: 1.15rem; }
 .case-real > p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.75; margin: 0 0 16px; }
 .case-real .case-detail-quote { margin: 8px 0 28px; }
-.case-real__shots { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.case-real__shots img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  border-radius: var(--radius-card);
+
+/* Галерея реальных скриншотов — листалка стрелками, один кадр за раз */
+.case-gallery {
+  position: relative;
+  max-width: 800px;
+  margin: 32px auto 0;
+}
+.case-gallery__viewport {
+  overflow: hidden;
+  border-radius: 16px;
   border: 1px solid var(--bg-graphite-500);
+  box-shadow: 0 16px 36px -14px rgba(0,0,0,0.5);
+  background: var(--bg-graphite-800);
+}
+.case-gallery__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.case-gallery__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.case-gallery__slide img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.case-gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent-orange);
+  background: #0a0a0d;
+  color: var(--text-primary);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px -6px rgba(0,0,0,0.6);
+  transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+.case-gallery__arrow--prev { left: -84px; }
+.case-gallery__arrow--next { right: -84px; }
+.case-gallery__arrow:hover:not(:disabled) { background: var(--accent-orange); transform: translateY(-50%) scale(1.08); }
+.case-gallery__arrow:disabled { opacity: 0.3; cursor: default; }
+
+@media (max-width: 900px) {
+  .case-gallery__arrow--prev { left: -8px; }
+  .case-gallery__arrow--next { right: -8px; }
+}
+
+/* Отзыв — отдельная карточка под галереей, без обрезки */
+.case-shot--review {
   display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 28px auto 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--accent-orange);
+  box-shadow: 0 20px 45px -14px rgba(249,139,0,0.3);
+}
+.case-shot--review img { display: block; width: 100%; height: auto; }
+
+@media (max-width: 680px) {
+  .case-real { padding: 28px 20px; }
+  .case-gallery { max-width: 100%; margin-top: 28px; }
+  .case-gallery__arrow { width: 48px; height: 48px; font-size: 1.6rem; }
 }
 .case-detail-results { display: flex; flex-direction: column; gap: 18px; }
 .case-detail-result {
