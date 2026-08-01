@@ -2184,6 +2184,8 @@ p { margin: 0; }
 .why-icon { font-size: 1.8rem; margin-bottom: 14px; line-height: 1; }
 .why-card h3 { margin: 0 0 10px; font-size: 1rem; }
 .why-card p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0; }
+.why-card__link { display: inline-block; margin-top: 12px; color: var(--accent-orange); font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.why-card__link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 1120px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 680px)  { .why-grid { grid-template-columns: 1fr; } }
