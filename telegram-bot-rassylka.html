@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=110399988", "ym");
+
+     ym(110399988, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110399988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бот-рассылка в Telegram для бизнеса: цена и как работает | TK Web</title>
+  <meta name="description" content="Бот-рассылка в Telegram — массовая рассылка акций и новостей подписчикам одной кнопкой. От 15 000 ₽. Ограничения, сравнение с SMS и WhatsApp." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/telegram-bot-rassylka.html" />
+  <meta property="og:title" content="Бот-рассылка в Telegram для бизнеса: цена и как работает" />
+  <meta property="og:description" content="Бот-рассылка в Telegram — массовая рассылка акций и новостей подписчикам одной кнопкой. От 15 000 ₽. Ограничения, сравнение с SMS и WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tk-webb.ru/telegram-bot-rassylka.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="TK Web" />
+  <meta property="og:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tk-webb.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Telegram-боты", "item": "https://tk-webb.ru/telegram-bot.html"},
+      {"@type": "ListItem", "position": 3, "name": "Бот-рассылка в Telegram для бизнеса", "item": "https://tk-webb.ru/telegram-bot-rassylka.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Бот-рассылка в Telegram для бизнеса",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://tk-webb.ru/",
+      "name": "TK Web — Тамара Коломейцева",
+      "url": "https://tk-webb.ru/",
+      "telephone": "+79662864905",
+      "email": "tk.webdis@gmail.com",
+      "areaServed": ["Россия", "Москва", "Санкт-Петербург", "Казань", "Екатеринбург", "Новосибирск", "Краснодар"]
+    },
+    "description": "Разработка Telegram-бота для массовых рассылок клиентам: акции, новости, напоминания одной кнопкой.",
+    "offers": [
+      { "@type": "Offer", "name": "Бот-рассылка", "price": "15000", "priceCurrency": "RUB" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Сколько стоит бот-рассылка в Telegram?",
+        "acceptedAnswer": {"@type": "Answer", "text": "От 15 000 ₽, срок разработки — от 3 дней. В стоимость входит сбор базы подписчиков и панель для отправки рассылки одной кнопкой."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли делать массовую рассылку всем клиентам сразу?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, рассылка отправляется всем подписчикам бота одновременно одной кнопкой — акция, новость или напоминание доходит до всей базы за секунды."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли разослать сообщение клиенту, который не подписан на бота?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Нет. Telegram API не разрешает боту первым писать пользователю, который не нажимал /start хотя бы раз, — это ограничение самой платформы против спама, а не техническое ограничение бота. Сначала клиент должен подписаться на бота, только после этого он попадает в базу рассылки."}
+      },
+      {
+        "@type": "Question",
+        "name": "Берёт ли Telegram плату за отправку сообщений подписчикам?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Нет, рассылка сообщениями через бота бесплатна в пределах разумных объёмов — в отличие от SMS, где платите за каждое сообщение, и WhatsApp Business API, где платите за сообщения вне окна диалога."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли сегментировать рассылку, например только постоянным клиентам?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, базу подписчиков можно разделить на сегменты и отправлять разным группам разные сообщения — например, новым клиентам приветственный бонус, а постоянным — акцию на повторную покупку."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли делать такие же рассылки в мессенджере MAX?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, тот же принцип рассылки можно реализовать и в MAX — подробно разбирала перенос и работу бота в MAX в отдельной статье."}
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="/">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
+          <a href="site-tilda.html">Сайты</a>
+          <a href="telegram-bot.html" class="nav--active" aria-current="page">Telegram-боты</a>
+          <a href="sayt-i-bot.html">Сайт+бот</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="stati.html">Статьи</a>
+          <a href="/#pricing">Прайс</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner section--hero-inner--compact" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Бот-рассылка</span>
+            <h1 class="reveal-up">Бот-рассылка в Telegram для бизнеса</h1>
+            <p class="hero__sub reveal-up">От 15 000 ₽. Отправляет акции, новости и напоминания всей базе подписчиков одной кнопкой — без платы за каждое сообщение.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTICLE -->
+      <section class="section section--articles-top">
+        <div class="container">
+
+          <div class="article-body">
+
+            <h2>Короткий ответ</h2>
+            <p>Бот-рассылка в Telegram — это бот, который собирает базу подписчиков (все, кто хотя бы раз нажал /start) и позволяет одной кнопкой отправить им сообщение: акцию, новость, напоминание. Стоимость разработки — от <strong>15 000 ₽</strong>, срок — от <strong>3 дней</strong>. Оплата разовая, отдельной платы за отправку сообщений подписчикам Telegram не берёт.</p>
+            <p>Главное ограничение: писать первым можно только тем, кто уже подписался на бота. Разослать сообщение по номеру телефона человеку, который никогда не писал боту, нельзя — это правило самого Telegram против спама, а не недоработка бота.</p>
+
+            <h2>Как выбрать возможности для рассылки</h2>
+            <div class="article-callout"><strong>Коротко:</strong> выбор зависит от размера базы подписчиков, частоты рассылок и нужна ли сегментация аудитории.</div>
+            <p><strong>Сколько подписчиков и как часто планируете писать.</strong> Для небольшой базы и редких рассылок (раз в неделю-две) хватает простого бота с одной кнопкой «Отправить всем». Для активной коммуникации, где нужны разные сообщения разным группам, стоит сразу закладывать сегментацию.</p>
+            <p><strong>Нужна ли сегментация.</strong> Если хотите слать разные сообщения новым и постоянным клиентам — например, приветственный бонус одним и акцию на повторную покупку другим — это отдельная функция бота, обсуждается при заказе.</p>
+            <p><strong>Как набираете базу подписчиков.</strong> Проще всего — кнопка на сайте или ссылка в соцсетях, которая сразу ведёт в бота. Чем быстрее человек попадает в бота после первого контакта с вами, тем выше процент тех, кто действительно подпишется.</p>
+            <p><strong>Нужны ли рассылки только в Telegram или и в других каналах.</strong> Если часть клиентов пользуется мессенджером MAX, тот же принцип рассылки можно реализовать и там — это отдельный, но похожий по логике бот.</p>
+
+            <h2>Сравнение: Telegram-бот, SMS, email и WhatsApp Business</h2>
+            <div class="article-callout"><strong>Коротко:</strong> Telegram-рассылка бесплатна и доходит быстро, но работает только по уже подписавшимся; SMS и WhatsApp Business платят за каждое сообщение вне диалога, email — самый дешёвый канал, но с более низкой открываемостью.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Канал</th><th>Кому можно писать</th><th>Плата за сообщение</th><th>Скорость прочтения</th></tr></thead>
+                <tbody>
+                  <tr><td>Telegram-бот</td><td>Только подписчикам бота</td><td>Нет</td><td>Обычно высокая — уведомление в мессенджере</td></tr>
+                  <tr><td>SMS</td><td>Любой номер телефона</td><td>Да, за каждое сообщение</td><td>Высокая, но канал воспринимается как реклама</td></tr>
+                  <tr><td>Email</td><td>Любой email из базы</td><td>Обычно по тарифу сервиса рассылок, не за сообщение</td><td>Ниже — письма чаще остаются непрочитанными</td></tr>
+                  <tr><td>WhatsApp Business API</td><td>Клиент должен разрешить переписку</td><td>Да, за сообщения вне окна диалога</td><td>Высокая</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Telegram-бот выгоднее по деньгам на больших объёмах: платите один раз за разработку, а не за каждое отправленное сообщение. Ограничение одно — писать можно только тем, кто уже в базе подписчиков, поэтому важно заранее продумать, как люди будут подписываться на бота.</p>
+
+            <h2>Стоимость и что входит в разработку</h2>
+            <div class="article-callout"><strong>Коротко:</strong> от 15 000 ₽, от 3 дней — сбор базы подписчиков и панель отправки рассылки входят в базовую стоимость.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Что делаю</th><th>Цена</th><th>Срок</th></tr></thead>
+                <tbody>
+                  <tr><td>Бот-рассылка (сбор базы, отправка всем)</td><td>от 15 000 ₽</td><td>от 3 дней</td></tr>
+                  <tr><td>+ сегментация базы по группам</td><td>обсуждается индивидуально</td><td>+1–2 дня</td></tr>
+                  <tr><td>Бот-рассылка + бот лояльности (бонусы)</td><td>от 40 000 ₽</td><td>от 7 дней</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>В стоимость входит: сценарий подписки на бота, кнопка массовой рассылки, база подписчиков с возможностью выгрузки, чекбокс согласия на обработку персональных данных при подписке, а после сдачи — обучение, как самостоятельно готовить и отправлять рассылку. Полный список из 6 видов Telegram-ботов и цен — на странице <a href="telegram-bot.html">Telegram-боты для бизнеса</a>.</p>
+
+            <h2>Частые вопросы</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Сколько стоит бот-рассылка в Telegram?</summary>
+                <div class="faq-body">От 15 000 ₽, от 3 дней. В стоимость входит сбор базы подписчиков и панель для отправки рассылки одной кнопкой.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли делать массовую рассылку всем клиентам сразу?</summary>
+                <div class="faq-body">Да, рассылка отправляется всем подписчикам бота одновременно одной кнопкой — акция, новость или напоминание доходит до всей базы за секунды.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли разослать сообщение клиенту, который не подписан на бота?</summary>
+                <div class="faq-body">Нет. Telegram не разрешает боту первым писать пользователю, который не нажимал /start хотя бы раз, — это ограничение платформы против спама. Сначала клиент подписывается, только после этого попадает в базу рассылки.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Берёт ли Telegram плату за отправку сообщений подписчикам?</summary>
+                <div class="faq-body">Нет, рассылка бесплатна в пределах разумных объёмов — в отличие от SMS, где платите за каждое сообщение, и WhatsApp Business API, где платите за сообщения вне окна диалога.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли сегментировать рассылку?</summary>
+                <div class="faq-body">Да, базу можно разделить на сегменты и отправлять разным группам разные сообщения — например, новым клиентам приветственный бонус, а постоянным — акцию на повторную покупку.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли делать такие же рассылки в MAX?</summary>
+                <div class="faq-body">Да, тот же принцип можно реализовать и в MAX — подробно разбирала перенос и работу бота в MAX в отдельной статье.</div>
+              </details>
+            </div>
+
+            <p>Нужен бот для рассылок под вашу базу клиентов — расскажите о задаче, посчитаю точную цену. <a href="#contact">Обсудить проект →</a></p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Нужна рассылка клиентам?</span>
+              <h2>Напишите — отвечу лично</h2>
+              <p>Оставьте имя и телефон или мессенджер. Звонить не буду — напишу сама.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Расскажите о задаче (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.webp" alt="TK Web" class="logo-footer" loading="lazy" width="66" height="36" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

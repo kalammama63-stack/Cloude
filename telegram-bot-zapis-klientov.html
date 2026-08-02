@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=110399988", "ym");
+
+     ym(110399988, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110399988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram-бот для записи клиентов: цена и как работает | TK Web</title>
+  <meta name="description" content="Telegram-бот для записи клиентов — от 25 000 ₽, от 5 дней. Ведёт календарь, шлёт напоминания, сравнение с формой на сайте и CRM для записи." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/telegram-bot-zapis-klientov.html" />
+  <meta property="og:title" content="Telegram-бот для записи клиентов: цена и как работает" />
+  <meta property="og:description" content="Telegram-бот для записи клиентов — от 25 000 ₽, от 5 дней. Ведёт календарь, шлёт напоминания, сравнение с формой на сайте и CRM для записи." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tk-webb.ru/telegram-bot-zapis-klientov.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="TK Web" />
+  <meta property="og:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tk-webb.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Telegram-боты", "item": "https://tk-webb.ru/telegram-bot.html"},
+      {"@type": "ListItem", "position": 3, "name": "Telegram-бот для записи клиентов", "item": "https://tk-webb.ru/telegram-bot-zapis-klientov.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Telegram-бот для записи клиентов",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://tk-webb.ru/",
+      "name": "TK Web — Тамара Коломейцева",
+      "url": "https://tk-webb.ru/",
+      "telephone": "+79662864905",
+      "email": "tk.webdis@gmail.com",
+      "areaServed": ["Россия", "Москва", "Санкт-Петербург", "Казань", "Екатеринбург", "Новосибирск", "Краснодар"]
+    },
+    "description": "Разработка Telegram-бота для онлайн-записи клиентов: календарь, напоминания, управление расписанием без звонков.",
+    "offers": [
+      { "@type": "Offer", "name": "Telegram-бот-администратор (запись клиентов)", "price": "25000", "priceCurrency": "RUB" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Сколько стоит Telegram-бот для записи клиентов?",
+        "acceptedAnswer": {"@type": "Answer", "text": "От 25 000 ₽, срок разработки — от 5 дней. Цена зависит от сложности сценария: один специалист с одной услугой дешевле, чем несколько мастеров, услуг и залов с раздельными календарями."}
+      },
+      {
+        "@type": "Question",
+        "name": "Чем бот для записи отличается от бота-опросника?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Бот-опросник просто собирает заявку и отправляет вам — вы сами перезваниваете и договариваетесь о времени. Бот для записи (бот-администратор) ведёт календарь сам: показывает свободные слоты, бронирует конкретное время и присылает напоминание, без участия человека."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли связать бота с CRM для записи, например YClients?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, интеграция с внешней CRM возможна: бот может писать записи в уже существующую систему вместо своего внутреннего календаря. Это усложняет разработку и обсуждается отдельно от базовой стоимости."}
+      },
+      {
+        "@type": "Question",
+        "name": "Присылает ли бот напоминания о записи?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, автоматически — обычно за 2 часа до визита. Это снижает процент неявок без вашего участия: не нужно самому обзванивать клиентов накануне."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли сделать бота для записи не в Telegram, а в MAX?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, тот же сценарий записи можно реализовать в мессенджере MAX или продублировать бота в обеих платформах — подробно разбирала перенос бота в MAX в отдельной статье."}
+      },
+      {
+        "@type": "Question",
+        "name": "Нужен ли сайт, если бот уже принимает записи?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Бот хорошо обрабатывает уже знакомую аудиторию, но не индексируется поисковыми системами — через Google или Яндекс на него не выйти. Если новых клиентов вы ждёте из поиска, сайт с кнопкой в бота работает эффективнее одного бота."}
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="/">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
+          <a href="site-tilda.html">Сайты</a>
+          <a href="telegram-bot.html" class="nav--active" aria-current="page">Telegram-боты</a>
+          <a href="sayt-i-bot.html">Сайт+бот</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="stati.html">Статьи</a>
+          <a href="/#pricing">Прайс</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner section--hero-inner--compact" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Бот-администратор</span>
+            <h1 class="reveal-up">Telegram-бот для записи клиентов</h1>
+            <p class="hero__sub reveal-up">От 25 000 ₽, от 5 дней. Бот сам показывает свободные слоты, бронирует время и присылает напоминания — без звонков и вашего участия.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTICLE -->
+      <section class="section section--articles-top">
+        <div class="container">
+
+          <div class="article-body">
+
+            <h2>Короткий ответ</h2>
+            <p>Telegram-бот для записи клиентов — это бот-администратор, который ведёт онлайн-запись прямо в чате: клиент выбирает удобное время, бот бронирует слот в календаре и присылает напоминание за пару часов до визита. Стоимость разработки — <strong>от 25 000 ₽</strong>, срок — <strong>от 5 дней</strong>. Оплата разовая, ежемесячных платежей за работу самого бота обычно нет или они минимальны.</p>
+            <p>В отличие от бота-опросника, который только собирает заявку и передаёт её вам, бот-администратор ведёт полноценный календарь сам — без вашего участия в процессе бронирования.</p>
+
+            <h2>Как выбрать: бот для записи или что-то другое</h2>
+            <div class="article-callout"><strong>Коротко:</strong> выбор зависит от того, нужна ли запись на конкретное время, сколько у вас специалистов и услуг и уже пользуетесь ли CRM.</div>
+            <p><strong>Нужна ли запись на конкретное время.</strong> Если клиенту важно выбрать именно час и дату (стрижка, консультация, приём) — нужен бот-администратор с календарём. Если достаточно просто собрать заявку с деталями и перезвонить самому — хватит более простого и дешёвого бота-опросника.</p>
+            <p><strong>Сколько специалистов и услуг.</strong> Запись к одному мастеру на одну-две услуги — самый простой и недорогой сценарий. Несколько мастеров, разные услуги с разной длительностью, несколько залов или кабинетов — сценарий сложнее, это увеличивает и цену, и срок разработки.</p>
+            <p><strong>Уже есть CRM для записи.</strong> Если вы уже пользуетесь сервисом вроде YClients, бота можно связать с ним — он будет писать записи в вашу существующую систему вместо своего внутреннего календаря. Если отдельной CRM нет, календарь бот ведёт полностью сам, и подключать ничего дополнительно не нужно.</p>
+            <p><strong>Где чаще всего пользуются ботом.</strong> Салоны красоты, автосервисы, репетиторы, клиники — везде, где есть повторяющаяся запись на приём. Если аудитория уже сидит в Telegram — бота достаточно. Если новых клиентов вы ждёте из поиска, стоит связать бота с <a href="site-tilda.html">сайтом</a>: сайт находят в Google и Яндексе, а кнопка на нём сразу ведёт в бота для записи.</p>
+
+            <h2>Сравнение: бот, форма на сайте, CRM или запись вручную</h2>
+            <div class="article-callout"><strong>Коротко:</strong> ручная запись и форма требуют вашего участия в бронировании, CRM для записи — платная подписка, бот-администратор ведёт календарь сам за разовую оплату.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th></th><th>Кто ведёт календарь</th><th>Напоминания</th><th>Стоимость</th></tr></thead>
+                <tbody>
+                  <tr><td>Звонки и переписка вручную</td><td>Вы сами</td><td>Только если не забудете</td><td>бесплатно, но тратит время</td></tr>
+                  <tr><td>Форма заявки на сайте</td><td>Вы обрабатываете заявки вручную</td><td>Нет</td><td>входит в разработку сайта</td></tr>
+                  <tr><td>CRM для записи (YClients и т.п.)</td><td>Автоматически, в отдельном сервисе</td><td>Да</td><td>подписка, обычно от 1 000 ₽/мес</td></tr>
+                  <tr><td>Telegram-бот-администратор</td><td>Автоматически, прямо в боте</td><td>Да, входит в разработку</td><td>от 25 000 ₽ разово</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Главное отличие бота от готовой CRM для записи — разовая оплата вместо подписки: заплатив один раз за разработку, дальше не нужно ежемесячно платить за сервис записи. Из минусов — бот делается под вашу конкретную задачу, а не берётся готовым с рынка, поэтому доработки в будущем оплачиваются отдельно.</p>
+            <p>Тот же сценарий можно реализовать не только в Telegram, но и в мессенджере MAX — например, если часть аудитории уже там или планируете дублировать канал, разбирала это отдельно в статье <a href="perenos-bota-v-max.html">про перенос бота в MAX</a>.</p>
+
+            <h2>Стоимость и что входит в разработку</h2>
+            <div class="article-callout"><strong>Коротко:</strong> от 25 000 ₽, от 5 дней — в стоимость входит сценарий записи, календарь, напоминания и обучение работе с ботом после сдачи.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Что делаю</th><th>Цена</th><th>Срок</th></tr></thead>
+                <tbody>
+                  <tr><td>Telegram-бот-администратор (1 специалист, 1–2 услуги)</td><td>от 25 000 ₽</td><td>от 5 дней</td></tr>
+                  <tr><td>Несколько специалистов / услуг / интеграция с CRM</td><td>обсуждается индивидуально</td><td>от 7 дней</td></tr>
+                  <tr><td>Сайт + бот для записи в связке</td><td>от 45 000 ₽</td><td>от 10 дней</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>В стоимость входит: сценарий диалога, календарь свободных слотов, автоматические напоминания клиентам, чекбокс согласия на обработку персональных данных в форме, а после сдачи — обучение, как самостоятельно редактировать расписание и услуги. Бот остаётся полностью вашим и под вашим контролем.</p>
+            <p>Полный список из 6 видов Telegram-ботов и цен — на странице <a href="telegram-bot.html">Telegram-боты для бизнеса</a>. Если запись нужна не сама по себе, а вместе с сайтом, который приводит новых клиентов из поиска, — посмотрите готовый комплект <a href="sayt-i-bot.html">«Сайт + Telegram-бот»</a>.</p>
+
+            <h2>Частые вопросы</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Сколько стоит Telegram-бот для записи клиентов?</summary>
+                <div class="faq-body">От 25 000 ₽, от 5 дней. Цена зависит от сложности сценария: один специалист с одной услугой дешевле, чем несколько мастеров, услуг и залов с раздельными календарями.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Чем бот для записи отличается от бота-опросника?</summary>
+                <div class="faq-body">Бот-опросник только собирает заявку и отправляет вам — вы сами перезваниваете и договариваетесь о времени. Бот для записи ведёт календарь сам: показывает свободные слоты, бронирует конкретное время и присылает напоминание без участия человека.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли связать бота с CRM для записи, например YClients?</summary>
+                <div class="faq-body">Да, интеграция с внешней CRM возможна: бот может писать записи в уже существующую систему вместо своего внутреннего календаря. Это усложняет разработку и обсуждается отдельно от базовой стоимости.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Присылает ли бот напоминания о записи?</summary>
+                <div class="faq-body">Да, автоматически — обычно за 2 часа до визита. Это снижает процент неявок без вашего участия: не нужно самому обзванивать клиентов накануне.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли сделать бота для записи не в Telegram, а в MAX?</summary>
+                <div class="faq-body">Да, тот же сценарий записи можно реализовать в мессенджере MAX или продублировать бота в обеих платформах — подробно разбирала перенос бота в MAX в отдельной статье.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Нужен ли сайт, если бот уже принимает записи?</summary>
+                <div class="faq-body">Бот хорошо обрабатывает уже знакомую аудиторию, но не индексируется поисковыми системами — через Google или Яндекс на него не выйти. Если новых клиентов вы ждёте из поиска, сайт с кнопкой в бота работает эффективнее одного бота.</div>
+              </details>
+            </div>
+
+            <p>Нужен бот для онлайн-записи под вашу задачу — расскажите, сколько специалистов и услуг, посчитаю точную цену. <a href="#contact">Обсудить проект →</a></p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Нужна онлайн-запись?</span>
+              <h2>Напишите — отвечу лично</h2>
+              <p>Оставьте имя и телефон или мессенджер. Звонить не буду — напишу сама.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Расскажите о задаче (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.webp" alt="TK Web" class="logo-footer" loading="lazy" width="66" height="36" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
