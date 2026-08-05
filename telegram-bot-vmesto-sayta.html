@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=110399988", "ym");
+
+     ym(110399988, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110399988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram-бот вместо сайта: когда хватит бота, а когда нет | TK Web</title>
+  <meta name="description" content="Бот или сайт для малого бизнеса? Разбираю честно: когда Telegram-бот закрывает задачу, когда без сайта не обойтись, и сколько стоит каждый вариант." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/telegram-bot-vmesto-sayta.html" />
+  <meta property="og:title" content="Telegram-бот вместо сайта: когда это работает и когда нет" />
+  <meta property="og:description" content="Бот или сайт для малого бизнеса? Разбираю честно: когда Telegram-бот закрывает задачу, когда без сайта не обойтись, и сколько стоит каждый вариант." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tk-webb.ru/telegram-bot-vmesto-sayta.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="TK Web" />
+  <meta property="og:image" content="https://tk-webb.ru/telegram-bot-vmesto-sayta.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/telegram-bot-vmesto-sayta.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tk-webb.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Статьи", "item": "https://tk-webb.ru/stati.html"},
+      {"@type": "ListItem", "position": 3, "name": "Telegram-бот вместо сайта: когда это работает и когда нет", "item": "https://tk-webb.ru/telegram-bot-vmesto-sayta.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Telegram-бот вместо сайта: когда это работает и когда нет",
+    "description": "Бот или сайт для малого бизнеса? Разбираю честно: когда Telegram-бот закрывает задачу, когда без сайта не обойтись, и сколько стоит каждый вариант.",
+    "image": "https://tk-webb.ru/telegram-bot-vmesto-sayta.png",
+    "datePublished": "2026-08-05",
+    "dateModified": "2026-08-05",
+    "author": {"@type": "Person", "name": "Тамара Коломейцева", "url": "https://tk-webb.ru/"},
+    "publisher": {"@type": "Organization", "name": "TK Web", "logo": {"@type": "ImageObject", "url": "https://tk-webb.ru/logo.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tk-webb.ru/telegram-bot-vmesto-sayta.html"}
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="/">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
+          <a href="site-tilda.html">Сайты</a>
+          <a href="telegram-bot.html">Telegram-боты</a>
+          <a href="sayt-i-bot.html">Сайт+бот</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="stati.html" class="nav--active" aria-current="page">Статьи</a>
+          <a href="/#pricing">Прайс</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Статья · 5 августа 2026</span>
+            <h1 class="reveal-up">Telegram-бот вместо сайта: когда это работает и когда нет</h1>
+            <p class="hero__sub reveal-up">Бот дешевле и быстрее. Сайт приносит клиентов из поиска. Разбираю конкретно — кому что подходит и можно ли совместить оба.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTICLE -->
+      <section class="section">
+        <div class="container">
+          <img src="telegram-bot-vmesto-sayta.webp" alt="Сравнение цен: Telegram-бот от 10 000 ₽ и сайт от 20 000 ₽" class="article-hero-img" loading="eager" width="1200" height="630" />
+
+          <div class="article-body">
+
+            <p>Когда ко мне приходит клиент и говорит «хочу сайт», я первым делом спрашиваю: а что именно должно происходить? Клиенты записываются? Задают вопросы? Или просто нужно, чтобы люди нашли вас в интернете?</p>
+
+            <p>Потому что иногда ответ — не сайт. Иногда Telegram-бот вместо сайта справляется лучше и дешевле. А иногда нужно и то и другое.</p>
+
+            <p>Я делаю и сайты на Тильде, и Telegram-боты — поэтому могу сравнить без заинтересованности в одну сторону. Вот что я вижу на практике.</p>
+
+            <p>Каждую неделю разбираю в блоге новое по сайтам и ботам для малого бизнеса: инструменты, кейсы, честные цены. <a href="#contact">Напишите</a>, если появится вопрос по ходу чтения.</p>
+
+            <h2>Чем бот отличается от сайта?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> сайт — ваша страница в интернете, которую находят через поиск. Бот — программа внутри Telegram, которая общается с пользователем кнопками и сообщениями. Сайт приводит новых людей, которые вас ещё не знают, бот обслуживает тех, кто уже нашёл вас и готов действовать.</div>
+            <p>Это принципиальное различие, и из него вытекает всё остальное.</p>
+            <p>Сайт существует в интернете как самостоятельная страница. Человек вбивает в Яндекс «мастер маникюра Владивосток» — и находит ваш сайт. Или вы даёте рекламу, и она ведёт на сайт. Сайт — это точка входа для новых людей, которые вас ещё не знают.</p>
+            <p>Бот живёт внутри Telegram. Чтобы с ним взаимодействовать, человек должен сначала оказаться в Telegram и найти вашего бота — по ссылке, по QR-коду, по рекомендации. Сам по себе бот в поиске Яндекса не появится.</p>
+            <p>Они просто решают разные задачи.</p>
+
+            <h2>Когда Telegram-бота достаточно?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> если ваши клиенты уже вас знают и вам нужно упростить процесс — бот справится лучше и дешевле сайта. Речь про запись на приём, ответы на частые вопросы, приём заявок и быстрый запуск за несколько дней вместо недель на разработку сайта.</div>
+            <p><strong>Запись на приём.</strong> Мастер маникюра, парикмахер, репетитор — все, кто принимает клиентов по записи. Бот показывает свободные слоты, принимает запись, отправляет напоминание за день. Всё это без участия человека. Клиент доволен — не нужно ждать ответа в мессенджере.</p>
+            <p><strong>Ответы на одни и те же вопросы.</strong> Если вам каждый день пишут «сколько стоит», «как записаться», «вы работаете в воскресенье» — бот закрывает это автоматически. Освобождает время.</p>
+            <p><strong>Приём заявок.</strong> Человек нажимает кнопку «хочу заказать», бот задаёт несколько вопросов, собирает данные и отправляет вам готовую заявку. Дешевле и быстрее, чем форма на сайте с подключением CRM — тот же принцип я разбирала <a href="svoy-bot-vmesto-komissii-marketpleisa.html">для продавцов, уходящих с маркетплейса на прямые заказы</a>.</p>
+            <p><strong>Быстрый старт.</strong> Если нужно запуститься за три дня — бот на конструкторе делается за несколько часов. Сайт — несколько дней минимум.</p>
+            <p>В этих четырёх случаях бот работает хорошо. Особенно если аудитория у вас уже есть — клиенты знают вас, у них есть Telegram, и им просто нужен удобный способ взаимодействовать. Кстати, если вы уже ведёте бота в Telegram и присматриваетесь к мессенджеру MAX — у меня есть <a href="perenos-bota-v-max.html">отдельный разбор переноса бота без потерь</a>.</p>
+            <p>Узнали свою ситуацию в одном из четырёх пунктов? Могу собрать такого бота под ключ — под конкретный сценарий вашего бизнеса, не шаблонно. Подробности и примеры — <a href="telegram-bot.html">на странице «Telegram-боты»</a>.</p>
+
+            <h2>Когда без сайта не обойтись?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> если вам нужны новые клиенты из поиска — только сайт, бот из Яндекса не найти. Ещё сайт нужен, если услуга требует объяснения через портфолио и кейсы, или если для вашей аудитории важна серьёзность бренда — особенно при работе с юрлицами и дорогими услугами.</div>
+            <p><strong>Поиск новых клиентов.</strong> Вот главное ограничение бота — его не найти через Яндекс или Google. Человек, который ищет «веб-дизайнер Приморский край» или «курсы английского для детей Уссурийск», не найдёт вашего бота. Он найдёт сайты. Если вы хотите клиентов из поисковой выдачи — без сайта никак.</p>
+            <p><strong>Портфолио и доверие.</strong> Если ваша услуга требует объяснения — например, вы делаете сложные проекты, у вас есть кейсы, примеры работ, отзывы — это нужно показывать. Бот плохо подходит для этого. Сайт позволяет выложить всё красиво и структурированно.</p>
+            <p><strong>Серьёзность.</strong> Звучит субъективно, но это реальность: для части аудитории сайт = серьёзная компания. Особенно если ваши услуги дороже среднего, или клиенты — юридические лица. Бот воспринимается как дополнение, а не как самостоятельный бизнес.</p>
+            <p>Если все ваши клиенты идут по рекомендациям и через сарафанное радио — сайт пока не срочно. Но если вы хотите выйти на новую аудиторию из поиска — сайт нужен.</p>
+
+            <h2>Сколько это стоит?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> бот через конструктор своими силами — от 1 600 рублей в месяц абонентской платы плюс время на сборку. Бот у разработчика под ключ — от 10 000 рублей за простой сценарий, дороже за сложную логику. Сайт на Тильде под ключ — от 20 000 рублей разово плюс подписка на платформу.</div>
+
+            <p><strong>Telegram-бот через конструктор своими силами (например BotHelp)</strong></p>
+            <p>Конструктор — это платформа, где бот собирается из готовых блоков без программиста. Если делаете сами, платить нужно только за аренду сервиса:</p>
+            <ul>
+              <li>Абонентская плата за платформу: от <a href="https://bothelp.io/ru/blog/skolko-stoit-razrabotka-chat-bota" target="_blank" rel="noreferrer">1 600 рублей в месяц</a> (это не стоимость бота, это аренда сервиса, на котором он работает).</li>
+              <li>Сборка самого бота своими силами — бесплатно, но уйдёт время на разбор конструктора.</li>
+            </ul>
+
+            <p><strong>Telegram-бот на заказ под ключ</strong></p>
+            <p>Разработчик пишет бота под вас с нуля. Платформа не нужна — бот живёт на собственном сервере, без абонентской платы конструктору.</p>
+
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Вариант</th><th>Цена</th><th>Ежемесячно</th></tr></thead>
+                <tbody>
+                  <tr><td>Через конструктор своими силами</td><td>бесплатно (только время)</td><td>от 1 600 ₽/мес за платформу</td></tr>
+                  <tr><td>Опросник под ключ</td><td>от 10 000 ₽</td><td>хостинг, часто бесплатно</td></tr>
+                  <tr><td>Администратор или поддержка под ключ</td><td>от 20 000–25 000 ₽</td><td>хостинг, часто бесплатно</td></tr>
+                  <tr><td>Сайт-визитка на Тильде</td><td>20 000–45 000 ₽</td><td>750 ₽/мес за платформу</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>У меня в актуальном прайсе: бот-опросник (сценарий, расчёт цены, заявка) — от 10 000 ₽, бот-администратор с записью и напоминаниями — от 25 000 ₽, бот-магазин с базовым каталогом и приёмом заказов — от 30 000 ₽, бот-рассылка — от 15 000 ₽, бот-поддержка — от 20 000 ₽. Это стартовые цены за стандартный сценарий. Если нужен полноценный каталог с уведомлениями и интеграцией в учёт заказов — это уже сложнее стандартного бота-магазина, и цена растёт до 80 000–180 000 ₽. Если добавить ещё и оплату прямо в чате — от 180 000 ₽. Дальше — только хостинг: в большинстве случаев бесплатно или до 500 рублей в месяц, в зависимости от нагрузки.</p>
+
+            <p><strong>Сайт на Тильде под ключ</strong></p>
+            <ul>
+              <li>Подписка на Tilda Personal: <a href="https://t-template.ru/tpost/tilda-tarify" target="_blank" rel="noreferrer">750 рублей в месяц</a>, или около 6 000 рублей в год при годовой оплате со скидкой. Для большинства небольших бизнесов хватает.</li>
+              <li>Работа над сайтом у меня: визитка — 20 000–45 000 ₽, лендинг — 25 000–80 000 ₽, в зависимости от объёма и сложности структуры.</li>
+              <li>Итого старт: от 20 000 рублей разово + подписка на платформу.</li>
+            </ul>
+
+            <p>Если считать за год: простой бот-опросник на старте дешевле сайта. Но сайт приносит клиентов из поиска, которых бот в принципе не может получить — это просто разные каналы с разными задачами. Полный разбор цен на сайты у меня есть <a href="skolko-stoit-sayt-u-frilansera.html">в отдельной статье</a>, если хотите сравнить детальнее.</p>
+
+            <h2>Сколько стоит поддержка бота и сайта после запуска?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> у бота на конструкторе поддержка после запуска — это только абонентская плата за платформу, от 1 600 рублей в месяц. У бота на заказ хостинг чаще всего бесплатный или обходится до 500 рублей в месяц. У сайта на Тильде — подписка от 750 рублей в месяц, или около 6 000 рублей в год при оплате сразу за год. Доработки логики или структуры в обоих случаях оплачиваются отдельно от абонентки.</div>
+            <p>Бот на конструкторе после запуска требует только абонентскую плату за платформу — это оплата аренды сервиса, на котором работает бот. Изменить сценарий, добавить вопрос или кнопку можно самостоятельно, без доплаты разработчику.</p>
+            <p>Бот на заказ обычно обходится без абонентки: хостинг чаще всего бесплатный или стоит до 500 рублей в месяц в зависимости от нагрузки. Если нужно поменять логику или добавить функцию, это отдельная оплачиваемая доработка.</p>
+            <p>Сайт на Тильде требует подписку на платформу — от 750 рублей в месяц, дешевле при оплате сразу за год. Изменение структуры, добавление страницы или обновление дизайна оплачивается отдельно от подписки.</p>
+
+            <h2>Можно ли совместить бот и сайт?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> да, и это часто лучший вариант. Сайт приносит новых клиентов из поиска, бот обслуживает тех, кто уже пришёл и готов записаться или заказать — вместе они закрывают весь путь клиента, от первого поиска до записи. Такая связка особенно удобна для мастеров и репетиторов, которые уже дают рекламу и хотят автоматизировать запись.</div>
+            <p>Вот как это работает на практике.</p>
+            <p>Человек ищет в Яндексе вашу услугу — находит сайт. Читает, смотрит примеры работ, убеждается, что вы подходите. На сайте кнопка «Записаться через Telegram» — нажимает, попадает в бота. Бот принимает запись, отправляет подтверждение, напоминает за день до встречи.</p>
+            <p>Сайт делает одну работу — привлекает и убеждает. Бот делает другую — принимает и обслуживает. Вместе они закрывают весь путь клиента от первого поиска до записи.</p>
+            <p>Для небольшого бизнеса с ограниченным бюджетом я бы советовала такую последовательность: сначала сайт с простой формой заявки, потом бот, когда поток клиентов вырастет. Готовое решение под оба канала сразу — <a href="sayt-i-bot.html">сайт и бот под ключ единой системой</a>.</p>
+
+            <h2>Какую ошибку чаще всего допускают при выборе?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> берут бота, потому что «это дешевле и модно», не проверив, откуда вообще приходят клиенты — а потом удивляются, что заявок не прибавилось. Обратная ошибка тоже частая: делают сайт, но вся коммуникация с клиентами остаётся ручной — в личных сообщениях, потому что бота так и не завели. Сайт приводит людей, а подхватить их автоматически некому.</div>
+            <p>Самая частая ошибка, которую я вижу: заводят бота, ожидая роста заявок, хотя реальная проблема была не в удобстве записи, а в том, что новых людей просто неоткуда взять — в поиске бизнеса нет вообще. Бот прекрасно обслуживает тех, кто уже нашёл вас, но не может заменить сайт как канал привлечения.</p>
+            <p>Вторая по частоте — обратная ситуация: делают сайт, а вся коммуникация с клиентами всё равно идёт через личные сообщения в мессенджере вручную, потому что бота так и не завели. Тогда сайт приводит людей, а дальше их некому подхватить автоматически.</p>
+
+            <h2>Кому подходит только бот, а кому только сайт?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> только бот подходит, если аудитория уже есть, а из поиска новых клиентов не ждёте — нужна быстрая запись или приём заявок. Только сайт нужен, если клиенты приходят из поиска, услуга требует портфолио, или клиенты — юридические лица, для которых важна серьёзность бренда. Если совпадает и то и другое — нужны оба инструмента вместе.</div>
+
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Критерий</th><th>Достаточно бота</th><th>Нужен сайт</th></tr></thead>
+                <tbody>
+                  <tr><td>Источник клиентов</td><td>уже есть — рекомендации, соцсети, своя база</td><td>новые люди из поиска — Яндекс, Google</td></tr>
+                  <tr><td>Задача</td><td>запись на приём, приём заявок, ответы на частые вопросы</td><td>портфолио, кейсы, примеры работ</td></tr>
+                  <tr><td>Тип клиентов</td><td>физлица, разовые услуги</td><td>юрлица, дорогие услуги, где важна серьёзность бренда</td></tr>
+                  <tr><td>Бюджет и сроки</td><td>нужен быстрый и недорогой запуск</td><td>готовы вложиться в разработку и подписку на платформу</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Если большинство пунктов совпадает с левой колонкой — хватит бота. Если с правой — нужен сайт. Если поровну — есть смысл делать оба инструмента по порядку: сначала то, что закрывает более срочную задачу.</p>
+
+            <h2>Что выбрать — мой практический совет?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> один вопрос решает всё — откуда приходят ваши клиенты. Рекомендации и своя база — начните с бота. Нужны новые люди из поиска — нужен сайт. Нужно и то и другое — делаем оба, но по порядку. Такой подход экономит время и бюджет: не переплачиваете за то, что пока не нужно бизнесу.</div>
+            <p>Один вопрос, который всё решает: <strong>откуда приходят ваши клиенты?</strong></p>
+            <p>Если все клиенты — рекомендации, соцсети, существующая база — начните с бота. Быстро, дёшево, решает конкретную проблему с записью или заявками.</p>
+            <p>Если хотите клиентов из Яндекса — нужен сайт. Без него вас там просто нет.</p>
+            <p>Если хотите и то и другое — делаем оба. Я работаю именно так: сначала разбираемся, что важнее прямо сейчас, потом строим в нужном порядке.</p>
+            <p>Я живу в маленьком посёлке в Приморском крае и работаю с клиентами по всей России удалённо. Делаю сайты на Тильде и Telegram-боты — под конкретную задачу, а не шаблонно. Если не понимаете, что вам нужно — <a href="#contact">напишите, разберёмся вместе</a>.</p>
+
+            <div class="article-sources">
+              <strong>Источники.</strong> Сравнение бота и сайта для бизнеса — из разборов vc.ru: <a href="https://vc.ru/money/2021728-telegram-boty-kak-zamena-saitam" target="_blank" rel="noreferrer">«Telegram-бот вместо сайта»</a> и <a href="https://vc.ru/services/1791982-chto-vybrat-sait-ili-telegram-bot-dlya-vashego-biznesa" target="_blank" rel="noreferrer">«Что выбрать: сайт или Telegram-бот»</a>. Цены на конструктор ботов — из блога <a href="https://bothelp.io/ru/blog/skolko-stoit-razrabotka-chat-bota" target="_blank" rel="noreferrer">BotHelp</a>, тарифы Tilda 2026 — с <a href="https://t-template.ru/tpost/tilda-tarify" target="_blank" rel="noreferrer">t-template.ru</a>.
+            </div>
+
+            <p>Определились, что вам нужно — сайт, бот или оба? <a href="cases.html">Посмотрите примеры работ →</a></p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Не понимаете, что вам нужно — бот или сайт?</span>
+              <h2>Напишите — отвечу лично</h2>
+              <p>Оставьте имя и телефон или мессенджер. Звонить не буду — напишу сама.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Ваш вопрос (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.webp" alt="TK Web" class="logo-footer" loading="lazy" width="66" height="36" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
