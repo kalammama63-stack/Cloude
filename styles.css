@@ -2903,6 +2903,13 @@ p { margin: 0; }
   margin: 0 0 40px;
   display: block;
 }
+.article-inline-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-card);
+  margin: 4px 0 28px;
+  display: block;
+}
 .article-meta { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 32px; opacity: 0.85; }
 .article-body { max-width: 760px; margin: 0 auto; }
 .article-body p { color: var(--text-secondary); line-height: 1.8; margin: 0 0 20px; font-size: 1.05rem; }
