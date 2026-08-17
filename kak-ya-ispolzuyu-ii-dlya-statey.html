@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=110399988", "ym");
+
+     ym(110399988, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110399988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Как я пишу статьи с ИИ: 16 шагов вместо одного промпта | TK Web</title>
+  <meta name="description" content="Половина статей в интернете уже написана ИИ - и это заметно. Показываю по шагам, как я строю процесс, чтобы мои тексты не звучали как остальные." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.html" />
+  <meta property="og:title" content="Как я пишу статьи с ИИ: 16 шагов вместо одного промпта" />
+  <meta property="og:description" content="Половина статей в интернете уже написана ИИ - и это заметно. Показываю по шагам, как я строю процесс, чтобы мои тексты не звучали как остальные." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="TK Web" />
+  <meta property="og:image" content="https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tk-webb.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Статьи", "item": "https://tk-webb.ru/stati.html"},
+      {"@type": "ListItem", "position": 3, "name": "Как я пишу статьи с ИИ: 16 шагов вместо одного промпта", "item": "https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Как я пишу статьи с ИИ: 16 шагов вместо одного промпта",
+    "description": "Половина статей в интернете уже написана ИИ - и это заметно. Показываю по шагам, как я строю процесс, чтобы мои тексты не звучали как остальные.",
+    "image": "https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.png",
+    "datePublished": "2026-08-17",
+    "dateModified": "2026-08-17",
+    "author": {"@type": "Person", "name": "Тамара Коломейцева", "url": "https://tk-webb.ru/"},
+    "publisher": {"@type": "Organization", "name": "TK Web", "logo": {"@type": "ImageObject", "url": "https://tk-webb.ru/logo.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tk-webb.ru/kak-ya-ispolzuyu-ii-dlya-statey.html"}
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="/">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
+          <a href="site-tilda.html">Сайты</a>
+          <a href="telegram-bot.html">Telegram-боты</a>
+          <a href="sayt-i-bot.html">Сайт+бот</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="stati.html" class="nav--active" aria-current="page">Статьи</a>
+          <a href="/#pricing">Прайс</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Статья · 17 августа 2026</span>
+            <h1 class="reveal-up">Как я пишу статьи с ИИ: 16 шагов вместо одного промпта</h1>
+            <p class="hero__sub reveal-up">Половина статей в интернете уже написана ИИ. Показываю, как устроен мой процесс, чтобы мои тексты не звучали как остальные.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTICLE -->
+      <section class="section">
+        <div class="container">
+          <img src="kak-ya-ispolzuyu-ii-dlya-statey.webp" alt="Обложка статьи: процесс написания статей с ИИ из 16 шагов и 6 проверок перед публикацией" class="article-hero-img" loading="eager" width="1200" height="630" />
+
+          <div class="article-body">
+
+            <p>Открываете статью и первая мысль - "это опять ИИ накидал?" Такая мысль в голове у читателя сейчас появляется часто.</p>
+            <p>Такие тексты обычно узнаваемы за пару абзацев: гладкие фразы, ни одного личного примера, вода вместо конкретики. Читатель тратит время впустую. Автор вроде бы старался, но результат ничем не выделяется среди тысяч таких же.</p>
+            <p>Я тоже пишу статьи с ИИ. На это у меня уходит процесс из 16 шагов, где половина времени - проверки, а не один запрос в чат. Расскажу, из чего он состоит и почему я его не сокращаю, даже когда лень.</p>
+            <p>Каждую неделю разбираю что-то новое про сайты, ботов и работу с ИИ. Подпишитесь на <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">сообщество ВКонтакте</a>, чтобы не пропустить.</p>
+
+            <h2>Почему вообще встал вопрос доверия к ИИ-текстам?</h2>
+            <div class="article-callout"><strong>Коротко:</strong> больше половины новых статей в интернете уже написаны нейросетью, читатели это чувствуют, и доверие к тексту падает просто потому, что он выглядит гладко и безлично.</div>
+            <p>Цифры не мои личные ощущения. Исследование Graphite (65 000 проверенных страниц) показало: 52% новых опубликованных статей в интернете написаны ИИ. По данным Imperva, 51% всего трафика в вебе теперь идёт от ботов - впервые больше, чем от живых людей. Слово "slop" ("ИИ-мусор") в конце 2025 года сразу три словаря - Macquarie, Merriam-Webster, American Dialect Society - признали словом года.</p>
+            <p>Это уже фон, в котором мы все теперь читаем и пишем, а не редкое явление. YouTube официально назвал борьбу с этим мусором приоритетом на 2026 год. Настороженность читателя к статье, где чувствуется ИИ, вполне обоснована.</p>
+
+            <h2>ИИ тут ни при чём - дело в том, кто им управляет</h2>
+            <div class="article-callout"><strong>Коротко:</strong> даже поисковики штрафуют за конвейерный контент без проверки, а не за сам факт использования ИИ - грань проходит между проверенным и непроверенным текстом.</div>
+            <p>У Google на этот счёт открытая позиция: компания официально не запрещает ИИ при создании контента, оценивает результат - "кто, как и зачем" стоит за текстом. Наказание идёт за низкое качество, которое обычно и производит конвейер.</p>
+            <p>В марте 2026 года у Google прошло обновление антиспам-системы SpamBrain. Оно научилось быстрее находить массово произведённый контент и прокатилось по всей выдаче меньше чем за сутки - рекордная скорость для таких апдейтов.</p>
+            <p>Индустрия контент-маркетинга формулирует похожую мысль иначе: модель "человек в контуре". Человека ставят в трёх решающих точках - бриф (что писать и для кого), редактура (что получилось), финальное решение публиковать или нет. Объём работы между этими точками действительно можно отдать ИИ. Публикация черновика без человеческой правки на любом из этих шагов - типовая причина, почему контент получается пустым.</p>
+            <p>Я формулирую это проще: "Я руковожу. ИИ делает." ИИ - очень быстрый и очень умный исполнитель, который знает миллион вещей, но делает ровно то, что ему говорят. Чтобы говорить правильно, нужно самой понимать, чего хочешь получить, и уметь это проверить. Идея и контроль - мои. Черновой объём - его.</p>
+
+            <h2>Как я выбираю, о чём вообще писать</h2>
+            <div class="article-callout"><strong>Коротко:</strong> тема берётся из того, что реально болит у читателя и чего ещё не написано, а не из головы наугад.</div>
+            <p>Первый шаг всего процесса - поиск темы, а не написание. Я собираю пул минимум из 20 кандидатов: что уже спрашивают, какие темы вокруг сайтов, ботов и ИИ сейчас на пике, где в поиске на самом деле пусто - читатель ищет ответ, а качественного материала на русском языке ещё нет.</p>
+            <p>Каждую тему из пула оцениваю по нескольким критериям сразу: насколько она свежая, есть ли у меня собственный опыт, который не перескажешь чужими словами, повторяю ли я в очередной раз один и тот же угол. Если из пяти последних статей три - про одно и то же, следующая тема обязана быть про что-то смежное. Иначе получается один и тот же текст, переписанный пять раз.</p>
+
+            <h2>Заголовок пишется для человека, а не для робота</h2>
+            <div class="article-callout"><strong>Коротко:</strong> заголовок за секунду объясняет, что человек получит, если прочитает, и только потом совпадает с тем, как это гуглят.</div>
+            <p>Соблазн - написать заголовок, набитый ключевыми словами, звучащий как из учебника по СЕО. Такой заголовок никто не хочет открывать: он звучит как реклама самому себе.</p>
+            <p>Поэтому я всегда пишу минимум три варианта заголовка и читаю их вслух. Если получилось что-то вроде "настройка и оптимизация процесса" - переписываю. Если звучит как то, что можно сказать другу за чаем - оставляю. Заголовок этой самой статьи прошёл ту же проверку: первый вариант был больше похож на "методология создания контента с применением ИИ", и он полетел в мусорную корзину в первую же секунду.</p>
+
+            <h2>Прежде чем писать - собираю доказательства</h2>
+            <div class="article-callout"><strong>Коротко:</strong> перед текстом идёт отдельный этап research - источники, цифры и цитаты собираются с указанием, откуда они взяты, а не по памяти модели.</div>
+            <p>Модель может уверенно написать неточность - не потому что "врёт", а потому что не всегда отличает то, что помнит приблизительно, от того, что проверено. Прежде чем писать текст, я запускаю отдельный поиск: официальные источники в приоритете, потом эксперты, и только потом обсуждения и мнения. Каждая цифра и цитата в итоге идёт с указанием, откуда она взята, - как в этой самой статье.</p>
+            <p>Отдельно смотрю на свой собственный опыт по теме - то, что уже проверено на практике и не найдёшь в чужих статьях. Ради этого вообще стоит читать чей-то текст: личный опыт нельзя нагенерировать.</p>
+
+            <h2>Шесть проверок на прочность, прежде чем текст кому-то показать</h2>
+            <div class="article-callout"><strong>Коротко:</strong> готовый черновик проходит шесть отдельных проверок - факты, юридические риски, тон, структуру, ИИ-штампы и ссылки, - и любая непройденная проверка держит статью в черновиках.</div>
+            <p>Вот что проверяется отдельными шагами:</p>
+            <ol>
+              <li><strong>Факты.</strong> Каждая цифра, цитата, дата сверяется заново, отдельно от текста, в котором она стоит.</li>
+              <li><strong>Юридические и репутационные риски.</strong> Обещания результата, которые нельзя гарантировать, ложная срочность, слова, которые сама для себя запретила использовать.</li>
+              <li><strong>Тон и голос.</strong> Звучит ли текст как я, а не как нейтральный корпоративный автор.</li>
+              <li><strong>Структура и понятность.</strong> Отвечает ли каждый раздел на реальный вопрос.</li>
+              <li><strong>Следы ИИ-почерка.</strong> Канцелярские обороты, одинаковый ритм предложений, штампованные фразы-клише - если что-то из этого проскочило, переписываю.</li>
+              <li><strong>Ссылки.</strong> Работают ли они и ведут ли туда, куда написано.</li>
+            </ol>
+            <p>Если хоть одна из шести проверок находит проблему, исправляю и прогоняю снова, пока не станет чисто. Это самая долгая часть всего процесса, и именно она чаще всего отличает статью, которую стоит читать, от той, которую пролистают на середине.</p>
+
+            <h2>Один реальный случай, где чуть не прокололась</h2>
+            <div class="article-callout"><strong>Коротко:</strong> однажды служебный технический вывод от вспомогательного скрипта чуть не попал прямо в текст статьи - поймала это благодаря отдельному шагу проверки, а не на глаз в конце.</div>
+            <p>Расскажу честно, не только про то, что всё идёт гладко. Один раз при подготовке черновика в текст едва не попала строчка служебного вывода от вспомогательного инструмента - обычно такое уходит в технический лог, но в тот раз чуть не проскочило прямо на вторую строку текста. Заметила это благодаря отдельному этапу, который специально ищет подобный мусор, отдельно от смыслового чтения.</p>
+            <p>Похожая история была с проверкой того, как статья выглядит на сайте: автоматическая проверка один раз вернула пустой результат из-за особенности того, как страница загружается. Можно было решить, что текст на месте и этого достаточно. Правило простое: если инструмент повёл себя не так, как ожидалось, разбираюсь в причине.</p>
+            <p>Ошибка находится до публикации, потому что для этого есть отдельный шаг, который специально ищет именно такие вещи.</p>
+
+            <h2>Что из этого можно взять себе, даже если вы не пишете статьи</h2>
+            <div class="article-callout"><strong>Коротко:</strong> главная идея переносится далеко за пределы текстов - ИИ можно доверить объём работы, а решение и финальную проверку результата - нет.</div>
+            <p>Если вы фрилансер и тоже начинаете пользоваться ИИ в работе - пишете тексты, собираете сайты, ведёте переписку с клиентами, - идея та же: ИИ хорош там, где нужен объём и скорость, и слаб там, где нужно решение и ответственность. Отдавайте ему черновой вариант. Проверяйте результат отдельным шагом. Если что-то пошло не так - разбирайтесь в причине.</p>
+            <p>Ровно эту же логику использую не только в статьях. Когда делаю сайт на Тильде или Telegram-бота для клиента, ИИ помогает быстрее собрать код и вёрстку. Что именно нужно клиенту, как это должно работать и что в итоге проверить перед сдачей - решаю сама, по тому же принципу: сначала черновой вариант, потом отдельная проверка, и только потом готово.</p>
+
+            <div class="article-sources">
+              <strong>Источники.</strong> <a href="https://medium.com/@theservitor/ai-slop-how-low-quality-ai-content-is-flooding-the-internet-82d2f14f7944" target="_blank" rel="noreferrer">Исследование Graphite о доле ИИ-статей в интернете</a> — Medium. <a href="https://www.theregister.com/ai-and-ml/2026/07/09/ai-slop-writing-has-taken-over-the-internet-particularly-linkedin-and-x/5269525" target="_blank" rel="noreferrer">Разбор роста ИИ-контента на LinkedIn и X</a> — The Register. <a href="https://dig.watch/updates/ai-slop-content-social-media" target="_blank" rel="noreferrer">Обзор влияния синтетического контента в 2026 году</a> — Digital Watch Observatory. <a href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content" target="_blank" rel="noreferrer">Официальная позиция Google по ИИ-контенту</a> — Google Search Central Blog. <a href="https://trustedaiseo.com/e-e-a-t-for-ai-content/" target="_blank" rel="noreferrer">E-E-A-T и оценка ИИ-контента в 2026 году</a> — Trustedaiseo. <a href="https://improvado.io/blog/human-in-the-loop-ai" target="_blank" rel="noreferrer">Модель "человек в контуре" в контент-маркетинге</a> — Improvado.
+            </div>
+
+            <p>Похожий вопрос я уже разбирала со стороны дизайна: <a href="zamenit-li-ii-veb-dizajnera.html">заменит ли ИИ веб-дизайнера</a>. А если задумываетесь о сайте и хотите понимать, за что платите, - вот честный разбор <a href="skolko-stoit-sayt-u-frilansera.html">сколько стоит сайт у фрилансера</a>.</p>
+            <p>Тот же принцип - объём отдать ИИ, решение и проверку оставить себе - лежит в основе того, как я делаю сайты и ботов для клиентов.</p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Нужен сайт на Тильде или Telegram-бот?</span>
+              <h2>Напишите — отвечу лично</h2>
+              <p>Оставьте имя и телефон или мессенджер. Звонить не буду — напишу сама.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Ваш вопрос (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.webp" alt="TK Web" class="logo-footer" loading="lazy" width="66" height="36" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
