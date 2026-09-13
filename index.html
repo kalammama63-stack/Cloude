@@ -1097,7 +1097,7 @@
             <form class="contact-form" id="contactForm">
               <input type="text" name="name" placeholder="Ваше имя" required />
               <input type="text" name="contact" placeholder="Телефон или Telegram" required />
-              <select name="service">
+              <select name="service" aria-label="Что вас интересует">
                 <option value="" disabled selected>Что вас интересует?</option>
                 <option value="Сайт на Tilda">Сайт на Tilda</option>
                 <option value="AI-сайт">AI-сайт</option>
@@ -1145,7 +1145,7 @@
   </div>
 
   <!-- ОВЕРЛЕЙ ЛИД-МАГНИТА -->
-  <div class="checklist-overlay" id="checklistToast" role="dialog" aria-modal="true">
+  <div class="checklist-overlay" id="checklistToast" role="dialog" aria-modal="true" aria-label="Чек-лист открыт">
     <div class="checklist-overlay__inner">
       <p class="checklist-overlay__text">Чек-лист открыт!<br>Понравилось? Напишите<br><a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web →</a></p>
       <button class="checklist-overlay__close" id="checklistToastClose">Закрыть</button>
