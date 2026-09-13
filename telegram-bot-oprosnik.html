@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=110399988", "ym");
+
+     ym(110399988, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/110399988" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бот-опросник для приёма заявок: цена | TK Web</title>
+  <meta name="description" content="Telegram-бот-опросник — от 10 000 ₽, от 3 дней. Собирает заявки с брифом: задаёт вопросы, считает стоимость, отправляет готовую заявку в Telegram без звонков." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tk-webb.ru/telegram-bot-oprosnik.html" />
+  <meta property="og:title" content="Бот-опросник для приёма заявок: цена" />
+  <meta property="og:description" content="Telegram-бот-опросник — от 10 000 ₽, от 3 дней. Собирает заявки с брифом: задаёт вопросы, считает стоимость, отправляет готовую заявку в Telegram без звонков." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tk-webb.ru/telegram-bot-oprosnik.html" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="TK Web" />
+  <meta property="og:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tk-webb.ru/og-image-bots.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://tk-webb.ru/"},
+      {"@type": "ListItem", "position": 2, "name": "Telegram-боты", "item": "https://tk-webb.ru/telegram-bot.html"},
+      {"@type": "ListItem", "position": 3, "name": "Бот-опросник для приёма заявок: цена", "item": "https://tk-webb.ru/telegram-bot-oprosnik.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Telegram-бот-опросник",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://tk-webb.ru/",
+      "name": "TK Web — Тамара Коломейцева",
+      "url": "https://tk-webb.ru/",
+      "telephone": "+79662864905",
+      "email": "tk.webdis@gmail.com",
+      "areaServed": ["Россия", "Москва", "Санкт-Петербург", "Казань", "Екатеринбург", "Новосибирск", "Краснодар"]
+    },
+    "description": "Разработка Telegram-бота-опросника для приёма заявок: вопросы, расчёт стоимости, готовая заявка в Telegram без звонков.",
+    "offers": [
+      { "@type": "Offer", "name": "Telegram-бот-опросник (приём заявок)", "price": "10000", "priceCurrency": "RUB" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Сколько стоит бот-опросник для приёма заявок?",
+        "acceptedAnswer": {"@type": "Answer", "text": "От 10 000 ₽, срок разработки — от 3 дней. Это самый простой и быстрый по разработке бот из линейки — цена растёт, только если сценарий опроса очень разветвлённый или нужна интеграция с внешними сервисами."}
+      },
+      {
+        "@type": "Question",
+        "name": "Чем бот-опросник отличается от бота для записи клиентов?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Бот-опросник задаёт вопросы, собирает данные и отправляет вам готовую заявку — дальше вы сами связываетесь с клиентом и договариваетесь о времени. Бот-администратор для записи ведёт календарь сам: показывает свободные слоты и бронирует конкретное время без вашего участия. Опросник дешевле и подходит, когда точное время не нужно фиксировать заранее."}
+      },
+      {
+        "@type": "Question",
+        "name": "Как работает сценарий бота-опросника?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Клиент нажимает кнопку «Начать» и отвечает на несколько вопросов по очереди — например, что нужно сделать, какой бюджет, как связаться. В конце бот может сам посчитать примерную стоимость по введённым данным и отправляет вам готовую заявку в Telegram."}
+      },
+      {
+        "@type": "Question",
+        "name": "Для какого бизнеса подходит бот-опросник?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Для любого бизнеса, где решение о цене или сроке зависит от деталей задачи: ремонт и монтаж, разработка, консультации, услуги на заказ. Бот заменяет первый созвон с уточняющими вопросами."}
+      },
+      {
+        "@type": "Question",
+        "name": "Можно ли доработать бота-опросника позже?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да. После сдачи бот остаётся вашим — можно добавить новые вопросы, изменить логику расчёта стоимости или позже перевести его в бота-администратора с записью на время. Доработка обсуждается отдельно от базовой стоимости."}
+      },
+      {
+        "@type": "Question",
+        "name": "Нужно ли платить за бота ежемесячно?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Нет, оплата разовая за разработку. Стоимость поддержания работы самого бота минимальна или отсутствует — зависит от платформы, обсуждается при заказе."}
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/logo.png" sizes="any" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <meta name="theme-color" content="#060607" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="page-shell">
+
+    <header class="topbar">
+      <div class="topbar__inner container">
+        <a class="brand" href="/">
+          <span class="brand-name">Тамара Коломейцева</span>
+        </a>
+        <nav class="nav" id="navMenu">
+          <a href="/">Главная</a>
+          <a href="site-tilda.html">Сайты</a>
+          <a href="telegram-bot.html" class="nav--active" aria-current="page">Telegram-боты</a>
+          <a href="sayt-i-bot.html">Сайт+бот</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="stati.html">Статьи</a>
+          <a href="/#pricing">Прайс</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+        <div class="topbar__right">
+          <a href="tel:+79662864905" class="nav-phone">+7 966 286 49 05</a>
+          <a class="button button--primary" href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section--hero-inner section--hero-inner--compact" id="home">
+        <div class="container hero-inner__content">
+          <div class="hero-inner__text">
+            <span class="eyebrow reveal-up">Бот-опросник</span>
+            <h1 class="reveal-up">Бот-опросник для приёма заявок</h1>
+            <p class="hero__sub reveal-up">От 10 000 ₽, от 3 дней. Бот задаёт вопросы, считает стоимость и отправляет готовую заявку в Telegram — без звонков и уточнений.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTICLE -->
+      <section class="section section--articles-top">
+        <div class="container">
+
+          <div class="article-body">
+
+            <h2>Короткий ответ</h2>
+            <p>Бот-опросник для приёма заявок стоит <strong>от 10 000 ₽</strong>, срок разработки — <strong>от 3 дней</strong>. Это самый простой и дешёвый бот из линейки: он задаёт клиенту несколько вопросов по очереди, при необходимости считает примерную стоимость и отправляет вам готовую заявку с брифом прямо в Telegram.</p>
+            <p>В отличие от <a href="telegram-bot-zapis-klientov.html">бота для записи клиентов</a>, опросник не ведёт календарь и не бронирует конкретное время — он только собирает данные и передаёт заявку вам, а дальше вы сами связываетесь с клиентом.</p>
+
+            <h2>Как выбрать: бот-опросник или что-то другое</h2>
+            <div class="article-callout"><strong>Коротко:</strong> выбор зависит от того, нужно ли фиксировать конкретное время визита или достаточно собрать данные и перезвонить самому.</div>
+            <p><strong>Нужно ли фиксировать точное время.</strong> Если клиенту важно выбрать конкретный час и дату — нужен бот-администратор с календарём. Если время не критично и вы сами перезваниваете, чтобы согласовать детали, — опросника достаточно, и он дешевле.</p>
+            <p><strong>Зависит ли цена услуги от деталей задачи.</strong> Ремонт, монтаж, разработка на заказ, консультации — везде, где цена и срок зависят от параметров конкретной задачи, опросник заменяет первый уточняющий звонок: клиент сам вводит нужные данные.</p>
+            <p><strong>Сколько вопросов нужно задать.</strong> Простой сценарий из 3–5 вопросов — самый быстрый и недорогой вариант. Разветвлённый сценарий, где следующий вопрос зависит от предыдущего ответа, увеличивает и цену, и срок разработки.</p>
+            <p><strong>Где сидит ваша аудитория.</strong> Если клиенты уже пишут вам в Telegram — бота достаточно. Если новых клиентов вы ждёте из поиска, стоит связать бота с <a href="site-tilda.html">сайтом</a>: сайт находят в Google и Яндексе, а кнопка на нём сразу ведёт в бота.</p>
+
+            <h2>Сравнение: опросник, форма на сайте и звонки вручную</h2>
+            <div class="article-callout"><strong>Коротко:</strong> звонки требуют вашего времени на каждого клиента, форма на сайте собирает заявку без диалога, бот-опросник задаёт уточняющие вопросы сам и отправляет готовый бриф.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th></th><th>Кто уточняет детали</th><th>Готовый бриф</th><th>Стоимость</th></tr></thead>
+                <tbody>
+                  <tr><td>Звонки вручную</td><td>Вы сами, на каждом звонке</td><td>Нет, каждый раз заново</td><td>бесплатно, но тратит время</td></tr>
+                  <tr><td>Форма заявки на сайте</td><td>Никто — просто набор полей</td><td>Частично</td><td>входит в разработку сайта</td></tr>
+                  <tr><td>Telegram-бот-опросник</td><td>Бот, по заданному сценарию</td><td>Да, сразу в Telegram</td><td>от 10 000 ₽ разово</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Главное отличие бота от формы на сайте — диалог: бот задаёт вопросы по очереди и может менять следующий вопрос в зависимости от ответа, а не просто собирает поля формы. Если позже понадобится ещё и фиксировать конкретное время визита — опросника можно дополнить или заменить на <a href="telegram-bot-zapis-klientov.html">бота для записи клиентов</a>.</p>
+
+            <h2>Стоимость и что входит в разработку</h2>
+            <div class="article-callout"><strong>Коротко:</strong> от 10 000 ₽, от 3 дней — в стоимость входит сценарий вопросов, расчёт стоимости при необходимости и передача заявки в Telegram.</div>
+            <div class="article-table-wrap">
+              <table>
+                <thead><tr><th>Что делаю</th><th>Цена</th><th>Срок</th></tr></thead>
+                <tbody>
+                  <tr><td>Бот-опросник (простой сценарий, 3–5 вопросов)</td><td>от 10 000 ₽</td><td>от 3 дней</td></tr>
+                  <tr><td>Разветвлённый сценарий / интеграции</td><td>обсуждается индивидуально</td><td>от 5 дней</td></tr>
+                  <tr><td><a href="telegram-bot-zapis-klientov.html">Бот-администратор (запись на время)</a></td><td>от 25 000 ₽</td><td>от 5 дней</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>В стоимость входит: сценарий диалога и вопросов, расчёт примерной стоимости по введённым данным (если нужен), отправка готовой заявки в Telegram, а после сдачи — обучение, как самостоятельно менять текст вопросов. Бот остаётся полностью вашим.</p>
+            <p>Полный список из 6 видов Telegram-ботов и цен — на странице <a href="telegram-bot.html">Telegram-боты для бизнеса</a>. Если заявки нужны не сами по себе, а вместе с сайтом, который приводит новых клиентов из поиска, — посмотрите готовый комплект <a href="sayt-i-bot.html">«Сайт + Telegram-бот»</a>.</p>
+
+            <h2>Частые вопросы</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Сколько стоит бот-опросник для приёма заявок?</summary>
+                <div class="faq-body">От 10 000 ₽, от 3 дней. Это самый простой бот из линейки — цена растёт, только если сценарий очень разветвлённый или нужна интеграция с внешними сервисами.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Чем опросник отличается от бота для записи клиентов?</summary>
+                <div class="faq-body">Опросник собирает данные и отправляет вам готовую заявку — вы сами связываетесь с клиентом. Бот для записи ведёт календарь сам и бронирует конкретное время без вашего участия.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Как работает сценарий бота-опросника?</summary>
+                <div class="faq-body">Клиент отвечает на несколько вопросов по очереди, бот может сам посчитать примерную стоимость и отправляет вам готовую заявку в Telegram.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Для какого бизнеса подходит бот-опросник?</summary>
+                <div class="faq-body">Для бизнеса, где цена или срок зависят от деталей задачи: ремонт, монтаж, разработка, консультации. Бот заменяет первый уточняющий созвон.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Можно ли доработать бота-опросника позже?</summary>
+                <div class="faq-body">Да. Можно добавить новые вопросы, изменить расчёт стоимости или позже перевести его в бота-администратора с записью на время. Доработка — отдельно от базовой стоимости.</div>
+              </details>
+              <details class="faq-item">
+                <summary>Нужно ли платить за бота ежемесячно?</summary>
+                <div class="faq-body">Нет, оплата разовая за разработку. Стоимость поддержания работы бота минимальна или отсутствует, зависит от платформы.</div>
+              </details>
+            </div>
+
+            <p>Нужен бот-опросник под вашу задачу — расскажите, какие вопросы важно задать клиенту, посчитаю точную цену. <a href="#contact">Обсудить проект →</a></p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-stars" aria-hidden="true">
+          <span class="star star--twinkle" style="--x:8%;--y:15%;--o:0.55;--d:2.8s"></span>
+          <span class="star star--twinkle" style="--x:22%;--y:70%;--o:0.4;--d:3.5s"></span>
+          <span class="star star--twinkle" style="--x:35%;--y:40%;--o:0.65;--d:2.1s"></span>
+          <span class="star star--twinkle" style="--x:50%;--y:85%;--o:0.3;--d:4.2s"></span>
+          <span class="star star--twinkle" style="--x:65%;--y:20%;--o:0.5;--d:3.1s"></span>
+          <span class="star star--twinkle" style="--x:78%;--y:55%;--o:0.45;--d:2.5s"></span>
+          <span class="star star--twinkle" style="--x:90%;--y:30%;--o:0.6;--d:3.8s"></span>
+          <span class="star star--shoot" style="--x:20%;--y:12%;--dx:120px;--dy:60px;--d:6s;--delay:1s"></span>
+          <span class="star star--shoot" style="--x:70%;--y:8%;--dx:90px;--dy:80px;--d:8s;--delay:3.5s"></span>
+        </div>
+        <div class="container">
+          <div class="contact-wrap reveal-up">
+            <div class="contact-left">
+              <span class="eyebrow">Нужны заявки?</span>
+              <h2>Напишите — отвечу лично</h2>
+              <p>Оставьте имя и телефон или мессенджер. Звонить не буду — напишу сама.</p>
+              <div class="contact-links">
+                <a href="tel:+79662864905">+7 966 286 49 05</a>
+                <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">@TK_Web в Telegram</a>
+                <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+                <a href="mailto:tk.webdis@gmail.com">tk.webdis@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <input type="text" name="name" placeholder="Ваше имя" required />
+              <input type="text" name="contact" placeholder="Телефон или Telegram" required />
+              <textarea name="message" placeholder="Расскажите о задаче (необязательно)" rows="3"></textarea>
+              <label class="form-consent">
+                <input type="checkbox" required />
+                <span>Отправляя форму, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a></span>
+              </label>
+              <button type="submit" class="button button--primary ai-btn" id="aiBtn">
+                <span class="ai-sp ai-sp1" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp2" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp3" aria-hidden="true">✦</span>
+                <span class="ai-sp ai-sp4" aria-hidden="true">✦</span>
+                Отправить →
+              </button>
+              <p class="form-note">Звонить не буду — напишу в мессенджер</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <img src="logo.webp" alt="TK Web" class="logo-footer" loading="lazy" width="66" height="36" />
+        <div class="footer__links">
+          <a href="tel:+79662864905">+7 966 286 49 05</a>
+          <a href="https://t.me/TK_Web" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://vk.com/clubtk_web" target="_blank" rel="noreferrer">ВКонтакте</a>
+          <a href="mailto:tk.webdis@gmail.com">Email</a>
+          <a href="https://www.blog-tk.ru/" target="_blank" rel="noreferrer">Блог</a>
+          <a href="https://kalammama63-stack.github.io/portfolio/" target="_blank" rel="noreferrer">Портфолио</a>
+        </div>
+        <div class="footer__copy">© 2026 TK Web · Работаю удалённо по всей России.</div>
+        <div class="footer__copy">Работаю по договору · <a href="privacy.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Политика конфиденциальности</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <a class="mobile-cta" href="https://t.me/TK_Web" target="_blank" rel="noreferrer" aria-label="Написать в Telegram">Написать в Telegram</a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
