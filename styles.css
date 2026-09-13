@@ -68,7 +68,7 @@ a {
 }
 a:hover { color: var(--accent-orange-light); }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 .container {
   width: min(1160px, calc(100% - 36px));
@@ -393,6 +393,7 @@ p { margin: 0; }
 
 .footer__inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -1734,7 +1735,6 @@ p { margin: 0; }
    ============================================================ */
 @media (max-width: 680px) {
   .topbar__inner { flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 12px 0; }
-  .nav { gap: 14px; font-size: 0.88rem; }
   .nav-phone { display: none; }
 
   .hero { padding-top: 72px; }
@@ -1760,6 +1760,8 @@ p { margin: 0; }
   .guide-card { flex-direction: column; align-items: flex-start; padding: 24px; }
 
   .bots-grid { grid-template-columns: 1fr; }
+
+  .footer__inner { justify-content: center; text-align: center; }
 }
 
 /* ============================================================
@@ -1955,6 +1957,10 @@ p { margin: 0; }
     flex-direction: column;
     gap: 36px;
   }
+  .about-img-wrap {
+    width: 100%;
+    max-width: 320px;
+  }
   .about-img {
     width: 100%;
     max-width: 320px;
@@ -1964,6 +1970,9 @@ p { margin: 0; }
 }
 
 @media (max-width: 680px) {
+  .about-img-wrap {
+    max-width: 100%;
+  }
   .about-img {
     max-width: 100%;
     aspect-ratio: 3/4;
@@ -2656,7 +2665,7 @@ p { margin: 0; }
 .burger--open span:nth-child(2) { opacity: 0; }
 .burger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .burger { display: flex; }
 
   .nav {
